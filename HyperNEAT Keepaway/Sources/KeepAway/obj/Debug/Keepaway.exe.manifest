@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Keepaway.exe" size="134144">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Keepaway.exe" size="130048">
       <assemblyIdentity name="Keepaway" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>MmZYXEp8j1HHlXXbvbITfqxXIcw=</dsig:DigestValue>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>7M8L+9TzrCE4V2qF5jisW5C0wkGeB6JWwfuNKxZk9lg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -60,8 +60,8 @@
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Px2UnT0sSWME/fZTcEEzCZF7H5Y=</dsig:DigestValue>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>quRFeO+ptUc6MYfKJYm+mHXbO+OrtQNBYhSo9XkOveQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -72,8 +72,8 @@
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>sZzMjsmWfHCxfP+JntBdjsgGbvI=</dsig:DigestValue>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>HVpPO2oovRsdHHs7U/9I86ysi1d2lflUKIGPtY2eNRo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -84,8 +84,8 @@
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>QqcrrwZPqrHqAdYkU+ikn3S46xI=</dsig:DigestValue>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>A7DUB3UvWZGkf48dGXUMohLQy9nfZF9UFa4CKkgepKw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -96,8 +96,8 @@
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>oDdRs5UsKWA7yNN/GTk67c98Sug=</dsig:DigestValue>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>2rWF0RWbBQbTG371hede0bOKgG8fUj3cI/cRfdWW9cQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -108,20 +108,20 @@
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>/h6NBhhwm6nCdDFz0mbssFokg9k=</dsig:DigestValue>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>pMJjtk2dBYnwp13gjr5pPgl9W+id12UU3n9UtWjb7nw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RoboCup#.dll" size="123904">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RoboCup#.dll" size="121856">
       <assemblyIdentity name="RoboCup#" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>vXxVrzSnQTswohSDTlZrWTSX7M4=</dsig:DigestValue>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>x0t41ADgs07GxWJw3Zo8KTUjHIT7f6+4aCvIcOm1eOQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -132,18 +132,18 @@
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>BMwQ/MmSgKzmPpgjmSJ/V+P2YN8=</dsig:DigestValue>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>RjnOyzIQbo6k2kf8/LpiqSsrvLeMZCPFaomCrufslks=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Keepaway.exe.config" size="157">
+  <file name="Keepaway.exe.config" size="146">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>dSX4F23TieGa0+AEB+JZiknVxEM=</dsig:DigestValue>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>QIWdpLbedRBQTdE4dzRdkrTfZuoJxsT05yx642EJdKo=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
