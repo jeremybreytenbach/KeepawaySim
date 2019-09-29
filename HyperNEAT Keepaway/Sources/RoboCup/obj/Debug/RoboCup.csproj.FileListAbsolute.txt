@@ -72,3 +72,12 @@ C:\Users\Sabre\Desktop\Keepaway Experiments\HyperNEAT Keepaway\KeepawayVersion2\
 C:\Users\Sabre\Desktop\Keepaway Experiments\HyperNEAT Keepaway\KeepawayVersion2\Sources\RoboCup\obj\Debug\RoboCup.csproj.GenerateResource.Cache
 C:\Users\Sabre\Desktop\Keepaway Experiments\HyperNEAT Keepaway\KeepawayVersion2\Sources\RoboCup\obj\Debug\RoboCup#.dll
 C:\Users\Sabre\Desktop\Keepaway Experiments\HyperNEAT Keepaway\KeepawayVersion2\Sources\RoboCup\obj\Debug\RoboCup#.pdb
+E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\KeepawaySim\HyperNEAT Keepaway\Sources\RoboCup\bin\Debug\RoboCup#.dll
+E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\KeepawaySim\HyperNEAT Keepaway\Sources\RoboCup\bin\Debug\RoboCup#.pdb
+E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\KeepawaySim\HyperNEAT Keepaway\Sources\RoboCup\obj\Debug\RoboCup.csprojAssemblyReference.cache
+E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\KeepawaySim\HyperNEAT Keepaway\Sources\RoboCup\obj\Debug\RoboCup.FieldVisualizer.resources
+E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\KeepawaySim\HyperNEAT Keepaway\Sources\RoboCup\obj\Debug\RoboCup.ObjectData.resources
+E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\KeepawaySim\HyperNEAT Keepaway\Sources\RoboCup\obj\Debug\RoboCup.csproj.GenerateResource.cache
+E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\KeepawaySim\HyperNEAT Keepaway\Sources\RoboCup\obj\Debug\RoboCup.csproj.CoreCompileInputs.cache
+E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\KeepawaySim\HyperNEAT Keepaway\Sources\RoboCup\obj\Debug\RoboCup#.dll
+E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\KeepawaySim\HyperNEAT Keepaway\Sources\RoboCup\obj\Debug\RoboCup#.pdb

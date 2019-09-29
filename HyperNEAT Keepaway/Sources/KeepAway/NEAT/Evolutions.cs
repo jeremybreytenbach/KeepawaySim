@@ -593,7 +593,7 @@ namespace Keepaway
             if (this.Saves.Populations.save && this.Generation % this.Saves.Populations.inteval == 0)
                 Population.SaveToXml(this.Saves.Populations.path + "G" + this.Generation.ToString("0000") + "Pop.xml", this.Current);
             if (this.Saves.PopulationStatistics.save && (this.Generation % this.Saves.PopulationStatistics.inteval == 0 || this.Generation == 1))
-                this.PopulationStatsFile.WriteLine((string)(object)this.Current.Generation + (object)"\t" + (string)(object)this.Current.MeanFitness + "\t" + (string)(object)this.Current.MaxFitness);
+                this.PopulationStatsFile.WriteLine(Convert.ToString(this.Current.Generation) + "\t" + Convert.ToString(this.Current.MeanFitness) + "\t" + Convert.ToString(this.Current.MaxFitness));
             if (this.Saves.Species.save && this.Generation % this.Saves.Species.inteval == 0)
             {
                 for (int index = 0; index < this.species.Count; ++index)

@@ -96,13 +96,13 @@ namespace Keepaway
             {
                 if (!nodes.Mutated && !nodes.Fixed)
                     return nodes.Type == NodeType.Hidden;
-                return false;
-            }));
+                return false; // Returns nodes that can be mutated
+            })); 
             this.MutatableLinks = Enumerable.Where<LinkGene>((IEnumerable<LinkGene>)this.Links, (Func<LinkGene, bool>)(links =>
             {
                 if (!links.Mutated)
                     return !links.Fixed;
-                return false;
+                return false; // Returns links that can be mutated
             }));
         }
 

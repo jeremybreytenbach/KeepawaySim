@@ -1,0 +1,35 @@
+HyperNEAT Keepaway/Sources/KeepAway/bin/Debug/Champs/**
+HyperNEAT Keepaway/Sources/KeepAway/bin/Debug/Populations/**
+HyperNEAT Keepaway/Sources/.vs/**
+*.application
+*.exe
+*.config
+*.manifest
+*.pdb
+*.dll
+*.pdb
+*.cache
+
+HyperNEAT Keepaway/DoxyGen/**
+HyperNEAT Keepaway/Sources/KeepAway/bin/**
+HyperNEAT Keepaway/Sources/CodeGraphData/**
+HyperNEAT Keepaway/Sources/KeepAway/app.config
+*.cd
+*.CopyComplete
+HyperNEAT Keepaway/Sources/KeepAway/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+HyperNEAT Keepaway/Sources/KeepAway/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+HyperNEAT Keepaway/Sources/KeepAway/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+
+NEAT Keepaway/Sources/RoboCup/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+NEAT Keepaway/Sources/RoboCup/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+NEAT Keepaway/Sources/RoboCup/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+NEAT Keepaway/Sources/KeepAway/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+NEAT Keepaway/Sources/KeepAway/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+NEAT Keepaway/Sources/KeepAway/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+
+HyperNEAT Keepaway/Sources/KeepAway/obj/**
+HyperNEAT Keepaway/Sources/KeepAway/obj/Debug/**
+HyperNEAT Keepaway/Capture.JPG
+HyperNEAT Keepaway/Sources/KeepAway/obj/Debug/TempPE/Properties.Resources.Designer.cs.dll
+NEAT Keepaway/Sources/.vs/RoboCup/v15/Server/sqlite3/**
+NEAT Keepaway/Sources/RoboCup/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
