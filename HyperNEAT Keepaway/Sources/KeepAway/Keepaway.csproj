@@ -108,6 +108,9 @@
   <ItemGroup>
     <Compile Include="Behavior.cs" />
     <Compile Include="ComputeNovelty.cs" />
+    <Compile Include="MAP-Elites\MapElement.cs" />
+    <Compile Include="MAP-Elites\EliteMap.cs" />
+    <Compile Include="MAP-Elites\MapElites.cs" />
     <Compile Include="NEAT\DecodedNetworks.cs" />
     <Compile Include="Diversity.cs" />
     <Compile Include="NEAT\Evaluator.cs" />
@@ -206,9 +209,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MAP-Elites\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
