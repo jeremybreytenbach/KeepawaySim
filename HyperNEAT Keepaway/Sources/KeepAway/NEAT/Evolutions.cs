@@ -368,16 +368,16 @@ namespace Keepaway
 
         public void OneGeneration()
         {
-            this.CriteriaMet = this.Evaluator(this.Current.Genomes, false);
-            if (Enumerable.Count<int>(this.Current.SpeciesIds) != this.Speciate.SpeciesCount)
+            this.CriteriaMet = this.Evaluator(this.Current.Genomes, false); // evaluate whether we have met a stopping criteria (todo: what criteria can be set?)
+            if (Enumerable.Count<int>(this.Current.SpeciesIds) != this.Speciate.SpeciesCount) // ?
                 this.ChangeThreshold();
-            this.UpdateStats();
-            this.Save();
+            this.UpdateStats(); // update max fitness for each species
+            this.Save(); // save champs, pops, fitness, species in xml files on disk 
             this.NextGeneration();
             this.UpdateSpeciesExtinction();
             if (this.OnGeneration == null)
                 return;
-            this.OnGeneration(this);
+            this.OnGeneration(this); // todo: this is an event, but what does it do? Who is listening?
         }
 
         private void UpdateSpeciesExtinction()
@@ -391,8 +391,8 @@ namespace Keepaway
 
         private void NextGeneration()
         {
-            this.IncrementGeneration();
-            this.Elitism();
+            this.IncrementGeneration(); 
+            this.Elitism(); // todo: investigate as priority
             this.Reproduce();
             this.Previous = this.Current;
             this.Current = this.Next;
@@ -579,10 +579,10 @@ namespace Keepaway
             ++this.Generation;
             for (int index = 0; index < this.Current.Genomes.Count; ++index)
                 ++this.Current.Genomes[index].Age;
-            HistoricalMarkings.CleanUp(this.Generation, this.Speciate.MarkingAge);
+            HistoricalMarkings.CleanUp(this.Generation, this.Speciate.MarkingAge); //todo: investigate HistoricalMarkings
         }
 
-        private void Save()
+        private void Save() // save champs, pops, fitness, species in xml files on disk
         {
             this.Current.Genomes.Sort((Comparison<NetworkGenome>)((b, a) => a.Fitness.CompareTo(b.Fitness)));
             NetworkGenome genome = this.Current.Genomes[0];
@@ -604,20 +604,20 @@ namespace Keepaway
             this.WriteSpeciesStats();
         }
 
-        private void UpdateStats()
+        private void UpdateStats() // Actually: update each species' max fitness
         {
-            for (int index = 0; index < this.species.Count; ++index)
+            for (int index = 0; index < this.species.Count; ++index) // for each species
             {
-                if (this.species[index].Champion.Fitness != this.species[index].MaximumFitness)
+                if (this.species[index].Champion.Fitness != this.species[index].MaximumFitness) // if this species' champ fitness is not the max fitness
                 {
-                    if (this.species[index].MaximumFitness < this.species[index].Champion.Fitness)
-                        this.species[index].Improved = this.Generation;
-                    this.species[index].MaximumFitness = this.species[index].Champion.Fitness;
+                    if (this.species[index].MaximumFitness < this.species[index].Champion.Fitness) // if this species' champ fitness is better than max fitness
+                        this.species[index].Improved = this.Generation; // record in Improved which generation was the one where max fitness improved
+                    this.species[index].MaximumFitness = this.species[index].Champion.Fitness; // update max fitness to bne this species fitness
                 }
             }
         }
 
-        private void ChangeThreshold()
+        private void ChangeThreshold() // todo: what does this do?
         {
             if (this.Speciate.SpeciesCount - Enumerable.Count<Species>((IEnumerable<Species>)this.species, (Func<Species, bool>)(g => !g.Extinct)) > 0)
             {
@@ -664,8 +664,8 @@ namespace Keepaway
             }
             else
             {
-                while (this.Generation <= this.Init.MaximumGenerations && (!this.CriteriaMet || !this.Init.StopOnFitnessCriteria))
-                    this.OneGeneration();
+                while (this.Generation <= this.Init.MaximumGenerations && (!this.CriteriaMet || !this.Init.StopOnFitnessCriteria)) // while we are not at max generations yet, and we haven't met other criteria for stopping
+                    this.OneGeneration(); // run a generation of evolution
                 if (this.Tests.ChampionsAtEnd.test)
                     this.PerformTest();
                 this.CompleteSaves();

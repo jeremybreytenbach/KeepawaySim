@@ -255,7 +255,7 @@ namespace Keepaway
 
                 }
 
-                for (int i = 0; i < genomes.Count; i++)
+                for (int i = 0; i < genomes.Count; i++) // todo: Investigate this
                 {
                     genomes[i].Fitness = 0;
                     for (int l = 0; l < maxVec.Length; l++)
@@ -289,11 +289,11 @@ namespace Keepaway
                     //Fitness Evaluation function.
                     double[] fitness = new double[4];
 
-                    for (int j = 0; j < config.Episodes; j++)
+                    for (int j = 0; j < config.Episodes; j++) // This is where we iterate over episodes. Server.RunCycle will run one episode, which ends when the ref says so.
                     {
-                        fitness = Evaluate(createdNetworks[mapping[genomes[i].Id]]);
+                        fitness = Evaluate(createdNetworks[mapping[genomes[i].Id]]); // Run an episode and store results. fitness - 0: cycles, 1: team_dispersion, 2: no passes, 3: distance_from_centre
                         genomes[i].RealFitness += fitness[0];
-                        for (int v = 0; v < fitness.Length; v++)
+                        for (int v = 0; v < fitness.Length; v++) // for each vector, add the fitness from each episode.
                         {
                             genomes[i].BehaviorType.bVector[v] += fitness[v];
                         }
@@ -302,7 +302,7 @@ namespace Keepaway
                     genomes[i].RealFitness /= config.Episodes;
                     for (int v = 0; v < fitness.Length; v++)
                     {
-                        genomes[i].BehaviorType.bVector[v] /= config.Episodes;
+                        genomes[i].BehaviorType.bVector[v] /= config.Episodes; //see line 296, we now divide by number of episodes to get average over episodes
                     }
                     evalCount[genomes[i].Id] = config.Episodes;
                     evaluations += config.Episodes;
@@ -311,10 +311,10 @@ namespace Keepaway
 
                 List<double> lists = new List<double>();
 
-                genomes.Sort((a, b) => b.Fitness.CompareTo(a.Fitness));
+                genomes.Sort((a, b) => b.Fitness.CompareTo(a.Fitness)); // question: Why sort on genome.Fitness (which seems to always be 0) and not genome.RealFitness which captures the avg fitness over all episodes (the actual genome fitness...)?
                 double Max0 = 0; double Max1 = 0; double Max2 = 0; double fit = 0;
 
-                for (int i = 0; i < genomes.Count; i++)
+                for (int i = 0; i < genomes.Count; i++) // This loop loops through all genomes.BehaviorType.bVectors and records finds the largest (max) and stores thsi in maxVec
                 {
                     maxVec[0] = genomes[i].RealFitness;
                     for (int v = 1; v < maxVec.Length; v++)
@@ -330,7 +330,7 @@ namespace Keepaway
                 for (int j = 0; j < genomes.Count; j++)
                 {
                     genomes[j].RealFitness /= fitnormaliser;
-                    genomes[j].BehaviorType.bVector[0] /= fitnormaliser;
+                    genomes[j].BehaviorType.bVector[0] /= fitnormaliser; // Question: Why is fitnormaliser always 12?
                     for (int v = 1; v < maxVec.Length; v++)
                     {
                         genomes[j].BehaviorType.bVector[v] /= maxVec[v];
@@ -380,11 +380,11 @@ namespace Keepaway
                 }
 
                 ComputeNovelty.addToArchive(genomes); //add the best N genomes to archive
-                
+                // Mapelites.updatemap(genomes);
                 return false;
 
             }
-            else
+            else // if test
             {
 
                 for (int i = 0; i < genomes.Count; i++)
