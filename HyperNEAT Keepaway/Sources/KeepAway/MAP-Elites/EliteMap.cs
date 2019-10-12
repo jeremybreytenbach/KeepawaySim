@@ -66,6 +66,7 @@ namespace Keepaway
 
         public void updateMapElement(NetworkGenome genome, int[] position)
         {
+            // replace genome at position with new specified genome
             Map[position[0], position[1], position[2]].genome = genome;
         }
     }

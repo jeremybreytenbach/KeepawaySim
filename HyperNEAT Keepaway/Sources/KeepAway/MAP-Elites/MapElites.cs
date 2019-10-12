@@ -9,7 +9,7 @@ namespace Keepaway
     public class MapElites
     {
         // properties
-        public EliteMap Map { get; set; } //what type should I use to store a hyperdim 
+        public EliteMap eliteMap;
 
         // methods
 
@@ -18,27 +18,27 @@ namespace Keepaway
             // initialise properties
         }
 
-        public void updateMap()
+        public void updateMap(List<NetworkGenome> genomes)
         {
+            // loop through each genome in list and add to appropriate position in eliteMap.Map
+            for (int i = 0; i < genomes.Count; i++)
+            {
+                // check where genome fits into map
 
+
+                // check if genome is better
+                bool isbetterGenome = eliteMap.compareGenome(genomes[i], position);
+
+                if (isbetterGenome)
+                {
+                    eliteMap.updateMapElement(genomes[i], position);
+                }
+                
+                eliteMap.updateMapElement(genomes[i], position);
+            }
         }
-
-        private void compareElement()
-        {
-
-        }
-
-        private void replaceElement()
-        {
-
-        }
-
+        
         private void writeToFile()
-        {
-
-        }
-
-        private void AddToMap()
         {
 
         }

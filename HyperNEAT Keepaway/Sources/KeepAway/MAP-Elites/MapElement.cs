@@ -12,8 +12,22 @@ namespace Keepaway
 
         public NetworkGenome genome; // store the genome itself
         public int[] position = new int[3]; // x,y,z position, eg 0,0,0 or 0,3,1 etc.
-        public double fitness; // should update this everytime genome changes
-        public double genomeId;// should update this everytime genome changes
+        public double fitness  // should update this everytime genome changes
+        {
+            get
+            {
+                return genome.Fitness;
+            }
+            set { }
+        }
+        public double genomeId // should update this everytime genome changes
+        {
+            get
+            {
+                return genome.Id;
+            }
+            set { }
+        }
 
         // methods
         public MapElement(NetworkGenome genome, int[] position)
