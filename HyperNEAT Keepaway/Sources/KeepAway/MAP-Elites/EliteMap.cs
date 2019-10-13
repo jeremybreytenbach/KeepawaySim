@@ -18,7 +18,8 @@ namespace Keepaway
 
         public int[] elementResolution = new int[numDimensions];
 
-        public MapElement[,,] Map = new MapElement[dimensionsMax[0], dimensionsMax[1], dimensionsMax[2]]; // teamDispersion, no_passes, distfromcentre
+        //public MapElement[,,] Map = new MapElement[dimensionsMax[0], dimensionsMax[1], dimensionsMax[2]]; // teamDispersion, no_passes, distfromcentre
+        public MapElement[,,] Map = new MapElement[100, 100, 100]; // teamDispersion, no_passes, distfromcentre
 
 
         // methods
@@ -34,13 +35,13 @@ namespace Keepaway
             dimensionsMin[1] = 0;
             dimensionsMin[2] = 0;
 
-            dimensionsMax[0] = 100000;
-            dimensionsMax[1] = 100000;
-            dimensionsMax[2] = 100000;
+            dimensionsMax[0] = 100;
+            dimensionsMax[1] = 100;
+            dimensionsMax[2] = 100;
 
-            elementResolution[0] = 10;
-            elementResolution[1] = 10;
-            elementResolution[2] = 10;
+            elementResolution[0] = 1;
+            elementResolution[1] = 1;
+            elementResolution[2] = 1;
 
             // Initialise map
             for (int dimensionIndex0 = 0; dimensionIndex0 < dimensionsMax[0]/elementResolution[0]; ++dimensionIndex0)
@@ -68,6 +69,18 @@ namespace Keepaway
         {
             // replace genome at position with new specified genome
             Map[position[0], position[1], position[2]].genome = genome;
+        }
+
+        public bool compareGenome(NetworkGenome genome, int[] position)
+        {
+            if (genome.Fitness > Map[position[0], position[1], position[2]].fitness) 
+            {
+                return true; // return true if passed in genome is greater than existing genome at that location
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

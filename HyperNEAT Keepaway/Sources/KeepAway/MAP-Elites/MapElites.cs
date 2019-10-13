@@ -16,6 +16,7 @@ namespace Keepaway
         public MapElites()
         {
             // initialise properties
+            eliteMap = new EliteMap();
         }
 
         public void updateMap(List<NetworkGenome> genomes)
@@ -24,7 +25,15 @@ namespace Keepaway
             for (int i = 0; i < genomes.Count; i++)
             {
                 // check where genome fits into map
+                // double cycles = genomes[i].BehaviorType.bVector[0];
+                double teamDispersion = genomes[i].BehaviorType.bVector[1];
+                double no_passes = genomes[i].BehaviorType.bVector[2];
+                double distfromcentre = genomes[i].BehaviorType.bVector[3];
 
+                int[] position = new int[3]; // x,y,z position, eg 0,0,0 or 0,3,1 etc.
+                position[0] = (EliteMap.dimensionsMax[0] - EliteMap.dimensionsMin[0]) / eliteMap.elementResolution[0] - 1;
+                position[1] = (EliteMap.dimensionsMax[1] - EliteMap.dimensionsMin[1]) / eliteMap.elementResolution[1] - 1;
+                position[2] = (EliteMap.dimensionsMax[2] - EliteMap.dimensionsMin[2]) / eliteMap.elementResolution[2] - 1;
 
                 // check if genome is better
                 bool isbetterGenome = eliteMap.compareGenome(genomes[i], position);
@@ -33,8 +42,6 @@ namespace Keepaway
                 {
                     eliteMap.updateMapElement(genomes[i], position);
                 }
-                
-                eliteMap.updateMapElement(genomes[i], position);
             }
         }
         

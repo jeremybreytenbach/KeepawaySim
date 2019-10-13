@@ -79,6 +79,9 @@ namespace Keepaway
         //public static double max_teamDispersion = 0.0, max_distCenter = 0.0, max_noPasses = 0.0;
         public static double[] maxVec = new double[4];
         public static double fitnormaliser = 12;
+
+        public static MapElites mapElites = new MapElites();
+
         #endregion
 
         /// <summary>
@@ -380,7 +383,10 @@ namespace Keepaway
                 }
 
                 ComputeNovelty.addToArchive(genomes); //add the best N genomes to archive
-                // Mapelites.updatemap(genomes);
+                
+                // update map with genomes
+                mapElites.updateMap(genomes);
+
                 return false;
 
             }
