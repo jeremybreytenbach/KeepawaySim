@@ -132,7 +132,7 @@ namespace Keepaway
 
 
             #endregion
-
+            var thisThing = 0;
 
         }
 

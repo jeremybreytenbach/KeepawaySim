@@ -670,6 +670,7 @@ namespace Keepaway
                     this.PerformTest();
                 this.CompleteSaves();
             }
+            var thisThing = 0;
         }
 
         private void CompleteSaves()
