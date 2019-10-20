@@ -60,24 +60,24 @@
         <NodeGene Id="8" Type="Hidden" Function="Gaussian" Layer="2" Fixed="false" />
       </Nodes>
       <Links>
-        <LinkGene Id="0" Source="0" Target="5" Weight="1.4117508102208376" Fixed="false" />
-        <LinkGene Id="1" Source="0" Target="6" Weight="3.2298843050375581" Fixed="false" />
-        <LinkGene Id="2" Source="1" Target="5" Weight="3.3493252540938556" Fixed="false" />
-        <LinkGene Id="3" Source="1" Target="6" Weight="2.2080782148987055" Fixed="false" />
-        <LinkGene Id="4" Source="2" Target="5" Weight="-3.7508289888501167" Fixed="false" />
-        <LinkGene Id="5" Source="2" Target="6" Weight="-2.8053532494232059" Fixed="false" />
-        <LinkGene Id="6" Source="3" Target="5" Weight="4.9163708928972483" Fixed="false" />
-        <LinkGene Id="7" Source="3" Target="6" Weight="-2.5201302976347506" Fixed="false" />
-        <LinkGene Id="8" Source="4" Target="5" Weight="-3.6656052828766406" Fixed="false" />
-        <LinkGene Id="9" Source="4" Target="6" Weight="3.4717624564655125" Fixed="false" />
-        <LinkGene Id="10" Source="1" Target="7" Weight="3.5210973815992475" Fixed="false" />
-        <LinkGene Id="11" Source="3" Target="7" Weight="0.68096484988927841" Fixed="false" />
-        <LinkGene Id="13" Source="4" Target="8" Weight="2.0821141730993986" Fixed="false" />
-        <LinkGene Id="14" Source="7" Target="5" Weight="1.6594081069342792" Fixed="false" />
-        <LinkGene Id="15" Source="8" Target="5" Weight="0.29932827921584249" Fixed="false" />
-        <LinkGene Id="16" Source="0" Target="7" Weight="4.1865796921774745" Fixed="false" />
-        <LinkGene Id="17" Source="0" Target="8" Weight="-1.5379181527532637" Fixed="false" />
-        <LinkGene Id="327" Source="8" Target="6" Weight="3.9829512592405081" Fixed="false" />
+        <LinkGene Id="0" Source="0" Target="5" Weight="-1.3322660815902054" Fixed="false" />
+        <LinkGene Id="1" Source="0" Target="6" Weight="2.9124317690730095" Fixed="false" />
+        <LinkGene Id="2" Source="1" Target="5" Weight="-0.879737357608974" Fixed="false" />
+        <LinkGene Id="3" Source="1" Target="6" Weight="3.5352748748846352" Fixed="false" />
+        <LinkGene Id="4" Source="2" Target="5" Weight="-2.0804638788104057" Fixed="false" />
+        <LinkGene Id="5" Source="2" Target="6" Weight="3.1130106560885906" Fixed="false" />
+        <LinkGene Id="6" Source="3" Target="5" Weight="2.301958086900413" Fixed="false" />
+        <LinkGene Id="7" Source="3" Target="6" Weight="3.6043488956056535" Fixed="false" />
+        <LinkGene Id="8" Source="4" Target="5" Weight="-1.4577069482766092" Fixed="false" />
+        <LinkGene Id="9" Source="4" Target="6" Weight="-1.9310820335522294" Fixed="false" />
+        <LinkGene Id="10" Source="1" Target="7" Weight="-2.4722911464050412" Fixed="false" />
+        <LinkGene Id="11" Source="3" Target="7" Weight="-2.4083646154031157" Fixed="false" />
+        <LinkGene Id="13" Source="4" Target="8" Weight="-1.0900448402389884" Fixed="false" />
+        <LinkGene Id="14" Source="7" Target="5" Weight="2.6201083906926215" Fixed="false" />
+        <LinkGene Id="15" Source="8" Target="5" Weight="-3.2335097505711019" Fixed="false" />
+        <LinkGene Id="16" Source="0" Target="7" Weight="-1.5305702365003526" Fixed="false" />
+        <LinkGene Id="17" Source="0" Target="8" Weight="-4.7593695600517094" Fixed="false" />
+        <LinkGene Id="327" Source="8" Target="6" Weight="2.4459692579694092" Fixed="false" />
       </Links>
       <BehaviorType>
         <bVector>
@@ -106,24 +106,24 @@
         <NodeGene Id="8" Type="Hidden" Function="Gaussian" Layer="2" Fixed="false" />
       </Nodes>
       <Links>
-        <LinkGene Id="0" Source="0" Target="5" Weight="-3.8136177300475538" Fixed="false" />
-        <LinkGene Id="1" Source="0" Target="6" Weight="4.7778637032024562" Fixed="false" />
-        <LinkGene Id="2" Source="1" Target="5" Weight="-4.0971962246112525" Fixed="false" />
-        <LinkGene Id="3" Source="1" Target="6" Weight="-2.1930274064652622" Fixed="false" />
-        <LinkGene Id="4" Source="2" Target="5" Weight="-2.6955862273462117" Fixed="false" />
-        <LinkGene Id="5" Source="2" Target="6" Weight="-1.8702485272660852" Fixed="false" />
-        <LinkGene Id="6" Source="3" Target="5" Weight="3.2278574374504387" Fixed="false" />
-        <LinkGene Id="7" Source="3" Target="6" Weight="4.7657813411206007" Fixed="false" />
-        <LinkGene Id="8" Source="4" Target="5" Weight="-4.6156794624403119" Fixed="false" />
-        <LinkGene Id="9" Source="4" Target="6" Weight="2.5777012552134693" Fixed="false" />
-        <LinkGene Id="10" Source="1" Target="7" Weight="1.9202848826535046" Fixed="false" />
-        <LinkGene Id="11" Source="3" Target="7" Weight="4.0924344421364367" Fixed="false" />
-        <LinkGene Id="13" Source="4" Target="8" Weight="-1.2473273370414972" Fixed="false" />
-        <LinkGene Id="14" Source="7" Target="5" Weight="3.9367848169058561" Fixed="false" />
-        <LinkGene Id="15" Source="8" Target="5" Weight="1.4657507161609829" Fixed="false" />
-        <LinkGene Id="16" Source="0" Target="7" Weight="3.6113907396793365" Fixed="false" />
-        <LinkGene Id="17" Source="0" Target="8" Weight="-3.8522767880931497" Fixed="false" />
-        <LinkGene Id="327" Source="8" Target="6" Weight="-4.3970563309267163" Fixed="false" />
+        <LinkGene Id="0" Source="0" Target="5" Weight="0.73567492887377739" Fixed="false" />
+        <LinkGene Id="1" Source="0" Target="6" Weight="-1.2087786453776062" Fixed="false" />
+        <LinkGene Id="2" Source="1" Target="5" Weight="0.29314278624951839" Fixed="false" />
+        <LinkGene Id="3" Source="1" Target="6" Weight="0.58674932457506657" Fixed="false" />
+        <LinkGene Id="4" Source="2" Target="5" Weight="1.099951509386301" Fixed="false" />
+        <LinkGene Id="5" Source="2" Target="6" Weight="3.0132579943165183" Fixed="false" />
+        <LinkGene Id="6" Source="3" Target="5" Weight="4.6134713036008179" Fixed="false" />
+        <LinkGene Id="7" Source="3" Target="6" Weight="2.1573144546709955" Fixed="false" />
+        <LinkGene Id="8" Source="4" Target="5" Weight="4.6385417133569717" Fixed="false" />
+        <LinkGene Id="9" Source="4" Target="6" Weight="0.25670706992968917" Fixed="false" />
+        <LinkGene Id="10" Source="1" Target="7" Weight="3.66599356289953" Fixed="false" />
+        <LinkGene Id="11" Source="3" Target="7" Weight="3.7800124753266573" Fixed="false" />
+        <LinkGene Id="13" Source="4" Target="8" Weight="-1.6321797110140324" Fixed="false" />
+        <LinkGene Id="14" Source="7" Target="5" Weight="4.447476021014154" Fixed="false" />
+        <LinkGene Id="15" Source="8" Target="5" Weight="1.7621568311005831" Fixed="false" />
+        <LinkGene Id="16" Source="0" Target="7" Weight="0.44631025986745954" Fixed="false" />
+        <LinkGene Id="17" Source="0" Target="8" Weight="0.6004805164411664" Fixed="false" />
+        <LinkGene Id="327" Source="8" Target="6" Weight="2.4037095089443028" Fixed="false" />
       </Links>
       <BehaviorType>
         <bVector>
@@ -152,24 +152,24 @@
         <NodeGene Id="8" Type="Hidden" Function="Gaussian" Layer="2" Fixed="false" />
       </Nodes>
       <Links>
-        <LinkGene Id="0" Source="0" Target="5" Weight="-4.0707672969438136" Fixed="false" />
-        <LinkGene Id="1" Source="0" Target="6" Weight="-0.5711919185705483" Fixed="false" />
-        <LinkGene Id="2" Source="1" Target="5" Weight="-4.2560816928744316" Fixed="false" />
-        <LinkGene Id="3" Source="1" Target="6" Weight="-2.4564946559257805" Fixed="false" />
-        <LinkGene Id="4" Source="2" Target="5" Weight="4.0569538413546979" Fixed="false" />
-        <LinkGene Id="5" Source="2" Target="6" Weight="3.1428631534799933" Fixed="false" />
-        <LinkGene Id="6" Source="3" Target="5" Weight="3.4014049149118364" Fixed="false" />
-        <LinkGene Id="7" Source="3" Target="6" Weight="-4.2025076760910451" Fixed="false" />
-        <LinkGene Id="8" Source="4" Target="5" Weight="-4.818592129740864" Fixed="false" />
-        <LinkGene Id="9" Source="4" Target="6" Weight="-0.76409358996897936" Fixed="false" />
-        <LinkGene Id="10" Source="1" Target="7" Weight="-1.7018540157005191" Fixed="false" />
-        <LinkGene Id="11" Source="3" Target="7" Weight="-0.96137862885370851" Fixed="false" />
-        <LinkGene Id="13" Source="4" Target="8" Weight="4.1052622301504016" Fixed="false" />
-        <LinkGene Id="14" Source="7" Target="5" Weight="-3.3871086500585079" Fixed="false" />
-        <LinkGene Id="15" Source="8" Target="5" Weight="0.0034142262302339077" Fixed="false" />
-        <LinkGene Id="16" Source="0" Target="7" Weight="-2.0999101921916008" Fixed="false" />
-        <LinkGene Id="17" Source="0" Target="8" Weight="-2.3385662771761417" Fixed="false" />
-        <LinkGene Id="327" Source="8" Target="6" Weight="0.20971935242414475" Fixed="false" />
+        <LinkGene Id="0" Source="0" Target="5" Weight="0.38816658779978752" Fixed="false" />
+        <LinkGene Id="1" Source="0" Target="6" Weight="2.9045296180993319" Fixed="false" />
+        <LinkGene Id="2" Source="1" Target="5" Weight="1.2153673893772066" Fixed="false" />
+        <LinkGene Id="3" Source="1" Target="6" Weight="-1.2323481822386384" Fixed="false" />
+        <LinkGene Id="4" Source="2" Target="5" Weight="4.4988365797325969" Fixed="false" />
+        <LinkGene Id="5" Source="2" Target="6" Weight="2.8968776203691959" Fixed="false" />
+        <LinkGene Id="6" Source="3" Target="5" Weight="-1.5874604368582368" Fixed="false" />
+        <LinkGene Id="7" Source="3" Target="6" Weight="4.4742397661320865" Fixed="false" />
+        <LinkGene Id="8" Source="4" Target="5" Weight="3.4498216421343386" Fixed="false" />
+        <LinkGene Id="9" Source="4" Target="6" Weight="3.1333817774429917" Fixed="false" />
+        <LinkGene Id="10" Source="1" Target="7" Weight="1.978522224817425" Fixed="false" />
+        <LinkGene Id="11" Source="3" Target="7" Weight="0.043737064115703106" Fixed="false" />
+        <LinkGene Id="13" Source="4" Target="8" Weight="2.6134726335294545" Fixed="false" />
+        <LinkGene Id="14" Source="7" Target="5" Weight="-1.0514941881410778" Fixed="false" />
+        <LinkGene Id="15" Source="8" Target="5" Weight="4.9435331276617944" Fixed="false" />
+        <LinkGene Id="16" Source="0" Target="7" Weight="2.2870434494689107" Fixed="false" />
+        <LinkGene Id="17" Source="0" Target="8" Weight="-0.36389009561389685" Fixed="false" />
+        <LinkGene Id="327" Source="8" Target="6" Weight="-4.0036849910393357" Fixed="false" />
       </Links>
       <BehaviorType>
         <bVector>
@@ -198,24 +198,24 @@
         <NodeGene Id="8" Type="Hidden" Function="Gaussian" Layer="2" Fixed="false" />
       </Nodes>
       <Links>
-        <LinkGene Id="0" Source="0" Target="5" Weight="-1.2466024700552225" Fixed="false" />
-        <LinkGene Id="1" Source="0" Target="6" Weight="3.2214531139470637" Fixed="false" />
-        <LinkGene Id="2" Source="1" Target="5" Weight="-4.9965459760278463" Fixed="false" />
-        <LinkGene Id="3" Source="1" Target="6" Weight="-0.15195413958281279" Fixed="false" />
-        <LinkGene Id="4" Source="2" Target="5" Weight="-4.6869054762646556" Fixed="false" />
-        <LinkGene Id="5" Source="2" Target="6" Weight="-2.4007856263779104" Fixed="false" />
-        <LinkGene Id="6" Source="3" Target="5" Weight="3.4630214981734753" Fixed="false" />
-        <LinkGene Id="7" Source="3" Target="6" Weight="2.1934177749790251" Fixed="false" />
-        <LinkGene Id="8" Source="4" Target="5" Weight="0.22562393452972174" Fixed="false" />
-        <LinkGene Id="9" Source="4" Target="6" Weight="-3.26266473159194" Fixed="false" />
-        <LinkGene Id="10" Source="1" Target="7" Weight="-1.2451111292466521" Fixed="false" />
-        <LinkGene Id="11" Source="3" Target="7" Weight="-2.4295142013579607" Fixed="false" />
-        <LinkGene Id="13" Source="4" Target="8" Weight="-0.081042926758527756" Fixed="false" />
-        <LinkGene Id="14" Source="7" Target="5" Weight="-3.6803890787996352" Fixed="false" />
-        <LinkGene Id="15" Source="8" Target="5" Weight="-4.0137761924415827" Fixed="false" />
-        <LinkGene Id="16" Source="0" Target="7" Weight="-0.9686254826374352" Fixed="false" />
-        <LinkGene Id="17" Source="0" Target="8" Weight="-4.4387598009780049" Fixed="false" />
-        <LinkGene Id="327" Source="8" Target="6" Weight="-3.4235426550731063" Fixed="false" />
+        <LinkGene Id="0" Source="0" Target="5" Weight="-2.9729947517625988" Fixed="false" />
+        <LinkGene Id="1" Source="0" Target="6" Weight="0.6236601946875453" Fixed="false" />
+        <LinkGene Id="2" Source="1" Target="5" Weight="1.93594038952142" Fixed="false" />
+        <LinkGene Id="3" Source="1" Target="6" Weight="3.3738607005216181" Fixed="false" />
+        <LinkGene Id="4" Source="2" Target="5" Weight="-1.2612536130473018" Fixed="false" />
+        <LinkGene Id="5" Source="2" Target="6" Weight="-0.42795739602297544" Fixed="false" />
+        <LinkGene Id="6" Source="3" Target="5" Weight="4.7496057907119393" Fixed="false" />
+        <LinkGene Id="7" Source="3" Target="6" Weight="0.59547722106799483" Fixed="false" />
+        <LinkGene Id="8" Source="4" Target="5" Weight="-1.5072853188030422" Fixed="false" />
+        <LinkGene Id="9" Source="4" Target="6" Weight="-4.3050268059596419" Fixed="false" />
+        <LinkGene Id="10" Source="1" Target="7" Weight="-0.98772353725507855" Fixed="false" />
+        <LinkGene Id="11" Source="3" Target="7" Weight="0.96993511542677879" Fixed="false" />
+        <LinkGene Id="13" Source="4" Target="8" Weight="1.3788463664241135" Fixed="false" />
+        <LinkGene Id="14" Source="7" Target="5" Weight="-3.2416837243363261" Fixed="false" />
+        <LinkGene Id="15" Source="8" Target="5" Weight="-3.9774568541906774" Fixed="false" />
+        <LinkGene Id="16" Source="0" Target="7" Weight="2.4354471103288233" Fixed="false" />
+        <LinkGene Id="17" Source="0" Target="8" Weight="-3.50779895670712" Fixed="false" />
+        <LinkGene Id="327" Source="8" Target="6" Weight="-4.7778383991681039" Fixed="false" />
       </Links>
       <BehaviorType>
         <bVector>
@@ -244,24 +244,24 @@
         <NodeGene Id="8" Type="Hidden" Function="Gaussian" Layer="2" Fixed="false" />
       </Nodes>
       <Links>
-        <LinkGene Id="0" Source="0" Target="5" Weight="-0.52961265435442328" Fixed="false" />
-        <LinkGene Id="1" Source="0" Target="6" Weight="4.47095159906894" Fixed="false" />
-        <LinkGene Id="2" Source="1" Target="5" Weight="3.7148290267214179" Fixed="false" />
-        <LinkGene Id="3" Source="1" Target="6" Weight="-2.289207826834172" Fixed="false" />
-        <LinkGene Id="4" Source="2" Target="5" Weight="-2.5740089686587453" Fixed="false" />
-        <LinkGene Id="5" Source="2" Target="6" Weight="1.4723010128363967" Fixed="false" />
-        <LinkGene Id="6" Source="3" Target="5" Weight="3.5940651479177177" Fixed="false" />
-        <LinkGene Id="7" Source="3" Target="6" Weight="-2.4659932823851705" Fixed="false" />
-        <LinkGene Id="8" Source="4" Target="5" Weight="0.20191180054098368" Fixed="false" />
-        <LinkGene Id="9" Source="4" Target="6" Weight="-2.272579160053283" Fixed="false" />
-        <LinkGene Id="10" Source="1" Target="7" Weight="-0.14787090942263603" Fixed="false" />
-        <LinkGene Id="11" Source="3" Target="7" Weight="1.8951440276578069" Fixed="false" />
-        <LinkGene Id="13" Source="4" Target="8" Weight="2.0547595992684364" Fixed="false" />
-        <LinkGene Id="14" Source="7" Target="5" Weight="3.20037609199062" Fixed="false" />
-        <LinkGene Id="15" Source="8" Target="5" Weight="0.24585015140473843" Fixed="false" />
-        <LinkGene Id="16" Source="0" Target="7" Weight="3.4725073631852865" Fixed="false" />
-        <LinkGene Id="17" Source="0" Target="8" Weight="3.7374121649190784" Fixed="false" />
-        <LinkGene Id="327" Source="8" Target="6" Weight="-3.5332417325116694" Fixed="false" />
+        <LinkGene Id="0" Source="0" Target="5" Weight="-4.9626535433344543" Fixed="false" />
+        <LinkGene Id="1" Source="0" Target="6" Weight="0.47293035313487053" Fixed="false" />
+        <LinkGene Id="2" Source="1" Target="5" Weight="-1.7258781031705439" Fixed="false" />
+        <LinkGene Id="3" Source="1" Target="6" Weight="1.70766580151394" Fixed="false" />
+        <LinkGene Id="4" Source="2" Target="5" Weight="2.3288573627360165" Fixed="false" />
+        <LinkGene Id="5" Source="2" Target="6" Weight="-2.7351644006557763" Fixed="false" />
+        <LinkGene Id="6" Source="3" Target="5" Weight="-4.1727031767368317" Fixed="false" />
+        <LinkGene Id="7" Source="3" Target="6" Weight="-3.2693260465748608" Fixed="false" />
+        <LinkGene Id="8" Source="4" Target="5" Weight="4.296879933681339" Fixed="false" />
+        <LinkGene Id="9" Source="4" Target="6" Weight="0.10352576617151499" Fixed="false" />
+        <LinkGene Id="10" Source="1" Target="7" Weight="-0.71673818398267031" Fixed="false" />
+        <LinkGene Id="11" Source="3" Target="7" Weight="0.73341194540262222" Fixed="false" />
+        <LinkGene Id="13" Source="4" Target="8" Weight="0.88760501472279429" Fixed="false" />
+        <LinkGene Id="14" Source="7" Target="5" Weight="3.7443285272456706" Fixed="false" />
+        <LinkGene Id="15" Source="8" Target="5" Weight="4.6547092334367335" Fixed="false" />
+        <LinkGene Id="16" Source="0" Target="7" Weight="0.54919640766456723" Fixed="false" />
+        <LinkGene Id="17" Source="0" Target="8" Weight="-1.533555353526026" Fixed="false" />
+        <LinkGene Id="327" Source="8" Target="6" Weight="-4.7138520330190659" Fixed="false" />
       </Links>
       <BehaviorType>
         <bVector>
@@ -290,24 +290,24 @@
         <NodeGene Id="8" Type="Hidden" Function="Gaussian" Layer="2" Fixed="false" />
       </Nodes>
       <Links>
-        <LinkGene Id="0" Source="0" Target="5" Weight="2.8743060072883964" Fixed="false" />
-        <LinkGene Id="1" Source="0" Target="6" Weight="-3.6302149505354464" Fixed="false" />
-        <LinkGene Id="2" Source="1" Target="5" Weight="-4.0582342888228595" Fixed="false" />
-        <LinkGene Id="3" Source="1" Target="6" Weight="4.90623518358916" Fixed="false" />
-        <LinkGene Id="4" Source="2" Target="5" Weight="-3.1805487326346338" Fixed="false" />
-        <LinkGene Id="5" Source="2" Target="6" Weight="3.2809568964876235" Fixed="false" />
-        <LinkGene Id="6" Source="3" Target="5" Weight="-3.1789441290311515" Fixed="false" />
-        <LinkGene Id="7" Source="3" Target="6" Weight="4.0903931157663465" Fixed="false" />
-        <LinkGene Id="8" Source="4" Target="5" Weight="0.66489305580034852" Fixed="false" />
-        <LinkGene Id="9" Source="4" Target="6" Weight="-2.2274364461191" Fixed="false" />
-        <LinkGene Id="10" Source="1" Target="7" Weight="-0.32642073929309845" Fixed="false" />
-        <LinkGene Id="11" Source="3" Target="7" Weight="1.7560843913815916" Fixed="false" />
-        <LinkGene Id="13" Source="4" Target="8" Weight="3.2743780571036041" Fixed="false" />
-        <LinkGene Id="14" Source="7" Target="5" Weight="1.3722038874402642" Fixed="false" />
-        <LinkGene Id="15" Source="8" Target="5" Weight="1.9904453400522471" Fixed="false" />
-        <LinkGene Id="16" Source="0" Target="7" Weight="0.61592174926772714" Fixed="false" />
-        <LinkGene Id="17" Source="0" Target="8" Weight="-1.6642301366664469" Fixed="false" />
-        <LinkGene Id="327" Source="8" Target="6" Weight="2.8631552401930094" Fixed="false" />
+        <LinkGene Id="0" Source="0" Target="5" Weight="2.6594928046688437" Fixed="false" />
+        <LinkGene Id="1" Source="0" Target="6" Weight="3.6772771016694605" Fixed="false" />
+        <LinkGene Id="2" Source="1" Target="5" Weight="-1.1307657766155899" Fixed="false" />
+        <LinkGene Id="3" Source="1" Target="6" Weight="-1.4064346859231591" Fixed="false" />
+        <LinkGene Id="4" Source="2" Target="5" Weight="-3.5658256988972425" Fixed="false" />
+        <LinkGene Id="5" Source="2" Target="6" Weight="3.12566090375185" Fixed="false" />
+        <LinkGene Id="6" Source="3" Target="5" Weight="-2.9064583498984575" Fixed="false" />
+        <LinkGene Id="7" Source="3" Target="6" Weight="-4.14360489230603" Fixed="false" />
+        <LinkGene Id="8" Source="4" Target="5" Weight="-3.9477105624973774" Fixed="false" />
+        <LinkGene Id="9" Source="4" Target="6" Weight="-1.3917906326241791" Fixed="false" />
+        <LinkGene Id="10" Source="1" Target="7" Weight="2.0173524017445743" Fixed="false" />
+        <LinkGene Id="11" Source="3" Target="7" Weight="-0.82229859894141555" Fixed="false" />
+        <LinkGene Id="13" Source="4" Target="8" Weight="-3.252246892079711" Fixed="false" />
+        <LinkGene Id="14" Source="7" Target="5" Weight="0.34445119323208928" Fixed="false" />
+        <LinkGene Id="15" Source="8" Target="5" Weight="-0.96315803471952677" Fixed="false" />
+        <LinkGene Id="16" Source="0" Target="7" Weight="-3.7389624188654125" Fixed="false" />
+        <LinkGene Id="17" Source="0" Target="8" Weight="-1.142265300732106" Fixed="false" />
+        <LinkGene Id="327" Source="8" Target="6" Weight="1.0956324101425707" Fixed="false" />
       </Links>
       <BehaviorType>
         <bVector>
@@ -336,24 +336,24 @@
         <NodeGene Id="8" Type="Hidden" Function="Gaussian" Layer="2" Fixed="false" />
       </Nodes>
       <Links>
-        <LinkGene Id="0" Source="0" Target="5" Weight="1.5395623445510864" Fixed="false" />
-        <LinkGene Id="1" Source="0" Target="6" Weight="3.4909457853063941" Fixed="false" />
-        <LinkGene Id="2" Source="1" Target="5" Weight="0.41720035718753934" Fixed="false" />
-        <LinkGene Id="3" Source="1" Target="6" Weight="-1.0772138647735119" Fixed="false" />
-        <LinkGene Id="4" Source="2" Target="5" Weight="1.2972199660725892" Fixed="false" />
-        <LinkGene Id="5" Source="2" Target="6" Weight="1.3335756910964847" Fixed="false" />
-        <LinkGene Id="6" Source="3" Target="5" Weight="0.85845031309872866" Fixed="false" />
-        <LinkGene Id="7" Source="3" Target="6" Weight="-0.5813261866569519" Fixed="false" />
-        <LinkGene Id="8" Source="4" Target="5" Weight="1.0600724350661039" Fixed="false" />
-        <LinkGene Id="9" Source="4" Target="6" Weight="3.3628037455491722" Fixed="false" />
-        <LinkGene Id="10" Source="1" Target="7" Weight="-0.097586496267467737" Fixed="false" />
-        <LinkGene Id="11" Source="3" Target="7" Weight="-1.7238578363321722" Fixed="false" />
-        <LinkGene Id="13" Source="4" Target="8" Weight="0.66982921445742249" Fixed="false" />
-        <LinkGene Id="14" Source="7" Target="5" Weight="0.32105176011100411" Fixed="false" />
-        <LinkGene Id="15" Source="8" Target="5" Weight="-0.072185553144663572" Fixed="false" />
-        <LinkGene Id="16" Source="0" Target="7" Weight="3.1695408560335636" Fixed="false" />
-        <LinkGene Id="17" Source="0" Target="8" Weight="-4.99723601853475" Fixed="false" />
-        <LinkGene Id="327" Source="8" Target="6" Weight="-2.6024828315712512" Fixed="false" />
+        <LinkGene Id="0" Source="0" Target="5" Weight="4.8892558133229613" Fixed="false" />
+        <LinkGene Id="1" Source="0" Target="6" Weight="3.871270774397999" Fixed="false" />
+        <LinkGene Id="2" Source="1" Target="5" Weight="1.4493867685087025" Fixed="false" />
+        <LinkGene Id="3" Source="1" Target="6" Weight="-2.9363541444763541" Fixed="false" />
+        <LinkGene Id="4" Source="2" Target="5" Weight="-4.9550300883129239" Fixed="false" />
+        <LinkGene Id="5" Source="2" Target="6" Weight="3.9457027637399733" Fixed="false" />
+        <LinkGene Id="6" Source="3" Target="5" Weight="-1.7688722931779921" Fixed="false" />
+        <LinkGene Id="7" Source="3" Target="6" Weight="0.17734335269778967" Fixed="false" />
+        <LinkGene Id="8" Source="4" Target="5" Weight="-4.2728725844062865" Fixed="false" />
+        <LinkGene Id="9" Source="4" Target="6" Weight="-1.6909422562457621" Fixed="false" />
+        <LinkGene Id="10" Source="1" Target="7" Weight="-3.3065932057797909" Fixed="false" />
+        <LinkGene Id="11" Source="3" Target="7" Weight="4.7604950494132936" Fixed="false" />
+        <LinkGene Id="13" Source="4" Target="8" Weight="1.2238290347158909" Fixed="false" />
+        <LinkGene Id="14" Source="7" Target="5" Weight="4.2951158131472766" Fixed="false" />
+        <LinkGene Id="15" Source="8" Target="5" Weight="-0.32436220208182931" Fixed="false" />
+        <LinkGene Id="16" Source="0" Target="7" Weight="4.9970912700518966" Fixed="false" />
+        <LinkGene Id="17" Source="0" Target="8" Weight="2.1458851010538638" Fixed="false" />
+        <LinkGene Id="327" Source="8" Target="6" Weight="2.67046217340976" Fixed="false" />
       </Links>
       <BehaviorType>
         <bVector>
@@ -382,24 +382,24 @@
         <NodeGene Id="8" Type="Hidden" Function="Gaussian" Layer="2" Fixed="false" />
       </Nodes>
       <Links>
-        <LinkGene Id="0" Source="0" Target="5" Weight="-3.6736271833069623" Fixed="false" />
-        <LinkGene Id="1" Source="0" Target="6" Weight="-0.71444828994572163" Fixed="false" />
-        <LinkGene Id="2" Source="1" Target="5" Weight="1.0251026879996061" Fixed="false" />
-        <LinkGene Id="3" Source="1" Target="6" Weight="-3.6853989865630865" Fixed="false" />
-        <LinkGene Id="4" Source="2" Target="5" Weight="0.63953196164220572" Fixed="false" />
-        <LinkGene Id="5" Source="2" Target="6" Weight="-0.30475001782178879" Fixed="false" />
-        <LinkGene Id="6" Source="3" Target="5" Weight="4.5601268694736063" Fixed="false" />
-        <LinkGene Id="7" Source="3" Target="6" Weight="-2.2277717292308807" Fixed="false" />
-        <LinkGene Id="8" Source="4" Target="5" Weight="4.3085234914906323" Fixed="false" />
-        <LinkGene Id="9" Source="4" Target="6" Weight="0.029219298157840967" Fixed="false" />
-        <LinkGene Id="10" Source="1" Target="7" Weight="2.1486861538141966" Fixed="false" />
-        <LinkGene Id="11" Source="3" Target="7" Weight="4.3162155104801059" Fixed="false" />
-        <LinkGene Id="13" Source="4" Target="8" Weight="-1.0574109060689807" Fixed="false" />
-        <LinkGene Id="14" Source="7" Target="5" Weight="-4.5898575684987009" Fixed="false" />
-        <LinkGene Id="15" Source="8" Target="5" Weight="-2.8591715777292848" Fixed="false" />
-        <LinkGene Id="16" Source="0" Target="7" Weight="4.9919401737861335" Fixed="false" />
-        <LinkGene Id="17" Source="0" Target="8" Weight="-3.0684932856820524" Fixed="false" />
-        <LinkGene Id="327" Source="8" Target="6" Weight="-2.5901771942153573" Fixed="false" />
+        <LinkGene Id="0" Source="0" Target="5" Weight="-4.5532484818249941" Fixed="false" />
+        <LinkGene Id="1" Source="0" Target="6" Weight="3.3063995512202382" Fixed="false" />
+        <LinkGene Id="2" Source="1" Target="5" Weight="-3.093688590452075" Fixed="false" />
+        <LinkGene Id="3" Source="1" Target="6" Weight="-3.8851262023672462" Fixed="false" />
+        <LinkGene Id="4" Source="2" Target="5" Weight="2.0843973662704229" Fixed="false" />
+        <LinkGene Id="5" Source="2" Target="6" Weight="1.2783764023333788" Fixed="false" />
+        <LinkGene Id="6" Source="3" Target="5" Weight="-2.1406716131605208" Fixed="false" />
+        <LinkGene Id="7" Source="3" Target="6" Weight="4.7645679279230535" Fixed="false" />
+        <LinkGene Id="8" Source="4" Target="5" Weight="2.4854689533822238" Fixed="false" />
+        <LinkGene Id="9" Source="4" Target="6" Weight="-4.6300465613603592" Fixed="false" />
+        <LinkGene Id="10" Source="1" Target="7" Weight="2.6751018222421408" Fixed="false" />
+        <LinkGene Id="11" Source="3" Target="7" Weight="-4.5397920371033251" Fixed="false" />
+        <LinkGene Id="13" Source="4" Target="8" Weight="-0.89283633511513472" Fixed="false" />
+        <LinkGene Id="14" Source="7" Target="5" Weight="4.0530547895468771" Fixed="false" />
+        <LinkGene Id="15" Source="8" Target="5" Weight="2.6422004983760417" Fixed="false" />
+        <LinkGene Id="16" Source="0" Target="7" Weight="1.5993705973960459" Fixed="false" />
+        <LinkGene Id="17" Source="0" Target="8" Weight="-2.1433450514450669" Fixed="false" />
+        <LinkGene Id="327" Source="8" Target="6" Weight="-4.4015419529750943" Fixed="false" />
       </Links>
       <BehaviorType>
         <bVector>
@@ -428,24 +428,24 @@
         <NodeGene Id="8" Type="Hidden" Function="Gaussian" Layer="2" Fixed="false" />
       </Nodes>
       <Links>
-        <LinkGene Id="0" Source="0" Target="5" Weight="0.62160844681784511" Fixed="false" />
-        <LinkGene Id="1" Source="0" Target="6" Weight="-1.7508082697167993" Fixed="false" />
-        <LinkGene Id="2" Source="1" Target="5" Weight="2.0339684886857867" Fixed="false" />
-        <LinkGene Id="3" Source="1" Target="6" Weight="1.1874025827273727" Fixed="false" />
-        <LinkGene Id="4" Source="2" Target="5" Weight="0.09588621323928237" Fixed="false" />
-        <LinkGene Id="5" Source="2" Target="6" Weight="2.2289850190281868" Fixed="false" />
-        <LinkGene Id="6" Source="3" Target="5" Weight="-4.7153057833202183" Fixed="false" />
-        <LinkGene Id="7" Source="3" Target="6" Weight="1.5335975447669625" Fixed="false" />
-        <LinkGene Id="8" Source="4" Target="5" Weight="-3.4020870039239526" Fixed="false" />
-        <LinkGene Id="9" Source="4" Target="6" Weight="0.35482225706800818" Fixed="false" />
-        <LinkGene Id="10" Source="1" Target="7" Weight="-3.68646185612306" Fixed="false" />
-        <LinkGene Id="11" Source="3" Target="7" Weight="-1.226569339632988" Fixed="false" />
-        <LinkGene Id="13" Source="4" Target="8" Weight="-2.7495384449139237" Fixed="false" />
-        <LinkGene Id="14" Source="7" Target="5" Weight="-4.4827628647908568" Fixed="false" />
-        <LinkGene Id="15" Source="8" Target="5" Weight="3.0968489521183074" Fixed="false" />
-        <LinkGene Id="16" Source="0" Target="7" Weight="4.1419082088395953" Fixed="false" />
-        <LinkGene Id="17" Source="0" Target="8" Weight="-2.6745977206155658" Fixed="false" />
-        <LinkGene Id="327" Source="8" Target="6" Weight="1.7785148695111275" Fixed="false" />
+        <LinkGene Id="0" Source="0" Target="5" Weight="-2.274107332341373" Fixed="false" />
+        <LinkGene Id="1" Source="0" Target="6" Weight="3.6682935734279454" Fixed="false" />
+        <LinkGene Id="2" Source="1" Target="5" Weight="1.4469761471264064" Fixed="false" />
+        <LinkGene Id="3" Source="1" Target="6" Weight="3.2172165694646537" Fixed="false" />
+        <LinkGene Id="4" Source="2" Target="5" Weight="-4.1017824760638177" Fixed="false" />
+        <LinkGene Id="5" Source="2" Target="6" Weight="-2.8096712077967823" Fixed="false" />
+        <LinkGene Id="6" Source="3" Target="5" Weight="-2.79093966120854" Fixed="false" />
+        <LinkGene Id="7" Source="3" Target="6" Weight="4.3885447457432747" Fixed="false" />
+        <LinkGene Id="8" Source="4" Target="5" Weight="-3.2935751765035093" Fixed="false" />
+        <LinkGene Id="9" Source="4" Target="6" Weight="2.1480977535247803" Fixed="false" />
+        <LinkGene Id="10" Source="1" Target="7" Weight="-2.6547653856687248" Fixed="false" />
+        <LinkGene Id="11" Source="3" Target="7" Weight="4.1066954424604774" Fixed="false" />
+        <LinkGene Id="13" Source="4" Target="8" Weight="-1.2826741836033762" Fixed="false" />
+        <LinkGene Id="14" Source="7" Target="5" Weight="1.9147540605627" Fixed="false" />
+        <LinkGene Id="15" Source="8" Target="5" Weight="-4.2355653736740351" Fixed="false" />
+        <LinkGene Id="16" Source="0" Target="7" Weight="4.4653258728794754" Fixed="false" />
+        <LinkGene Id="17" Source="0" Target="8" Weight="-2.481460536364466" Fixed="false" />
+        <LinkGene Id="327" Source="8" Target="6" Weight="-3.5476277582347393" Fixed="false" />
       </Links>
       <BehaviorType>
         <bVector>
@@ -474,24 +474,24 @@
         <NodeGene Id="8" Type="Hidden" Function="Gaussian" Layer="2" Fixed="false" />
       </Nodes>
       <Links>
-        <LinkGene Id="0" Source="0" Target="5" Weight="-3.5516558447852731" Fixed="false" />
-        <LinkGene Id="1" Source="0" Target="6" Weight="3.6319091054610908" Fixed="false" />
-        <LinkGene Id="2" Source="1" Target="5" Weight="4.3740787846036255" Fixed="false" />
-        <LinkGene Id="3" Source="1" Target="6" Weight="-4.0948910429142416" Fixed="false" />
-        <LinkGene Id="4" Source="2" Target="5" Weight="2.6569066918455064" Fixed="false" />
-        <LinkGene Id="5" Source="2" Target="6" Weight="1.329481469001621" Fixed="false" />
-        <LinkGene Id="6" Source="3" Target="5" Weight="-2.7493866067379713" Fixed="false" />
-        <LinkGene Id="7" Source="3" Target="6" Weight="1.7049584561027587" Fixed="false" />
-        <LinkGene Id="8" Source="4" Target="5" Weight="1.3468873174861074" Fixed="false" />
-        <LinkGene Id="9" Source="4" Target="6" Weight="-2.1987288515083492" Fixed="false" />
-        <LinkGene Id="10" Source="1" Target="7" Weight="-2.6889634970575571" Fixed="false" />
-        <LinkGene Id="11" Source="3" Target="7" Weight="4.7842216049321" Fixed="false" />
-        <LinkGene Id="13" Source="4" Target="8" Weight="3.9393875235691667" Fixed="false" />
-        <LinkGene Id="14" Source="7" Target="5" Weight="4.6420311904512346" Fixed="false" />
-        <LinkGene Id="15" Source="8" Target="5" Weight="0.17430991865694523" Fixed="false" />
-        <LinkGene Id="16" Source="0" Target="7" Weight="1.6109727462753654" Fixed="false" />
-        <LinkGene Id="17" Source="0" Target="8" Weight="0.0093851424753665924" Fixed="false" />
-        <LinkGene Id="327" Source="8" Target="6" Weight="-2.8888645581901073" Fixed="false" />
+        <LinkGene Id="0" Source="0" Target="5" Weight="-2.8226243215613067" Fixed="false" />
+        <LinkGene Id="1" Source="0" Target="6" Weight="1.0297407140024006" Fixed="false" />
+        <LinkGene Id="2" Source="1" Target="5" Weight="-2.2529875254258513" Fixed="false" />
+        <LinkGene Id="3" Source="1" Target="6" Weight="3.549875020980835" Fixed="false" />
+        <LinkGene Id="4" Source="2" Target="5" Weight="-3.3283077832311392" Fixed="false" />
+        <LinkGene Id="5" Source="2" Target="6" Weight="-0.50468975910916924" Fixed="false" />
+        <LinkGene Id="6" Source="3" Target="5" Weight="4.6727152355015278" Fixed="false" />
+        <LinkGene Id="7" Source="3" Target="6" Weight="-2.0887553645297885" Fixed="false" />
+        <LinkGene Id="8" Source="4" Target="5" Weight="-4.0562106971628964" Fixed="false" />
+        <LinkGene Id="9" Source="4" Target="6" Weight="0.28166852425783873" Fixed="false" />
+        <LinkGene Id="10" Source="1" Target="7" Weight="-2.7919714548625052" Fixed="false" />
+        <LinkGene Id="11" Source="3" Target="7" Weight="3.5456344252452254" Fixed="false" />
+        <LinkGene Id="13" Source="4" Target="8" Weight="-4.8327395971864462" Fixed="false" />
+        <LinkGene Id="14" Source="7" Target="5" Weight="4.5145768881775439" Fixed="false" />
+        <LinkGene Id="15" Source="8" Target="5" Weight="-3.7592945760115981" Fixed="false" />
+        <LinkGene Id="16" Source="0" Target="7" Weight="-0.273740163538605" Fixed="false" />
+        <LinkGene Id="17" Source="0" Target="8" Weight="-4.7880480554886162" Fixed="false" />
+        <LinkGene Id="327" Source="8" Target="6" Weight="1.9784567505121231" Fixed="false" />
       </Links>
       <BehaviorType>
         <bVector>
@@ -520,24 +520,24 @@
         <NodeGene Id="8" Type="Hidden" Function="Gaussian" Layer="2" Fixed="false" />
       </Nodes>
       <Links>
-        <LinkGene Id="0" Source="0" Target="5" Weight="-2.13480272796005" Fixed="false" />
-        <LinkGene Id="1" Source="0" Target="6" Weight="-4.849314873572439" Fixed="false" />
-        <LinkGene Id="2" Source="1" Target="5" Weight="-4.4870394933968782" Fixed="false" />
-        <LinkGene Id="3" Source="1" Target="6" Weight="-3.0250139441341162" Fixed="false" />
-        <LinkGene Id="4" Source="2" Target="5" Weight="3.3355631842277944" Fixed="false" />
-        <LinkGene Id="5" Source="2" Target="6" Weight="4.7975397575646639" Fixed="false" />
-        <LinkGene Id="6" Source="3" Target="5" Weight="2.0974831888452172" Fixed="false" />
-        <LinkGene Id="7" Source="3" Target="6" Weight="0.79435524297878146" Fixed="false" />
-        <LinkGene Id="8" Source="4" Target="5" Weight="-1.2807973707094789" Fixed="false" />
-        <LinkGene Id="9" Source="4" Target="6" Weight="-3.5703706555068493" Fixed="false" />
-        <LinkGene Id="10" Source="1" Target="7" Weight="3.6614065780304372" Fixed="false" />
-        <LinkGene Id="11" Source="3" Target="7" Weight="3.5065943095833063" Fixed="false" />
-        <LinkGene Id="13" Source="4" Target="8" Weight="0.95738188130781054" Fixed="false" />
-        <LinkGene Id="14" Source="7" Target="5" Weight="3.4565307083539665" Fixed="false" />
-        <LinkGene Id="15" Source="8" Target="5" Weight="-2.6859822170808911" Fixed="false" />
-        <LinkGene Id="16" Source="0" Target="7" Weight="-0.35781346261501312" Fixed="false" />
-        <LinkGene Id="17" Source="0" Target="8" Weight="3.9201922225765884" Fixed="false" />
-        <LinkGene Id="327" Source="8" Target="6" Weight="2.3613664624281228" Fixed="false" />
+        <LinkGene Id="0" Source="0" Target="5" Weight="-0.17241059569641948" Fixed="false" />
+        <LinkGene Id="1" Source="0" Target="6" Weight="-4.0818725991994143" Fixed="false" />
+        <LinkGene Id="2" Source="1" Target="5" Weight="-1.4152617240324616" Fixed="false" />
+        <LinkGene Id="3" Source="1" Target="6" Weight="2.1450075833126903" Fixed="false" />
+        <LinkGene Id="4" Source="2" Target="5" Weight="-0.19554696278646588" Fixed="false" />
+        <LinkGene Id="5" Source="2" Target="6" Weight="3.5884005040861666" Fixed="false" />
+        <LinkGene Id="6" Source="3" Target="5" Weight="1.5278686210513115" Fixed="false" />
+        <LinkGene Id="7" Source="3" Target="6" Weight="-3.6360135395079851" Fixed="false" />
+        <LinkGene Id="8" Source="4" Target="5" Weight="3.1322736199945211" Fixed="false" />
+        <LinkGene Id="9" Source="4" Target="6" Weight="-3.3476794767193496" Fixed="false" />
+        <LinkGene Id="10" Source="1" Target="7" Weight="2.7253968804143369" Fixed="false" />
+        <LinkGene Id="11" Source="3" Target="7" Weight="3.4826341178268194" Fixed="false" />
+        <LinkGene Id="13" Source="4" Target="8" Weight="2.4738786369562149" Fixed="false" />
+        <LinkGene Id="14" Source="7" Target="5" Weight="-0.21820064401254058" Fixed="false" />
+        <LinkGene Id="15" Source="8" Target="5" Weight="4.694438141305" Fixed="false" />
+        <LinkGene Id="16" Source="0" Target="7" Weight="4.3746487121097744" Fixed="false" />
+        <LinkGene Id="17" Source="0" Target="8" Weight="1.0790309542790055" Fixed="false" />
+        <LinkGene Id="327" Source="8" Target="6" Weight="3.0721360980533063" Fixed="false" />
       </Links>
       <BehaviorType>
         <bVector>
@@ -566,24 +566,24 @@
         <NodeGene Id="8" Type="Hidden" Function="Gaussian" Layer="2" Fixed="false" />
       </Nodes>
       <Links>
-        <LinkGene Id="0" Source="0" Target="5" Weight="1.1895953537896276" Fixed="false" />
-        <LinkGene Id="1" Source="0" Target="6" Weight="3.5143115790560842" Fixed="false" />
-        <LinkGene Id="2" Source="1" Target="5" Weight="-4.4571375148370862" Fixed="false" />
-        <LinkGene Id="3" Source="1" Target="6" Weight="4.5480541046708822" Fixed="false" />
-        <LinkGene Id="4" Source="2" Target="5" Weight="2.7292685303837061" Fixed="false" />
-        <LinkGene Id="5" Source="2" Target="6" Weight="2.3435024102218449" Fixed="false" />
-        <LinkGene Id="6" Source="3" Target="5" Weight="0.42780998162925243" Fixed="false" />
-        <LinkGene Id="7" Source="3" Target="6" Weight="0.79272614326328039" Fixed="false" />
-        <LinkGene Id="8" Source="4" Target="5" Weight="-0.71631917264312506" Fixed="false" />
-        <LinkGene Id="9" Source="4" Target="6" Weight="4.7167441202327609" Fixed="false" />
-        <LinkGene Id="10" Source="1" Target="7" Weight="4.4990021968260407" Fixed="false" />
-        <LinkGene Id="11" Source="3" Target="7" Weight="0.63049434218555689" Fixed="false" />
-        <LinkGene Id="13" Source="4" Target="8" Weight="4.8960633133538067" Fixed="false" />
-        <LinkGene Id="14" Source="7" Target="5" Weight="4.1086760815232992" Fixed="false" />
-        <LinkGene Id="15" Source="8" Target="5" Weight="-3.6709239357151091" Fixed="false" />
-        <LinkGene Id="16" Source="0" Target="7" Weight="3.6564791551791131" Fixed="false" />
-        <LinkGene Id="17" Source="0" Target="8" Weight="-3.4135760460048914" Fixed="false" />
-        <LinkGene Id="327" Source="8" Target="6" Weight="-1.7158940993249416" Fixed="false" />
+        <LinkGene Id="0" Source="0" Target="5" Weight="0.71287701139226556" Fixed="false" />
+        <LinkGene Id="1" Source="0" Target="6" Weight="4.9072319874539971" Fixed="false" />
+        <LinkGene Id="2" Source="1" Target="5" Weight="-1.2742174509912729" Fixed="false" />
+        <LinkGene Id="3" Source="1" Target="6" Weight="4.4016291853040457" Fixed="false" />
+        <LinkGene Id="4" Source="2" Target="5" Weight="-1.2708105309866369" Fixed="false" />
+        <LinkGene Id="5" Source="2" Target="6" Weight="2.4234738503582776" Fixed="false" />
+        <LinkGene Id="6" Source="3" Target="5" Weight="4.4984518783167005" Fixed="false" />
+        <LinkGene Id="7" Source="3" Target="6" Weight="1.9653541804291308" Fixed="false" />
+        <LinkGene Id="8" Source="4" Target="5" Weight="0.63456120435148478" Fixed="false" />
+        <LinkGene Id="9" Source="4" Target="6" Weight="-1.8458940577693284" Fixed="false" />
+        <LinkGene Id="10" Source="1" Target="7" Weight="2.1874687960371375" Fixed="false" />
+        <LinkGene Id="11" Source="3" Target="7" Weight="4.110390308778733" Fixed="false" />
+        <LinkGene Id="13" Source="4" Target="8" Weight="1.1950556514784694" Fixed="false" />
+        <LinkGene Id="14" Source="7" Target="5" Weight="1.00449028192088" Fixed="false" />
+        <LinkGene Id="15" Source="8" Target="5" Weight="-1.0194527171552181" Fixed="false" />
+        <LinkGene Id="16" Source="0" Target="7" Weight="3.6548347771167755" Fixed="false" />
+        <LinkGene Id="17" Source="0" Target="8" Weight="0.11159079615026712" Fixed="false" />
+        <LinkGene Id="327" Source="8" Target="6" Weight="-0.25535920634865761" Fixed="false" />
       </Links>
       <BehaviorType>
         <bVector>
@@ -612,24 +612,24 @@
         <NodeGene Id="8" Type="Hidden" Function="Gaussian" Layer="2" Fixed="false" />
       </Nodes>
       <Links>
-        <LinkGene Id="0" Source="0" Target="5" Weight="2.9396511125378311" Fixed="false" />
-        <LinkGene Id="1" Source="0" Target="6" Weight="1.8176014325581491" Fixed="false" />
-        <LinkGene Id="2" Source="1" Target="5" Weight="0.53275374695658684" Fixed="false" />
-        <LinkGene Id="3" Source="1" Target="6" Weight="-1.6600297298282385" Fixed="false" />
-        <LinkGene Id="4" Source="2" Target="5" Weight="4.4851132505573332" Fixed="false" />
-        <LinkGene Id="5" Source="2" Target="6" Weight="4.4948412152007222" Fixed="false" />
-        <LinkGene Id="6" Source="3" Target="5" Weight="-1.4278897945769131" Fixed="false" />
-        <LinkGene Id="7" Source="3" Target="6" Weight="-4.5967147150076926" Fixed="false" />
-        <LinkGene Id="8" Source="4" Target="5" Weight="2.7159427152946591" Fixed="false" />
-        <LinkGene Id="9" Source="4" Target="6" Weight="2.6884116674773395" Fixed="false" />
-        <LinkGene Id="10" Source="1" Target="7" Weight="-1.3048386434093118" Fixed="false" />
-        <LinkGene Id="11" Source="3" Target="7" Weight="4.3677596072666347" Fixed="false" />
-        <LinkGene Id="13" Source="4" Target="8" Weight="-0.31380535336211324" Fixed="false" />
-        <LinkGene Id="14" Source="7" Target="5" Weight="2.4934555473737419" Fixed="false" />
-        <LinkGene Id="15" Source="8" Target="5" Weight="-1.5692707500420511" Fixed="false" />
-        <LinkGene Id="16" Source="0" Target="7" Weight="-3.7225697259418666" Fixed="false" />
-        <LinkGene Id="17" Source="0" Target="8" Weight="-3.6919704126194119" Fixed="false" />
-        <LinkGene Id="327" Source="8" Target="6" Weight="2.804291092325002" Fixed="false" />
+        <LinkGene Id="0" Source="0" Target="5" Weight="-3.530262045096606" Fixed="false" />
+        <LinkGene Id="1" Source="0" Target="6" Weight="2.1828309819102287" Fixed="false" />
+        <LinkGene Id="2" Source="1" Target="5" Weight="4.6801820560358465" Fixed="false" />
+        <LinkGene Id="3" Source="1" Target="6" Weight="-2.8169032884761691" Fixed="false" />
+        <LinkGene Id="4" Source="2" Target="5" Weight="-2.2952848114073277" Fixed="false" />
+        <LinkGene Id="5" Source="2" Target="6" Weight="0.41307167150080204" Fixed="false" />
+        <LinkGene Id="6" Source="3" Target="5" Weight="3.0970686231739819" Fixed="false" />
+        <LinkGene Id="7" Source="3" Target="6" Weight="-3.7145017273724079" Fixed="false" />
+        <LinkGene Id="8" Source="4" Target="5" Weight="1.8259571306407452" Fixed="false" />
+        <LinkGene Id="9" Source="4" Target="6" Weight="-4.7143603581935167" Fixed="false" />
+        <LinkGene Id="10" Source="1" Target="7" Weight="0.13032437302172184" Fixed="false" />
+        <LinkGene Id="11" Source="3" Target="7" Weight="1.770079352427274" Fixed="false" />
+        <LinkGene Id="13" Source="4" Target="8" Weight="2.2421438829042017" Fixed="false" />
+        <LinkGene Id="14" Source="7" Target="5" Weight="2.3777143354527652" Fixed="false" />
+        <LinkGene Id="15" Source="8" Target="5" Weight="0.034609078429639339" Fixed="false" />
+        <LinkGene Id="16" Source="0" Target="7" Weight="4.7325233137235045" Fixed="false" />
+        <LinkGene Id="17" Source="0" Target="8" Weight="2.7662213915027678" Fixed="false" />
+        <LinkGene Id="327" Source="8" Target="6" Weight="4.7416127123869956" Fixed="false" />
       </Links>
       <BehaviorType>
         <bVector>
@@ -658,24 +658,24 @@
         <NodeGene Id="8" Type="Hidden" Function="Gaussian" Layer="2" Fixed="false" />
       </Nodes>
       <Links>
-        <LinkGene Id="0" Source="0" Target="5" Weight="-2.5110389199107885" Fixed="false" />
-        <LinkGene Id="1" Source="0" Target="6" Weight="2.397080403752625" Fixed="false" />
-        <LinkGene Id="2" Source="1" Target="5" Weight="-1.6635750746354461" Fixed="false" />
-        <LinkGene Id="3" Source="1" Target="6" Weight="-0.16873219283297658" Fixed="false" />
-        <LinkGene Id="4" Source="2" Target="5" Weight="-0.8975825528614223" Fixed="false" />
-        <LinkGene Id="5" Source="2" Target="6" Weight="-0.060678189620375633" Fixed="false" />
-        <LinkGene Id="6" Source="3" Target="5" Weight="4.2865580692887306" Fixed="false" />
-        <LinkGene Id="7" Source="3" Target="6" Weight="0.18139434512704611" Fixed="false" />
-        <LinkGene Id="8" Source="4" Target="5" Weight="2.9778459458611906" Fixed="false" />
-        <LinkGene Id="9" Source="4" Target="6" Weight="3.7161593488417566" Fixed="false" />
-        <LinkGene Id="10" Source="1" Target="7" Weight="-1.7638826020993292" Fixed="false" />
-        <LinkGene Id="11" Source="3" Target="7" Weight="-4.0422381018288434" Fixed="false" />
-        <LinkGene Id="13" Source="4" Target="8" Weight="3.5867573390714824" Fixed="false" />
-        <LinkGene Id="14" Source="7" Target="5" Weight="-0.27012525591999292" Fixed="false" />
-        <LinkGene Id="15" Source="8" Target="5" Weight="0.82747178617864847" Fixed="false" />
-        <LinkGene Id="16" Source="0" Target="7" Weight="0.34421729855239391" Fixed="false" />
-        <LinkGene Id="17" Source="0" Target="8" Weight="-0.0086647621355950832" Fixed="false" />
-        <LinkGene Id="327" Source="8" Target="6" Weight="-1.7994783585891128" Fixed="false" />
+        <LinkGene Id="0" Source="0" Target="5" Weight="3.7911149417050183" Fixed="false" />
+        <LinkGene Id="1" Source="0" Target="6" Weight="3.0619723233394325" Fixed="false" />
+        <LinkGene Id="2" Source="1" Target="5" Weight="-4.743359973654151" Fixed="false" />
+        <LinkGene Id="3" Source="1" Target="6" Weight="4.3262515380047262" Fixed="false" />
+        <LinkGene Id="4" Source="2" Target="5" Weight="-1.0474313166923821" Fixed="false" />
+        <LinkGene Id="5" Source="2" Target="6" Weight="-3.93296038499102" Fixed="false" />
+        <LinkGene Id="6" Source="3" Target="5" Weight="-3.35091401822865" Fixed="false" />
+        <LinkGene Id="7" Source="3" Target="6" Weight="2.5446829502470791" Fixed="false" />
+        <LinkGene Id="8" Source="4" Target="5" Weight="-2.9366288962773979" Fixed="false" />
+        <LinkGene Id="9" Source="4" Target="6" Weight="-2.2282640100456774" Fixed="false" />
+        <LinkGene Id="10" Source="1" Target="7" Weight="4.2764435219578445" Fixed="false" />
+        <LinkGene Id="11" Source="3" Target="7" Weight="-0.79831219743937254" Fixed="false" />
+        <LinkGene Id="13" Source="4" Target="8" Weight="4.021491592284292" Fixed="false" />
+        <LinkGene Id="14" Source="7" Target="5" Weight="-2.2983490768820047" Fixed="false" />
+        <LinkGene Id="15" Source="8" Target="5" Weight="3.9661433873698115" Fixed="false" />
+        <LinkGene Id="16" Source="0" Target="7" Weight="3.4248173260129988" Fixed="false" />
+        <LinkGene Id="17" Source="0" Target="8" Weight="1.9652436231262982" Fixed="false" />
+        <LinkGene Id="327" Source="8" Target="6" Weight="-4.3039996409788728" Fixed="false" />
       </Links>
       <BehaviorType>
         <bVector>
@@ -704,24 +704,24 @@
         <NodeGene Id="8" Type="Hidden" Function="Gaussian" Layer="2" Fixed="false" />
       </Nodes>
       <Links>
-        <LinkGene Id="0" Source="0" Target="5" Weight="0.5789331067353487" Fixed="false" />
-        <LinkGene Id="1" Source="0" Target="6" Weight="-0.63796962844207883" Fixed="false" />
-        <LinkGene Id="2" Source="1" Target="5" Weight="4.76755487266928" Fixed="false" />
-        <LinkGene Id="3" Source="1" Target="6" Weight="-2.041041599586606" Fixed="false" />
-        <LinkGene Id="4" Source="2" Target="5" Weight="0.1024784822948277" Fixed="false" />
-        <LinkGene Id="5" Source="2" Target="6" Weight="-2.2834198409691453" Fixed="false" />
-        <LinkGene Id="6" Source="3" Target="5" Weight="-0.82062582951039076" Fixed="false" />
-        <LinkGene Id="7" Source="3" Target="6" Weight="-1.3496228610165417" Fixed="false" />
-        <LinkGene Id="8" Source="4" Target="5" Weight="-1.209311077836901" Fixed="false" />
-        <LinkGene Id="9" Source="4" Target="6" Weight="-1.2389690103009343" Fixed="false" />
-        <LinkGene Id="10" Source="1" Target="7" Weight="4.9263519910164177" Fixed="false" />
-        <LinkGene Id="11" Source="3" Target="7" Weight="-3.8616944802924991" Fixed="false" />
-        <LinkGene Id="13" Source="4" Target="8" Weight="-2.1204964676871896" Fixed="false" />
-        <LinkGene Id="14" Source="7" Target="5" Weight="0.078027897980064154" Fixed="false" />
-        <LinkGene Id="15" Source="8" Target="5" Weight="-2.6127152494154871" Fixed="false" />
-        <LinkGene Id="16" Source="0" Target="7" Weight="-3.3656257693655789" Fixed="false" />
-        <LinkGene Id="17" Source="0" Target="8" Weight="2.1861410443671048" Fixed="false" />
-        <LinkGene Id="327" Source="8" Target="6" Weight="1.0151239344850183" Fixed="false" />
+        <LinkGene Id="0" Source="0" Target="5" Weight="0.77460680389776826" Fixed="false" />
+        <LinkGene Id="1" Source="0" Target="6" Weight="2.086080654989928" Fixed="false" />
+        <LinkGene Id="2" Source="1" Target="5" Weight="-3.6833707615733147" Fixed="false" />
+        <LinkGene Id="3" Source="1" Target="6" Weight="4.1247438662685454" Fixed="false" />
+        <LinkGene Id="4" Source="2" Target="5" Weight="3.4131670137867332" Fixed="false" />
+        <LinkGene Id="5" Source="2" Target="6" Weight="0.23189081344753504" Fixed="false" />
+        <LinkGene Id="6" Source="3" Target="5" Weight="-0.69989392068237066" Fixed="false" />
+        <LinkGene Id="7" Source="3" Target="6" Weight="-2.7840882539749146" Fixed="false" />
+        <LinkGene Id="8" Source="4" Target="5" Weight="0.38642038125544786" Fixed="false" />
+        <LinkGene Id="9" Source="4" Target="6" Weight="-1.0268859914503992" Fixed="false" />
+        <LinkGene Id="10" Source="1" Target="7" Weight="-4.7612355486489832" Fixed="false" />
+        <LinkGene Id="11" Source="3" Target="7" Weight="4.5781687460839748" Fixed="false" />
+        <LinkGene Id="13" Source="4" Target="8" Weight="-4.5472828764468431" Fixed="false" />
+        <LinkGene Id="14" Source="7" Target="5" Weight="4.2891624290496111" Fixed="false" />
+        <LinkGene Id="15" Source="8" Target="5" Weight="4.4840245577506721" Fixed="false" />
+        <LinkGene Id="16" Source="0" Target="7" Weight="-1.59839847125113" Fixed="false" />
+        <LinkGene Id="17" Source="0" Target="8" Weight="0.31866274541243911" Fixed="false" />
+        <LinkGene Id="327" Source="8" Target="6" Weight="0.059371872339397669" Fixed="false" />
       </Links>
       <BehaviorType>
         <bVector>
@@ -750,24 +750,24 @@
         <NodeGene Id="8" Type="Hidden" Function="Gaussian" Layer="2" Fixed="false" />
       </Nodes>
       <Links>
-        <LinkGene Id="0" Source="0" Target="5" Weight="4.6648018970154226" Fixed="false" />
-        <LinkGene Id="1" Source="0" Target="6" Weight="0.61239841626957059" Fixed="false" />
-        <LinkGene Id="2" Source="1" Target="5" Weight="-3.0413635517470539" Fixed="false" />
-        <LinkGene Id="3" Source="1" Target="6" Weight="3.8785962155088782" Fixed="false" />
-        <LinkGene Id="4" Source="2" Target="5" Weight="0.37986739538609982" Fixed="false" />
-        <LinkGene Id="5" Source="2" Target="6" Weight="1.4305004407651722" Fixed="false" />
-        <LinkGene Id="6" Source="3" Target="5" Weight="-3.9312000595964491" Fixed="false" />
-        <LinkGene Id="7" Source="3" Target="6" Weight="4.07709336373955" Fixed="false" />
-        <LinkGene Id="8" Source="4" Target="5" Weight="-1.7044427082873881" Fixed="false" />
-        <LinkGene Id="9" Source="4" Target="6" Weight="3.800417548045516" Fixed="false" />
-        <LinkGene Id="10" Source="1" Target="7" Weight="-1.3196094147861004" Fixed="false" />
-        <LinkGene Id="11" Source="3" Target="7" Weight="-1.289377270732075" Fixed="false" />
-        <LinkGene Id="13" Source="4" Target="8" Weight="3.3490845421329141" Fixed="false" />
-        <LinkGene Id="14" Source="7" Target="5" Weight="4.9885430885478854" Fixed="false" />
-        <LinkGene Id="15" Source="8" Target="5" Weight="-4.6193729341030121" Fixed="false" />
-        <LinkGene Id="16" Source="0" Target="7" Weight="-1.8012151774019003" Fixed="false" />
-        <LinkGene Id="17" Source="0" Target="8" Weight="0.46861741691827774" Fixed="false" />
-        <LinkGene Id="327" Source="8" Target="6" Weight="0.69126076297834516" Fixed="false" />
+        <LinkGene Id="0" Source="0" Target="5" Weight="-4.4606941542588174" Fixed="false" />
+        <LinkGene Id="1" Source="0" Target="6" Weight="2.370773502625525" Fixed="false" />
+        <LinkGene Id="2" Source="1" Target="5" Weight="3.0997516587376595" Fixed="false" />
+        <LinkGene Id="3" Source="1" Target="6" Weight="-4.7743196785449982" Fixed="false" />
+        <LinkGene Id="4" Source="2" Target="5" Weight="0.54038836155086756" Fixed="false" />
+        <LinkGene Id="5" Source="2" Target="6" Weight="-4.9752607056871057" Fixed="false" />
+        <LinkGene Id="6" Source="3" Target="5" Weight="1.2416326091624796" Fixed="false" />
+        <LinkGene Id="7" Source="3" Target="6" Weight="-0.48788991291075945" Fixed="false" />
+        <LinkGene Id="8" Source="4" Target="5" Weight="0.73779553640633821" Fixed="false" />
+        <LinkGene Id="9" Source="4" Target="6" Weight="4.2211350169964135" Fixed="false" />
+        <LinkGene Id="10" Source="1" Target="7" Weight="1.8269606167450547" Fixed="false" />
+        <LinkGene Id="11" Source="3" Target="7" Weight="-3.4397319867275655" Fixed="false" />
+        <LinkGene Id="13" Source="4" Target="8" Weight="0.42849047109484673" Fixed="false" />
+        <LinkGene Id="14" Source="7" Target="5" Weight="-3.8302171207033098" Fixed="false" />
+        <LinkGene Id="15" Source="8" Target="5" Weight="-4.525929840747267" Fixed="false" />
+        <LinkGene Id="16" Source="0" Target="7" Weight="-2.6890254346653819" Fixed="false" />
+        <LinkGene Id="17" Source="0" Target="8" Weight="-3.2867955579422414" Fixed="false" />
+        <LinkGene Id="327" Source="8" Target="6" Weight="4.5636735064908862" Fixed="false" />
       </Links>
       <BehaviorType>
         <bVector>
@@ -796,24 +796,24 @@
         <NodeGene Id="8" Type="Hidden" Function="Gaussian" Layer="2" Fixed="false" />
       </Nodes>
       <Links>
-        <LinkGene Id="0" Source="0" Target="5" Weight="4.9249462084844708" Fixed="false" />
-        <LinkGene Id="1" Source="0" Target="6" Weight="-0.70700297132134438" Fixed="false" />
-        <LinkGene Id="2" Source="1" Target="5" Weight="-2.3562331567518413" Fixed="false" />
-        <LinkGene Id="3" Source="1" Target="6" Weight="-3.5279738204553723" Fixed="false" />
-        <LinkGene Id="4" Source="2" Target="5" Weight="-1.2763749994337559" Fixed="false" />
-        <LinkGene Id="5" Source="2" Target="6" Weight="0.25555840693414211" Fixed="false" />
-        <LinkGene Id="6" Source="3" Target="5" Weight="-1.2417914113029838" Fixed="false" />
-        <LinkGene Id="7" Source="3" Target="6" Weight="-0.32317649340257049" Fixed="false" />
-        <LinkGene Id="8" Source="4" Target="5" Weight="1.4140635030344129" Fixed="false" />
-        <LinkGene Id="9" Source="4" Target="6" Weight="2.2471574880182743" Fixed="false" />
-        <LinkGene Id="10" Source="1" Target="7" Weight="1.1082923132926226" Fixed="false" />
-        <LinkGene Id="11" Source="3" Target="7" Weight="-2.88940763566643" Fixed="false" />
-        <LinkGene Id="13" Source="4" Target="8" Weight="4.3670594412833452" Fixed="false" />
-        <LinkGene Id="14" Source="7" Target="5" Weight="2.3960043280385435" Fixed="false" />
-        <LinkGene Id="15" Source="8" Target="5" Weight="-4.8784648696891963" Fixed="false" />
-        <LinkGene Id="16" Source="0" Target="7" Weight="4.5292027131654322" Fixed="false" />
-        <LinkGene Id="17" Source="0" Target="8" Weight="-3.410524136852473" Fixed="false" />
-        <LinkGene Id="327" Source="8" Target="6" Weight="1.4423720887862146" Fixed="false" />
+        <LinkGene Id="0" Source="0" Target="5" Weight="0.05902451928704977" Fixed="false" />
+        <LinkGene Id="1" Source="0" Target="6" Weight="4.7475978475995362" Fixed="false" />
+        <LinkGene Id="2" Source="1" Target="5" Weight="1.0759348259307444" Fixed="false" />
+        <LinkGene Id="3" Source="1" Target="6" Weight="4.4705527857877314" Fixed="false" />
+        <LinkGene Id="4" Source="2" Target="5" Weight="4.73347547929734" Fixed="false" />
+        <LinkGene Id="5" Source="2" Target="6" Weight="4.37158641172573" Fixed="false" />
+        <LinkGene Id="6" Source="3" Target="5" Weight="1.8261539819650352" Fixed="false" />
+        <LinkGene Id="7" Source="3" Target="6" Weight="-1.16424853913486" Fixed="false" />
+        <LinkGene Id="8" Source="4" Target="5" Weight="2.6913383207283914" Fixed="false" />
+        <LinkGene Id="9" Source="4" Target="6" Weight="2.3137520998716354" Fixed="false" />
+        <LinkGene Id="10" Source="1" Target="7" Weight="0.058191947173327208" Fixed="false" />
+        <LinkGene Id="11" Source="3" Target="7" Weight="4.0160979819484055" Fixed="false" />
+        <LinkGene Id="13" Source="4" Target="8" Weight="-0.89892025105655193" Fixed="false" />
+        <LinkGene Id="14" Source="7" Target="5" Weight="-4.656703919172287" Fixed="false" />
+        <LinkGene Id="15" Source="8" Target="5" Weight="-2.2472374071367085" Fixed="false" />
+        <LinkGene Id="16" Source="0" Target="7" Weight="-4.377795048058033" Fixed="false" />
+        <LinkGene Id="17" Source="0" Target="8" Weight="2.1619520639069378" Fixed="false" />
+        <LinkGene Id="327" Source="8" Target="6" Weight="3.6862497194670141" Fixed="false" />
       </Links>
       <BehaviorType>
         <bVector>
@@ -842,24 +842,24 @@
         <NodeGene Id="8" Type="Hidden" Function="Gaussian" Layer="2" Fixed="false" />
       </Nodes>
       <Links>
-        <LinkGene Id="0" Source="0" Target="5" Weight="0.039071799255907536" Fixed="false" />
-        <LinkGene Id="1" Source="0" Target="6" Weight="1.1231423844583333" Fixed="false" />
-        <LinkGene Id="2" Source="1" Target="5" Weight="2.8612115699797869" Fixed="false" />
-        <LinkGene Id="3" Source="1" Target="6" Weight="-1.6289792372845113" Fixed="false" />
-        <LinkGene Id="4" Source="2" Target="5" Weight="-2.6251744222827256" Fixed="false" />
-        <LinkGene Id="5" Source="2" Target="6" Weight="-0.83079360891133547" Fixed="false" />
-        <LinkGene Id="6" Source="3" Target="5" Weight="2.6223739609122276" Fixed="false" />
-        <LinkGene Id="7" Source="3" Target="6" Weight="-1.7722569010220468" Fixed="false" />
-        <LinkGene Id="8" Source="4" Target="5" Weight="0.51916925236582756" Fixed="false" />
-        <LinkGene Id="9" Source="4" Target="6" Weight="-2.2966504259966314" Fixed="false" />
-        <LinkGene Id="10" Source="1" Target="7" Weight="-2.2658873093314469" Fixed="false" />
-        <LinkGene Id="11" Source="3" Target="7" Weight="-0.20689950557425618" Fixed="false" />
-        <LinkGene Id="13" Source="4" Target="8" Weight="-3.6644579283893108" Fixed="false" />
-        <LinkGene Id="14" Source="7" Target="5" Weight="-3.2659251638688147" Fixed="false" />
-        <LinkGene Id="15" Source="8" Target="5" Weight="-2.1652929694391787" Fixed="false" />
-        <LinkGene Id="16" Source="0" Target="7" Weight="-0.31616209307685494" Fixed="false" />
-        <LinkGene Id="17" Source="0" Target="8" Weight="-0.94508943147957325" Fixed="false" />
-        <LinkGene Id="327" Source="8" Target="6" Weight="2.837138632312417" Fixed="false" />
+        <LinkGene Id="0" Source="0" Target="5" Weight="4.501951530110091" Fixed="false" />
+        <LinkGene Id="1" Source="0" Target="6" Weight="1.4235547301359475" Fixed="false" />
+        <LinkGene Id="2" Source="1" Target="5" Weight="-0.69540204713121057" Fixed="false" />
+        <LinkGene Id="3" Source="1" Target="6" Weight="-3.7355891289189458" Fixed="false" />
+        <LinkGene Id="4" Source="2" Target="5" Weight="1.7033108766190708" Fixed="false" />
+        <LinkGene Id="5" Source="2" Target="6" Weight="-0.20542272832244635" Fixed="false" />
+        <LinkGene Id="6" Source="3" Target="5" Weight="-4.487301385961473" Fixed="false" />
+        <LinkGene Id="7" Source="3" Target="6" Weight="-1.9045503018423915" Fixed="false" />
+        <LinkGene Id="8" Source="4" Target="5" Weight="2.31563312234357" Fixed="false" />
+        <LinkGene Id="9" Source="4" Target="6" Weight="3.4205212979577482" Fixed="false" />
+        <LinkGene Id="10" Source="1" Target="7" Weight="-3.7678235792554915" Fixed="false" />
+        <LinkGene Id="11" Source="3" Target="7" Weight="4.2031958396546543" Fixed="false" />
+        <LinkGene Id="13" Source="4" Target="8" Weight="0.15131785767152906" Fixed="false" />
+        <LinkGene Id="14" Source="7" Target="5" Weight="3.1814919272437692" Fixed="false" />
+        <LinkGene Id="15" Source="8" Target="5" Weight="-0.53890281124040484" Fixed="false" />
+        <LinkGene Id="16" Source="0" Target="7" Weight="-2.2671747859567404" Fixed="false" />
+        <LinkGene Id="17" Source="0" Target="8" Weight="4.6061078459024429" Fixed="false" />
+        <LinkGene Id="327" Source="8" Target="6" Weight="1.1763860494829714" Fixed="false" />
       </Links>
       <BehaviorType>
         <bVector>
@@ -888,24 +888,24 @@
         <NodeGene Id="8" Type="Hidden" Function="Gaussian" Layer="2" Fixed="false" />
       </Nodes>
       <Links>
-        <LinkGene Id="0" Source="0" Target="5" Weight="-3.27843161765486" Fixed="false" />
-        <LinkGene Id="1" Source="0" Target="6" Weight="3.0154182785190642" Fixed="false" />
-        <LinkGene Id="2" Source="1" Target="5" Weight="-2.1501390798948705" Fixed="false" />
-        <LinkGene Id="3" Source="1" Target="6" Weight="2.0968865207396448" Fixed="false" />
-        <LinkGene Id="4" Source="2" Target="5" Weight="-1.3741482654586434" Fixed="false" />
-        <LinkGene Id="5" Source="2" Target="6" Weight="-3.5645189671777189" Fixed="false" />
-        <LinkGene Id="6" Source="3" Target="5" Weight="-3.9688365650363266" Fixed="false" />
-        <LinkGene Id="7" Source="3" Target="6" Weight="-0.12416156707331538" Fixed="false" />
-        <LinkGene Id="8" Source="4" Target="5" Weight="-1.4059684635140002" Fixed="false" />
-        <LinkGene Id="9" Source="4" Target="6" Weight="-4.48493923060596" Fixed="false" />
-        <LinkGene Id="10" Source="1" Target="7" Weight="2.4596374901011586" Fixed="false" />
-        <LinkGene Id="11" Source="3" Target="7" Weight="-4.3869107798673213" Fixed="false" />
-        <LinkGene Id="13" Source="4" Target="8" Weight="3.7725128838792443" Fixed="false" />
-        <LinkGene Id="14" Source="7" Target="5" Weight="-3.2283409498631954" Fixed="false" />
-        <LinkGene Id="15" Source="8" Target="5" Weight="2.4620296666398644" Fixed="false" />
-        <LinkGene Id="16" Source="0" Target="7" Weight="4.35746462084353" Fixed="false" />
-        <LinkGene Id="17" Source="0" Target="8" Weight="-1.0473402868956327" Fixed="false" />
-        <LinkGene Id="327" Source="8" Target="6" Weight="2.7706651762127876" Fixed="false" />
+        <LinkGene Id="0" Source="0" Target="5" Weight="4.9727992550469935" Fixed="false" />
+        <LinkGene Id="1" Source="0" Target="6" Weight="-2.3425698163919151" Fixed="false" />
+        <LinkGene Id="2" Source="1" Target="5" Weight="4.67739128973335" Fixed="false" />
+        <LinkGene Id="3" Source="1" Target="6" Weight="1.3032157439738512" Fixed="false" />
+        <LinkGene Id="4" Source="2" Target="5" Weight="3.861508525442332" Fixed="false" />
+        <LinkGene Id="5" Source="2" Target="6" Weight="-0.0088940677233040333" Fixed="false" />
+        <LinkGene Id="6" Source="3" Target="5" Weight="0.67658104933798313" Fixed="false" />
+        <LinkGene Id="7" Source="3" Target="6" Weight="0.94932010862976313" Fixed="false" />
+        <LinkGene Id="8" Source="4" Target="5" Weight="0.90568107319995761" Fixed="false" />
+        <LinkGene Id="9" Source="4" Target="6" Weight="-0.2465470414608717" Fixed="false" />
+        <LinkGene Id="10" Source="1" Target="7" Weight="1.4737032633274794" Fixed="false" />
+        <LinkGene Id="11" Source="3" Target="7" Weight="-3.037228174507618" Fixed="false" />
+        <LinkGene Id="13" Source="4" Target="8" Weight="3.4081806987524033" Fixed="false" />
+        <LinkGene Id="14" Source="7" Target="5" Weight="2.2359175700694323" Fixed="false" />
+        <LinkGene Id="15" Source="8" Target="5" Weight="2.0821413258090615" Fixed="false" />
+        <LinkGene Id="16" Source="0" Target="7" Weight="-3.268802841193974" Fixed="false" />
+        <LinkGene Id="17" Source="0" Target="8" Weight="2.127063199877739" Fixed="false" />
+        <LinkGene Id="327" Source="8" Target="6" Weight="3.3346478082239628" Fixed="false" />
       </Links>
       <BehaviorType>
         <bVector>
@@ -934,24 +934,24 @@
         <NodeGene Id="8" Type="Hidden" Function="Gaussian" Layer="2" Fixed="false" />
       </Nodes>
       <Links>
-        <LinkGene Id="0" Source="0" Target="5" Weight="2.4283904489129782" Fixed="false" />
-        <LinkGene Id="1" Source="0" Target="6" Weight="1.0477502993308008" Fixed="false" />
-        <LinkGene Id="2" Source="1" Target="5" Weight="2.6762843038886786" Fixed="false" />
-        <LinkGene Id="3" Source="1" Target="6" Weight="-4.6828724723309278" Fixed="false" />
-        <LinkGene Id="4" Source="2" Target="5" Weight="-4.0258641284890473" Fixed="false" />
-        <LinkGene Id="5" Source="2" Target="6" Weight="3.6982482462190092" Fixed="false" />
-        <LinkGene Id="6" Source="3" Target="5" Weight="-0.511639416217804" Fixed="false" />
-        <LinkGene Id="7" Source="3" Target="6" Weight="4.4710254855453968" Fixed="false" />
-        <LinkGene Id="8" Source="4" Target="5" Weight="-4.5749516086652875" Fixed="false" />
-        <LinkGene Id="9" Source="4" Target="6" Weight="-0.98395997658371925" Fixed="false" />
-        <LinkGene Id="10" Source="1" Target="7" Weight="0.50612234743312" Fixed="false" />
-        <LinkGene Id="11" Source="3" Target="7" Weight="-1.4816493005491793" Fixed="false" />
-        <LinkGene Id="13" Source="4" Target="8" Weight="2.1911539556458592" Fixed="false" />
-        <LinkGene Id="14" Source="7" Target="5" Weight="-3.3623110293410718" Fixed="false" />
-        <LinkGene Id="15" Source="8" Target="5" Weight="-3.3659562305547297" Fixed="false" />
-        <LinkGene Id="16" Source="0" Target="7" Weight="4.128391572739929" Fixed="false" />
-        <LinkGene Id="17" Source="0" Target="8" Weight="-3.6014480842277408" Fixed="false" />
-        <LinkGene Id="327" Source="8" Target="6" Weight="4.4835676858201623" Fixed="false" />
+        <LinkGene Id="0" Source="0" Target="5" Weight="-2.901807997841388" Fixed="false" />
+        <LinkGene Id="1" Source="0" Target="6" Weight="2.7652188367210329" Fixed="false" />
+        <LinkGene Id="2" Source="1" Target="5" Weight="-1.1295832553878427" Fixed="false" />
+        <LinkGene Id="3" Source="1" Target="6" Weight="0.68271405762061477" Fixed="false" />
+        <LinkGene Id="4" Source="2" Target="5" Weight="-0.13422359945252538" Fixed="false" />
+        <LinkGene Id="5" Source="2" Target="6" Weight="-1.614648993127048" Fixed="false" />
+        <LinkGene Id="6" Source="3" Target="5" Weight="2.18328908784315" Fixed="false" />
+        <LinkGene Id="7" Source="3" Target="6" Weight="-4.7046664729714394" Fixed="false" />
+        <LinkGene Id="8" Source="4" Target="5" Weight="3.1686767213977873" Fixed="false" />
+        <LinkGene Id="9" Source="4" Target="6" Weight="1.311734018381685" Fixed="false" />
+        <LinkGene Id="10" Source="1" Target="7" Weight="-1.3263397058472037" Fixed="false" />
+        <LinkGene Id="11" Source="3" Target="7" Weight="2.3449214221909642" Fixed="false" />
+        <LinkGene Id="13" Source="4" Target="8" Weight="-2.6694103190675378" Fixed="false" />
+        <LinkGene Id="14" Source="7" Target="5" Weight="-2.8004895942285657" Fixed="false" />
+        <LinkGene Id="15" Source="8" Target="5" Weight="0.28021731646731496" Fixed="false" />
+        <LinkGene Id="16" Source="0" Target="7" Weight="-0.28154144994914532" Fixed="false" />
+        <LinkGene Id="17" Source="0" Target="8" Weight="0.59329320443794131" Fixed="false" />
+        <LinkGene Id="327" Source="8" Target="6" Weight="-2.3723716149106622" Fixed="false" />
       </Links>
       <BehaviorType>
         <bVector>
@@ -980,24 +980,24 @@
         <NodeGene Id="8" Type="Hidden" Function="Gaussian" Layer="2" Fixed="false" />
       </Nodes>
       <Links>
-        <LinkGene Id="0" Source="0" Target="5" Weight="1.7990906280465424" Fixed="false" />
-        <LinkGene Id="1" Source="0" Target="6" Weight="0.77402404742315412" Fixed="false" />
-        <LinkGene Id="2" Source="1" Target="5" Weight="2.7500036219134927" Fixed="false" />
-        <LinkGene Id="3" Source="1" Target="6" Weight="-2.6459436607547104" Fixed="false" />
-        <LinkGene Id="4" Source="2" Target="5" Weight="1.9299240526743233" Fixed="false" />
-        <LinkGene Id="5" Source="2" Target="6" Weight="0.0020047626458108425" Fixed="false" />
-        <LinkGene Id="6" Source="3" Target="5" Weight="4.3780687334947288" Fixed="false" />
-        <LinkGene Id="7" Source="3" Target="6" Weight="-2.2212231741286814" Fixed="false" />
-        <LinkGene Id="8" Source="4" Target="5" Weight="3.5195780079811811" Fixed="false" />
-        <LinkGene Id="9" Source="4" Target="6" Weight="1.3696804898791015" Fixed="false" />
-        <LinkGene Id="10" Source="1" Target="7" Weight="-3.1888116989284754" Fixed="false" />
-        <LinkGene Id="11" Source="3" Target="7" Weight="1.0631930129602552" Fixed="false" />
-        <LinkGene Id="13" Source="4" Target="8" Weight="-2.4090053699910641" Fixed="false" />
-        <LinkGene Id="14" Source="7" Target="5" Weight="-4.615600926335901" Fixed="false" />
-        <LinkGene Id="15" Source="8" Target="5" Weight="1.0198872652836144" Fixed="false" />
-        <LinkGene Id="16" Source="0" Target="7" Weight="1.4904362987726927" Fixed="false" />
-        <LinkGene Id="17" Source="0" Target="8" Weight="-4.7952657053247094" Fixed="false" />
-        <LinkGene Id="327" Source="8" Target="6" Weight="1.7600066401064396" Fixed="false" />
+        <LinkGene Id="0" Source="0" Target="5" Weight="-1.6340613621287048" Fixed="false" />
+        <LinkGene Id="1" Source="0" Target="6" Weight="3.7837416026741266" Fixed="false" />
+        <LinkGene Id="2" Source="1" Target="5" Weight="2.0408216794021428" Fixed="false" />
+        <LinkGene Id="3" Source="1" Target="6" Weight="-3.0733409407548606" Fixed="false" />
+        <LinkGene Id="4" Source="2" Target="5" Weight="-2.4201622372493148" Fixed="false" />
+        <LinkGene Id="5" Source="2" Target="6" Weight="2.7801901055499911" Fixed="false" />
+        <LinkGene Id="6" Source="3" Target="5" Weight="0.11723561910912395" Fixed="false" />
+        <LinkGene Id="7" Source="3" Target="6" Weight="3.1913696508854628" Fixed="false" />
+        <LinkGene Id="8" Source="4" Target="5" Weight="-4.0668477583676577" Fixed="false" />
+        <LinkGene Id="9" Source="4" Target="6" Weight="-1.695706972386688" Fixed="false" />
+        <LinkGene Id="10" Source="1" Target="7" Weight="-1.0666536493226886" Fixed="false" />
+        <LinkGene Id="11" Source="3" Target="7" Weight="-3.5473492252640426" Fixed="false" />
+        <LinkGene Id="13" Source="4" Target="8" Weight="-2.6321453670971096" Fixed="false" />
+        <LinkGene Id="14" Source="7" Target="5" Weight="-4.9431029777042568" Fixed="false" />
+        <LinkGene Id="15" Source="8" Target="5" Weight="2.067733108997345" Fixed="false" />
+        <LinkGene Id="16" Source="0" Target="7" Weight="-1.2598056555725634" Fixed="false" />
+        <LinkGene Id="17" Source="0" Target="8" Weight="1.0075384611263871" Fixed="false" />
+        <LinkGene Id="327" Source="8" Target="6" Weight="3.1377026904374361" Fixed="false" />
       </Links>
       <BehaviorType>
         <bVector>
@@ -1026,24 +1026,24 @@
         <NodeGene Id="8" Type="Hidden" Function="Gaussian" Layer="2" Fixed="false" />
       </Nodes>
       <Links>
-        <LinkGene Id="0" Source="0" Target="5" Weight="-2.9029194382019341" Fixed="false" />
-        <LinkGene Id="1" Source="0" Target="6" Weight="-2.5999761139974" Fixed="false" />
-        <LinkGene Id="2" Source="1" Target="5" Weight="-1.1212051915936172" Fixed="false" />
-        <LinkGene Id="3" Source="1" Target="6" Weight="-4.9682195484638214" Fixed="false" />
-        <LinkGene Id="4" Source="2" Target="5" Weight="-3.4115232969634235" Fixed="false" />
-        <LinkGene Id="5" Source="2" Target="6" Weight="-2.8246271819807589" Fixed="false" />
-        <LinkGene Id="6" Source="3" Target="5" Weight="1.90193145070225" Fixed="false" />
-        <LinkGene Id="7" Source="3" Target="6" Weight="-2.1024705190211534" Fixed="false" />
-        <LinkGene Id="8" Source="4" Target="5" Weight="3.3242370490916073" Fixed="false" />
-        <LinkGene Id="9" Source="4" Target="6" Weight="-0.74643004452809691" Fixed="false" />
-        <LinkGene Id="10" Source="1" Target="7" Weight="-2.7059600851498544" Fixed="false" />
-        <LinkGene Id="11" Source="3" Target="7" Weight="-4.7907801903784275" Fixed="false" />
-        <LinkGene Id="13" Source="4" Target="8" Weight="0.40386244654655457" Fixed="false" />
-        <LinkGene Id="14" Source="7" Target="5" Weight="4.4830399192869663" Fixed="false" />
-        <LinkGene Id="15" Source="8" Target="5" Weight="-4.540626232046634" Fixed="false" />
-        <LinkGene Id="16" Source="0" Target="7" Weight="4.4676019717007875" Fixed="false" />
-        <LinkGene Id="17" Source="0" Target="8" Weight="3.4357586642727256" Fixed="false" />
-        <LinkGene Id="327" Source="8" Target="6" Weight="-0.45493828132748604" Fixed="false" />
+        <LinkGene Id="0" Source="0" Target="5" Weight="-3.2484284625388682" Fixed="false" />
+        <LinkGene Id="1" Source="0" Target="6" Weight="3.7533739279024303" Fixed="false" />
+        <LinkGene Id="2" Source="1" Target="5" Weight="4.9856770294718444" Fixed="false" />
+        <LinkGene Id="3" Source="1" Target="6" Weight="2.6417436287738383" Fixed="false" />
+        <LinkGene Id="4" Source="2" Target="5" Weight="2.3930207686498761" Fixed="false" />
+        <LinkGene Id="5" Source="2" Target="6" Weight="3.8883549813181162" Fixed="false" />
+        <LinkGene Id="6" Source="3" Target="5" Weight="-2.766074244864285" Fixed="false" />
+        <LinkGene Id="7" Source="3" Target="6" Weight="4.9182027881033719" Fixed="false" />
+        <LinkGene Id="8" Source="4" Target="5" Weight="1.0241384105756879" Fixed="false" />
+        <LinkGene Id="9" Source="4" Target="6" Weight="0.5221368302591145" Fixed="false" />
+        <LinkGene Id="10" Source="1" Target="7" Weight="-3.9926360896788538" Fixed="false" />
+        <LinkGene Id="11" Source="3" Target="7" Weight="2.4833143153227866" Fixed="false" />
+        <LinkGene Id="13" Source="4" Target="8" Weight="-0.6991663109511137" Fixed="false" />
+        <LinkGene Id="14" Source="7" Target="5" Weight="0.92186518711969256" Fixed="false" />
+        <LinkGene Id="15" Source="8" Target="5" Weight="-3.664363594725728" Fixed="false" />
+        <LinkGene Id="16" Source="0" Target="7" Weight="-3.104920880869031" Fixed="false" />
+        <LinkGene Id="17" Source="0" Target="8" Weight="-4.0251905098557472" Fixed="false" />
+        <LinkGene Id="327" Source="8" Target="6" Weight="-3.3380305650644004" Fixed="false" />
       </Links>
       <BehaviorType>
         <bVector>
@@ -1072,24 +1072,24 @@
         <NodeGene Id="8" Type="Hidden" Function="Gaussian" Layer="2" Fixed="false" />
       </Nodes>
       <Links>
-        <LinkGene Id="0" Source="0" Target="5" Weight="-3.9181142579764128" Fixed="false" />
-        <LinkGene Id="1" Source="0" Target="6" Weight="0.51523672649636865" Fixed="false" />
-        <LinkGene Id="2" Source="1" Target="5" Weight="-3.9187965542078018" Fixed="false" />
-        <LinkGene Id="3" Source="1" Target="6" Weight="-4.0484108799137175" Fixed="false" />
-        <LinkGene Id="4" Source="2" Target="5" Weight="-1.6322608455084264" Fixed="false" />
-        <LinkGene Id="5" Source="2" Target="6" Weight="0.51358543569222093" Fixed="false" />
-        <LinkGene Id="6" Source="3" Target="5" Weight="-4.3591067986562848" Fixed="false" />
-        <LinkGene Id="7" Source="3" Target="6" Weight="4.8030671779997647" Fixed="false" />
-        <LinkGene Id="8" Source="4" Target="5" Weight="-1.6902922559529543" Fixed="false" />
-        <LinkGene Id="9" Source="4" Target="6" Weight="0.638474018778652" Fixed="false" />
-        <LinkGene Id="10" Source="1" Target="7" Weight="2.4763076193630695" Fixed="false" />
-        <LinkGene Id="11" Source="3" Target="7" Weight="3.3052679686807096" Fixed="false" />
-        <LinkGene Id="13" Source="4" Target="8" Weight="-0.53840598091483116" Fixed="false" />
-        <LinkGene Id="14" Source="7" Target="5" Weight="-2.3126631649211049" Fixed="false" />
-        <LinkGene Id="15" Source="8" Target="5" Weight="-2.1213646698743105" Fixed="false" />
-        <LinkGene Id="16" Source="0" Target="7" Weight="1.3368547521531582" Fixed="false" />
-        <LinkGene Id="17" Source="0" Target="8" Weight="1.8591286009177566" Fixed="false" />
-        <LinkGene Id="327" Source="8" Target="6" Weight="2.6208990253508091" Fixed="false" />
+        <LinkGene Id="0" Source="0" Target="5" Weight="1.4756998140364885" Fixed="false" />
+        <LinkGene Id="1" Source="0" Target="6" Weight="-0.19997495459392667" Fixed="false" />
+        <LinkGene Id="2" Source="1" Target="5" Weight="-3.5010160761885345" Fixed="false" />
+        <LinkGene Id="3" Source="1" Target="6" Weight="-0.66657241899520159" Fixed="false" />
+        <LinkGene Id="4" Source="2" Target="5" Weight="4.733799765817821" Fixed="false" />
+        <LinkGene Id="5" Source="2" Target="6" Weight="1.3771116500720382" Fixed="false" />
+        <LinkGene Id="6" Source="3" Target="5" Weight="3.6397773772478104" Fixed="false" />
+        <LinkGene Id="7" Source="3" Target="6" Weight="1.8000037176534534" Fixed="false" />
+        <LinkGene Id="8" Source="4" Target="5" Weight="4.8127005132846534" Fixed="false" />
+        <LinkGene Id="9" Source="4" Target="6" Weight="-0.63609166769310832" Fixed="false" />
+        <LinkGene Id="10" Source="1" Target="7" Weight="1.6379535919986665" Fixed="false" />
+        <LinkGene Id="11" Source="3" Target="7" Weight="0.74421986937522888" Fixed="false" />
+        <LinkGene Id="13" Source="4" Target="8" Weight="-1.8352726311422885" Fixed="false" />
+        <LinkGene Id="14" Source="7" Target="5" Weight="-2.4899702076800168" Fixed="false" />
+        <LinkGene Id="15" Source="8" Target="5" Weight="0.79373968997970223" Fixed="false" />
+        <LinkGene Id="16" Source="0" Target="7" Weight="-4.6952326199971139" Fixed="false" />
+        <LinkGene Id="17" Source="0" Target="8" Weight="-3.2331172004342079" Fixed="false" />
+        <LinkGene Id="327" Source="8" Target="6" Weight="-0.77822658699005842" Fixed="false" />
       </Links>
       <BehaviorType>
         <bVector>
@@ -1118,24 +1118,24 @@
         <NodeGene Id="8" Type="Hidden" Function="Gaussian" Layer="2" Fixed="false" />
       </Nodes>
       <Links>
-        <LinkGene Id="0" Source="0" Target="5" Weight="4.2070254567079246" Fixed="false" />
-        <LinkGene Id="1" Source="0" Target="6" Weight="-1.4410551404580474" Fixed="false" />
-        <LinkGene Id="2" Source="1" Target="5" Weight="2.4914278090000153" Fixed="false" />
-        <LinkGene Id="3" Source="1" Target="6" Weight="3.2354174670763314" Fixed="false" />
-        <LinkGene Id="4" Source="2" Target="5" Weight="3.8340645865537226" Fixed="false" />
-        <LinkGene Id="5" Source="2" Target="6" Weight="-1.4619197952561081" Fixed="false" />
-        <LinkGene Id="6" Source="3" Target="5" Weight="-1.6717205173335969" Fixed="false" />
-        <LinkGene Id="7" Source="3" Target="6" Weight="-1.3675156189128757" Fixed="false" />
-        <LinkGene Id="8" Source="4" Target="5" Weight="0.58917959919199347" Fixed="false" />
-        <LinkGene Id="9" Source="4" Target="6" Weight="-2.9475864837877452" Fixed="false" />
-        <LinkGene Id="10" Source="1" Target="7" Weight="1.3054250786080957" Fixed="false" />
-        <LinkGene Id="11" Source="3" Target="7" Weight="1.4990443666465581" Fixed="false" />
-        <LinkGene Id="13" Source="4" Target="8" Weight="1.052372008562088" Fixed="false" />
-        <LinkGene Id="14" Source="7" Target="5" Weight="-2.7562558208592236" Fixed="false" />
-        <LinkGene Id="15" Source="8" Target="5" Weight="1.7577599314972758" Fixed="false" />
-        <LinkGene Id="16" Source="0" Target="7" Weight="-3.8353436556644738" Fixed="false" />
-        <LinkGene Id="17" Source="0" Target="8" Weight="-4.18446047231555" Fixed="false" />
-        <LinkGene Id="327" Source="8" Target="6" Weight="3.0116596934385598" Fixed="false" />
+        <LinkGene Id="0" Source="0" Target="5" Weight="-3.9926555380225182" Fixed="false" />
+        <LinkGene Id="1" Source="0" Target="6" Weight="4.0415683179162443" Fixed="false" />
+        <LinkGene Id="2" Source="1" Target="5" Weight="4.1647527227178216" Fixed="false" />
+        <LinkGene Id="3" Source="1" Target="6" Weight="2.8049382055178285" Fixed="false" />
+        <LinkGene Id="4" Source="2" Target="5" Weight="4.8215460148639977" Fixed="false" />
+        <LinkGene Id="5" Source="2" Target="6" Weight="-3.3616222068667412" Fixed="false" />
+        <LinkGene Id="6" Source="3" Target="5" Weight="1.5930657600983977" Fixed="false" />
+        <LinkGene Id="7" Source="3" Target="6" Weight="-1.307735547889024" Fixed="false" />
+        <LinkGene Id="8" Source="4" Target="5" Weight="-0.074042207561433315" Fixed="false" />
+        <LinkGene Id="9" Source="4" Target="6" Weight="2.7274594968184829" Fixed="false" />
+        <LinkGene Id="10" Source="1" Target="7" Weight="-2.1017793286591768" Fixed="false" />
+        <LinkGene Id="11" Source="3" Target="7" Weight="-0.32889181282371283" Fixed="false" />
+        <LinkGene Id="13" Source="4" Target="8" Weight="2.9943666444160044" Fixed="false" />
+        <LinkGene Id="14" Source="7" Target="5" Weight="1.7942151962779462" Fixed="false" />
+        <LinkGene Id="15" Source="8" Target="5" Weight="0.33476808806881309" Fixed="false" />
+        <LinkGene Id="16" Source="0" Target="7" Weight="1.9596967194229364" Fixed="false" />
+        <LinkGene Id="17" Source="0" Target="8" Weight="-3.4922964824363589" Fixed="false" />
+        <LinkGene Id="327" Source="8" Target="6" Weight="1.2063597165979445" Fixed="false" />
       </Links>
       <BehaviorType>
         <bVector>
@@ -1164,24 +1164,24 @@
         <NodeGene Id="8" Type="Hidden" Function="Gaussian" Layer="2" Fixed="false" />
       </Nodes>
       <Links>
-        <LinkGene Id="0" Source="0" Target="5" Weight="3.3639041520655155" Fixed="false" />
-        <LinkGene Id="1" Source="0" Target="6" Weight="0.22453795652836561" Fixed="false" />
-        <LinkGene Id="2" Source="1" Target="5" Weight="-2.7053112699650228" Fixed="false" />
-        <LinkGene Id="3" Source="1" Target="6" Weight="2.0740010123699903" Fixed="false" />
-        <LinkGene Id="4" Source="2" Target="5" Weight="3.4750998090021312" Fixed="false" />
-        <LinkGene Id="5" Source="2" Target="6" Weight="-3.3003405714407563" Fixed="false" />
-        <LinkGene Id="6" Source="3" Target="5" Weight="4.2145816795527935" Fixed="false" />
-        <LinkGene Id="7" Source="3" Target="6" Weight="-3.1551254796795547" Fixed="false" />
-        <LinkGene Id="8" Source="4" Target="5" Weight="-4.46875880472362" Fixed="false" />
-        <LinkGene Id="9" Source="4" Target="6" Weight="0.814646715298295" Fixed="false" />
-        <LinkGene Id="10" Source="1" Target="7" Weight="-0.64821417210623622" Fixed="false" />
-        <LinkGene Id="11" Source="3" Target="7" Weight="-1.1005562916398048" Fixed="false" />
-        <LinkGene Id="13" Source="4" Target="8" Weight="-1.5779132745228708" Fixed="false" />
-        <LinkGene Id="14" Source="7" Target="5" Weight="1.6590903187170625" Fixed="false" />
-        <LinkGene Id="15" Source="8" Target="5" Weight="1.4015817921608686" Fixed="false" />
-        <LinkGene Id="16" Source="0" Target="7" Weight="-2.5907561252824962" Fixed="false" />
-        <LinkGene Id="17" Source="0" Target="8" Weight="-1.3030904438346624" Fixed="false" />
-        <LinkGene Id="327" Source="8" Target="6" Weight="-0.491186217404902" Fixed="false" />
+        <LinkGene Id="0" Source="0" Target="5" Weight="-3.455803981050849" Fixed="false" />
+        <LinkGene Id="1" Source="0" Target="6" Weight="-2.1594880102202296" Fixed="false" />
+        <LinkGene Id="2" Source="1" Target="5" Weight="4.48473910568282" Fixed="false" />
+        <LinkGene Id="3" Source="1" Target="6" Weight="3.8909163209609687" Fixed="false" />
+        <LinkGene Id="4" Source="2" Target="5" Weight="0.79883589874953032" Fixed="false" />
+        <LinkGene Id="5" Source="2" Target="6" Weight="2.9874490899965167" Fixed="false" />
+        <LinkGene Id="6" Source="3" Target="5" Weight="-2.877009161747992" Fixed="false" />
+        <LinkGene Id="7" Source="3" Target="6" Weight="3.12110559316352" Fixed="false" />
+        <LinkGene Id="8" Source="4" Target="5" Weight="2.5907343486323953" Fixed="false" />
+        <LinkGene Id="9" Source="4" Target="6" Weight="3.2939076260663569" Fixed="false" />
+        <LinkGene Id="10" Source="1" Target="7" Weight="3.85143916355446" Fixed="false" />
+        <LinkGene Id="11" Source="3" Target="7" Weight="-3.0195938143879175" Fixed="false" />
+        <LinkGene Id="13" Source="4" Target="8" Weight="-3.7656330014579" Fixed="false" />
+        <LinkGene Id="14" Source="7" Target="5" Weight="3.5444648447446525" Fixed="false" />
+        <LinkGene Id="15" Source="8" Target="5" Weight="-0.066882835235446692" Fixed="false" />
+        <LinkGene Id="16" Source="0" Target="7" Weight="-3.3543635392561555" Fixed="false" />
+        <LinkGene Id="17" Source="0" Target="8" Weight="-3.3199606416746974" Fixed="false" />
+        <LinkGene Id="327" Source="8" Target="6" Weight="4.3123618350364268" Fixed="false" />
       </Links>
       <BehaviorType>
         <bVector>
@@ -1210,24 +1210,24 @@
         <NodeGene Id="8" Type="Hidden" Function="Gaussian" Layer="2" Fixed="false" />
       </Nodes>
       <Links>
-        <LinkGene Id="0" Source="0" Target="5" Weight="4.8697896185331047" Fixed="false" />
-        <LinkGene Id="1" Source="0" Target="6" Weight="1.9848864572122693" Fixed="false" />
-        <LinkGene Id="2" Source="1" Target="5" Weight="1.8976262770593166" Fixed="false" />
-        <LinkGene Id="3" Source="1" Target="6" Weight="2.7366185840219259" Fixed="false" />
-        <LinkGene Id="4" Source="2" Target="5" Weight="-1.2869180040434003" Fixed="false" />
-        <LinkGene Id="5" Source="2" Target="6" Weight="1.2076356983743608" Fixed="false" />
-        <LinkGene Id="6" Source="3" Target="5" Weight="-4.3937264615669847" Fixed="false" />
-        <LinkGene Id="7" Source="3" Target="6" Weight="2.5686556217260659" Fixed="false" />
-        <LinkGene Id="8" Source="4" Target="5" Weight="2.274079192429781" Fixed="false" />
-        <LinkGene Id="9" Source="4" Target="6" Weight="-4.0507540735416114" Fixed="false" />
-        <LinkGene Id="10" Source="1" Target="7" Weight="-0.69322713883593678" Fixed="false" />
-        <LinkGene Id="11" Source="3" Target="7" Weight="3.134447536431253" Fixed="false" />
-        <LinkGene Id="13" Source="4" Target="8" Weight="4.1841475456021726" Fixed="false" />
-        <LinkGene Id="14" Source="7" Target="5" Weight="-2.341320610139519" Fixed="false" />
-        <LinkGene Id="15" Source="8" Target="5" Weight="-2.9307316592894495" Fixed="false" />
-        <LinkGene Id="16" Source="0" Target="7" Weight="-2.0979422028176486" Fixed="false" />
-        <LinkGene Id="17" Source="0" Target="8" Weight="-1.9401093549095094" Fixed="false" />
-        <LinkGene Id="327" Source="8" Target="6" Weight="-2.3946820735000074" Fixed="false" />
+        <LinkGene Id="0" Source="0" Target="5" Weight="2.6245729927904904" Fixed="false" />
+        <LinkGene Id="1" Source="0" Target="6" Weight="0.48991692718118429" Fixed="false" />
+        <LinkGene Id="2" Source="1" Target="5" Weight="-2.1289841318503022" Fixed="false" />
+        <LinkGene Id="3" Source="1" Target="6" Weight="-4.4118160218931735" Fixed="false" />
+        <LinkGene Id="4" Source="2" Target="5" Weight="1.8050676840357482" Fixed="false" />
+        <LinkGene Id="5" Source="2" Target="6" Weight="-3.8128569186665118" Fixed="false" />
+        <LinkGene Id="6" Source="3" Target="5" Weight="-0.71688625030219555" Fixed="false" />
+        <LinkGene Id="7" Source="3" Target="6" Weight="1.6760447807610035" Fixed="false" />
+        <LinkGene Id="8" Source="4" Target="5" Weight="2.8893638751469553" Fixed="false" />
+        <LinkGene Id="9" Source="4" Target="6" Weight="-4.5859753945842385" Fixed="false" />
+        <LinkGene Id="10" Source="1" Target="7" Weight="-0.092223568353801966" Fixed="false" />
+        <LinkGene Id="11" Source="3" Target="7" Weight="-4.818753635045141" Fixed="false" />
+        <LinkGene Id="13" Source="4" Target="8" Weight="-2.7146223071031272" Fixed="false" />
+        <LinkGene Id="14" Source="7" Target="5" Weight="-2.2460613329894841" Fixed="false" />
+        <LinkGene Id="15" Source="8" Target="5" Weight="0.81599415047094226" Fixed="false" />
+        <LinkGene Id="16" Source="0" Target="7" Weight="-1.3709218963049352" Fixed="false" />
+        <LinkGene Id="17" Source="0" Target="8" Weight="2.3083546315319836" Fixed="false" />
+        <LinkGene Id="327" Source="8" Target="6" Weight="-4.6567166433669627" Fixed="false" />
       </Links>
       <BehaviorType>
         <bVector>
@@ -1256,24 +1256,24 @@
         <NodeGene Id="8" Type="Hidden" Function="Gaussian" Layer="2" Fixed="false" />
       </Nodes>
       <Links>
-        <LinkGene Id="0" Source="0" Target="5" Weight="3.9159199385903776" Fixed="false" />
-        <LinkGene Id="1" Source="0" Target="6" Weight="-0.9209112380631268" Fixed="false" />
-        <LinkGene Id="2" Source="1" Target="5" Weight="-1.221128876786679" Fixed="false" />
-        <LinkGene Id="3" Source="1" Target="6" Weight="-1.4797883410938084" Fixed="false" />
-        <LinkGene Id="4" Source="2" Target="5" Weight="3.7393760657869279" Fixed="false" />
-        <LinkGene Id="5" Source="2" Target="6" Weight="2.1646907972171903" Fixed="false" />
-        <LinkGene Id="6" Source="3" Target="5" Weight="-0.20077535649761558" Fixed="false" />
-        <LinkGene Id="7" Source="3" Target="6" Weight="-2.3883408936671913" Fixed="false" />
-        <LinkGene Id="8" Source="4" Target="5" Weight="1.2822157796472311" Fixed="false" />
-        <LinkGene Id="9" Source="4" Target="6" Weight="0.35570954438298941" Fixed="false" />
-        <LinkGene Id="10" Source="1" Target="7" Weight="0.23204650264233351" Fixed="false" />
-        <LinkGene Id="11" Source="3" Target="7" Weight="-3.6389513476751745" Fixed="false" />
-        <LinkGene Id="13" Source="4" Target="8" Weight="-3.6306317965500057" Fixed="false" />
-        <LinkGene Id="14" Source="7" Target="5" Weight="1.56372215365991" Fixed="false" />
-        <LinkGene Id="15" Source="8" Target="5" Weight="-1.8772795703262091" Fixed="false" />
-        <LinkGene Id="16" Source="0" Target="7" Weight="-2.38931093364954" Fixed="false" />
-        <LinkGene Id="17" Source="0" Target="8" Weight="-1.6973516275174916" Fixed="false" />
-        <LinkGene Id="327" Source="8" Target="6" Weight="-4.6759633719921112" Fixed="false" />
+        <LinkGene Id="0" Source="0" Target="5" Weight="-3.4318458917550743" Fixed="false" />
+        <LinkGene Id="1" Source="0" Target="6" Weight="-0.359721127897501" Fixed="false" />
+        <LinkGene Id="2" Source="1" Target="5" Weight="0.092669932637363672" Fixed="false" />
+        <LinkGene Id="3" Source="1" Target="6" Weight="3.322557108476758" Fixed="false" />
+        <LinkGene Id="4" Source="2" Target="5" Weight="2.4829470459371805" Fixed="false" />
+        <LinkGene Id="5" Source="2" Target="6" Weight="0.44951863819733262" Fixed="false" />
+        <LinkGene Id="6" Source="3" Target="5" Weight="-0.059542502276599407" Fixed="false" />
+        <LinkGene Id="7" Source="3" Target="6" Weight="3.0745006934739649" Fixed="false" />
+        <LinkGene Id="8" Source="4" Target="5" Weight="-0.94553886214271188" Fixed="false" />
+        <LinkGene Id="9" Source="4" Target="6" Weight="-1.7009715875610709" Fixed="false" />
+        <LinkGene Id="10" Source="1" Target="7" Weight="2.7903294004499912" Fixed="false" />
+        <LinkGene Id="11" Source="3" Target="7" Weight="1.1651559197343886" Fixed="false" />
+        <LinkGene Id="13" Source="4" Target="8" Weight="3.4140764293260872" Fixed="false" />
+        <LinkGene Id="14" Source="7" Target="5" Weight="4.012112959753722" Fixed="false" />
+        <LinkGene Id="15" Source="8" Target="5" Weight="2.2653938923031092" Fixed="false" />
+        <LinkGene Id="16" Source="0" Target="7" Weight="-4.9078973010182381" Fixed="false" />
+        <LinkGene Id="17" Source="0" Target="8" Weight="0.3431955142877996" Fixed="false" />
+        <LinkGene Id="327" Source="8" Target="6" Weight="-0.96880029886960983" Fixed="false" />
       </Links>
       <BehaviorType>
         <bVector>
@@ -1302,24 +1302,24 @@
         <NodeGene Id="8" Type="Hidden" Function="Gaussian" Layer="2" Fixed="false" />
       </Nodes>
       <Links>
-        <LinkGene Id="0" Source="0" Target="5" Weight="2.1654966031201184" Fixed="false" />
-        <LinkGene Id="1" Source="0" Target="6" Weight="0.61849379912018776" Fixed="false" />
-        <LinkGene Id="2" Source="1" Target="5" Weight="1.520989197306335" Fixed="false" />
-        <LinkGene Id="3" Source="1" Target="6" Weight="2.8256179229356349" Fixed="false" />
-        <LinkGene Id="4" Source="2" Target="5" Weight="-1.5153410076163709" Fixed="false" />
-        <LinkGene Id="5" Source="2" Target="6" Weight="-1.012051843572408" Fixed="false" />
-        <LinkGene Id="6" Source="3" Target="5" Weight="0.42343465378507972" Fixed="false" />
-        <LinkGene Id="7" Source="3" Target="6" Weight="0.32309330999851227" Fixed="false" />
-        <LinkGene Id="8" Source="4" Target="5" Weight="-1.3043347466737032" Fixed="false" />
-        <LinkGene Id="9" Source="4" Target="6" Weight="-3.0746721616014838" Fixed="false" />
-        <LinkGene Id="10" Source="1" Target="7" Weight="3.5835411236621439" Fixed="false" />
-        <LinkGene Id="11" Source="3" Target="7" Weight="-3.3393677696585655" Fixed="false" />
-        <LinkGene Id="13" Source="4" Target="8" Weight="-2.6835589483380318" Fixed="false" />
-        <LinkGene Id="14" Source="7" Target="5" Weight="2.8931001690216362" Fixed="false" />
-        <LinkGene Id="15" Source="8" Target="5" Weight="0.891595056746155" Fixed="false" />
-        <LinkGene Id="16" Source="0" Target="7" Weight="-4.1026984783820808" Fixed="false" />
-        <LinkGene Id="17" Source="0" Target="8" Weight="2.4479773850180209" Fixed="false" />
-        <LinkGene Id="327" Source="8" Target="6" Weight="-0.55657185148447752" Fixed="false" />
+        <LinkGene Id="0" Source="0" Target="5" Weight="-2.3411194863729179" Fixed="false" />
+        <LinkGene Id="1" Source="0" Target="6" Weight="-2.211385197006166" Fixed="false" />
+        <LinkGene Id="2" Source="1" Target="5" Weight="3.6366318841464818" Fixed="false" />
+        <LinkGene Id="3" Source="1" Target="6" Weight="-0.85692353779450059" Fixed="false" />
+        <LinkGene Id="4" Source="2" Target="5" Weight="-0.886745871976018" Fixed="false" />
+        <LinkGene Id="5" Source="2" Target="6" Weight="2.9900492867454886" Fixed="false" />
+        <LinkGene Id="6" Source="3" Target="5" Weight="4.8354249307885766" Fixed="false" />
+        <LinkGene Id="7" Source="3" Target="6" Weight="-0.93879535095766187" Fixed="false" />
+        <LinkGene Id="8" Source="4" Target="5" Weight="2.6853786362335086" Fixed="false" />
+        <LinkGene Id="9" Source="4" Target="6" Weight="-3.6520863603800535" Fixed="false" />
+        <LinkGene Id="10" Source="1" Target="7" Weight="-0.52608421072363853" Fixed="false" />
+        <LinkGene Id="11" Source="3" Target="7" Weight="-3.064068213570863" Fixed="false" />
+        <LinkGene Id="13" Source="4" Target="8" Weight="2.7132258540950716" Fixed="false" />
+        <LinkGene Id="14" Source="7" Target="5" Weight="1.9971253001131117" Fixed="false" />
+        <LinkGene Id="15" Source="8" Target="5" Weight="-0.80598392058163881" Fixed="false" />
+        <LinkGene Id="16" Source="0" Target="7" Weight="2.3079398740082979" Fixed="false" />
+        <LinkGene Id="17" Source="0" Target="8" Weight="4.1077684913761914" Fixed="false" />
+        <LinkGene Id="327" Source="8" Target="6" Weight="1.6136160749010742" Fixed="false" />
       </Links>
       <BehaviorType>
         <bVector>
@@ -1348,24 +1348,24 @@
         <NodeGene Id="8" Type="Hidden" Function="Gaussian" Layer="2" Fixed="false" />
       </Nodes>
       <Links>
-        <LinkGene Id="0" Source="0" Target="5" Weight="2.364424669649452" Fixed="false" />
-        <LinkGene Id="1" Source="0" Target="6" Weight="4.543647076934576" Fixed="false" />
-        <LinkGene Id="2" Source="1" Target="5" Weight="3.5751243703998625" Fixed="false" />
-        <LinkGene Id="3" Source="1" Target="6" Weight="3.0061502591706812" Fixed="false" />
-        <LinkGene Id="4" Source="2" Target="5" Weight="-0.6680100504308939" Fixed="false" />
-        <LinkGene Id="5" Source="2" Target="6" Weight="3.632401276845485" Fixed="false" />
-        <LinkGene Id="6" Source="3" Target="5" Weight="-1.8329172092489898" Fixed="false" />
-        <LinkGene Id="7" Source="3" Target="6" Weight="-2.3468672949820757" Fixed="false" />
-        <LinkGene Id="8" Source="4" Target="5" Weight="-3.5406808345578611" Fixed="false" />
-        <LinkGene Id="9" Source="4" Target="6" Weight="-1.8651826540008187" Fixed="false" />
-        <LinkGene Id="10" Source="1" Target="7" Weight="-4.5259237266145647" Fixed="false" />
-        <LinkGene Id="11" Source="3" Target="7" Weight="3.6630096286535263" Fixed="false" />
-        <LinkGene Id="13" Source="4" Target="8" Weight="-0.24329292122274637" Fixed="false" />
-        <LinkGene Id="14" Source="7" Target="5" Weight="-2.9516657395288348" Fixed="false" />
-        <LinkGene Id="15" Source="8" Target="5" Weight="4.8328426643274724" Fixed="false" />
-        <LinkGene Id="16" Source="0" Target="7" Weight="1.4810665091499686" Fixed="false" />
-        <LinkGene Id="17" Source="0" Target="8" Weight="-4.118162349332124" Fixed="false" />
-        <LinkGene Id="327" Source="8" Target="6" Weight="-4.6076740277931094" Fixed="false" />
+        <LinkGene Id="0" Source="0" Target="5" Weight="-1.9032981223426759" Fixed="false" />
+        <LinkGene Id="1" Source="0" Target="6" Weight="4.749614130705595" Fixed="false" />
+        <LinkGene Id="2" Source="1" Target="5" Weight="2.4543960951268673" Fixed="false" />
+        <LinkGene Id="3" Source="1" Target="6" Weight="0.030030449852347374" Fixed="false" />
+        <LinkGene Id="4" Source="2" Target="5" Weight="0.40934632532298565" Fixed="false" />
+        <LinkGene Id="5" Source="2" Target="6" Weight="-0.86297669447958469" Fixed="false" />
+        <LinkGene Id="6" Source="3" Target="5" Weight="3.7453067838214338" Fixed="false" />
+        <LinkGene Id="7" Source="3" Target="6" Weight="-3.2952777785249054" Fixed="false" />
+        <LinkGene Id="8" Source="4" Target="5" Weight="-2.7665538294240832" Fixed="false" />
+        <LinkGene Id="9" Source="4" Target="6" Weight="2.7478085504844785" Fixed="false" />
+        <LinkGene Id="10" Source="1" Target="7" Weight="-2.0757498149760067" Fixed="false" />
+        <LinkGene Id="11" Source="3" Target="7" Weight="0.6254961621016264" Fixed="false" />
+        <LinkGene Id="13" Source="4" Target="8" Weight="2.920091487467289" Fixed="false" />
+        <LinkGene Id="14" Source="7" Target="5" Weight="-2.2417901828885078" Fixed="false" />
+        <LinkGene Id="15" Source="8" Target="5" Weight="-2.5402215658687055" Fixed="false" />
+        <LinkGene Id="16" Source="0" Target="7" Weight="3.5330665693618357" Fixed="false" />
+        <LinkGene Id="17" Source="0" Target="8" Weight="4.4669937109574676" Fixed="false" />
+        <LinkGene Id="327" Source="8" Target="6" Weight="0.47875360120087862" Fixed="false" />
       </Links>
       <BehaviorType>
         <bVector>

@@ -387,6 +387,8 @@ namespace Keepaway
                 // update map with genomes
                 mapElites.updateMap(genomes);
 
+                mapElites.writeToFile();
+
                 return false;
 
             }

@@ -172,6 +172,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\CSMatIO\CSMatIO\src\csmatio.csproj">
+      <Project>{d6eb17bf-9074-484f-9950-e06169a3c39d}</Project>
+      <Name>csmatio</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RoboCup\RoboCup.csproj">
       <Project>{3E4781D8-339F-43BE-9EBC-2A3045F0C4F6}</Project>
       <Name>RoboCup</Name>
@@ -209,7 +213,6 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

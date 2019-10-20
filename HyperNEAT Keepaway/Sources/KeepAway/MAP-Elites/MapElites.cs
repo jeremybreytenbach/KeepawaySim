@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using csmatio.types;
+using csmatio.io;
 
 namespace Keepaway
 {
@@ -94,9 +96,30 @@ namespace Keepaway
             }
         }
         
-        private void writeToFile()
+        public void writeToFile()
         {
+            double[,,] fitness = new double[100, 100, 100];
 
+            //foreach (MapElement mapElement in this.eliteMap.Map)
+            for (int n = 0; n < 100; n++)
+            {
+                for (int nn = 0; nn < 100; nn++)
+                {
+                    for (int nnn = 0; nnn < 100; nnn++)
+                    {
+                        fitness[n, nn, nnn] = this.eliteMap.Map[n, nn, nnn].fitness;
+                    }
+                }                    
+            }
+
+            
+            MLDouble matlabMapDouble = new MLDouble("Double", new double[] { double.MaxValue, double.MinValue }, 1);
+
+            List<MLArray> mlList = new List<MLArray>();
+            mlList.Add(matlabMapDouble);
+
+            string filename = "E:\\Google Drive\\Academics\\UCT - MIT\\Research\\Code\\KeepawaySim\\Data\\map";
+            MatFileWriter mfw = new MatFileWriter(filename, mlList, true);
         }
     }
 }
