@@ -44,5 +44,12 @@ namespace Keepaway
             this.fitness = genome.Fitness;
             this.genomeId = genome.Id;
         }
+
+        public void updateMapElementProperties()
+        {
+            //this.position = position;
+            this.fitness = genome.Fitness;
+            //this.genomeId = genome.Id;
+        }
     }
 }

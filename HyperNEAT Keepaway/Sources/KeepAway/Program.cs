@@ -130,10 +130,10 @@ namespace Keepaway
 
             evo.AllGenerations();
 
+            // Write final map to matlab file for further analysis
+            mapElites.writeToFile();
 
             #endregion
-            var thisThing = 0;
-
         }
 
         #region HyperNEAT helper methods
@@ -387,7 +387,8 @@ namespace Keepaway
                 // update map with genomes
                 mapElites.updateMap(genomes);
 
-                mapElites.writeToFile();
+                // save new version of map after every generation
+                //mapElites.writeToFile();
 
                 return false;
 

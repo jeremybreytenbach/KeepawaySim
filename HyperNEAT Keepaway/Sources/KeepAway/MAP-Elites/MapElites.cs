@@ -34,9 +34,9 @@ namespace Keepaway
                 double distfromcentre = genomes[i].BehaviorType.bVector[3];
 
                 // round each dimension
-                teamDispersion = Math.Round(teamDispersion);
-                no_passes = Math.Round(no_passes);
-                distfromcentre = Math.Round(distfromcentre);
+                teamDispersion = Math.Round(teamDispersion * 100);
+                no_passes = Math.Round(no_passes * 100);
+                distfromcentre = Math.Round(distfromcentre * 100);
 
                 // update EliteMap max to new max if necessary
                 //if (teamDispersion > EliteMap.dimensionsMax[0])
@@ -122,6 +122,8 @@ namespace Keepaway
 
             matlab.Execute(@"for k = 0:99;fitness(1:100,1:100,k+1) =  eval(sprintf('fitness_%i',k));end");
             matlab.Execute(@"save('E:\\Google Drive\\Academics\\UCT - MIT\\Research\\Code\\KeepawaySim\\Data\\fitness.mat','fitness')");
+
+            //matlab.Execute(@"exit");
 
             //MLDouble matlabMapDouble = new MLDouble("Double", new double[] { double.MaxValue, double.MinValue }, 1);
 

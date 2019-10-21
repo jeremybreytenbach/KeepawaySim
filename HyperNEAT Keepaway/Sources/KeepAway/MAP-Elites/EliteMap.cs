@@ -12,11 +12,11 @@ namespace Keepaway
         
         public static int numDimensions = 3;
 
-        public static int[] dimensionsMin = new int[numDimensions];
-        public static int[] dimensionsMax = new int[numDimensions];
+        public static double[] dimensionsMin = new double[numDimensions];
+        public static double[] dimensionsMax = new double[numDimensions];
         public static string[] dimensionNames = new string[numDimensions]; // teamDispersion, no_passes, distfromcentre
 
-        public int[] elementResolution = new int[numDimensions];
+        public double[] elementResolution = new double[numDimensions];
 
         //public MapElement[,,] Map = new MapElement[dimensionsMax[0], dimensionsMax[1], dimensionsMax[2]]; // teamDispersion, no_passes, distfromcentre
         public MapElement[,,] Map = new MapElement[100, 100, 100]; // teamDispersion, no_passes, distfromcentre
@@ -69,6 +69,9 @@ namespace Keepaway
         {
             // replace genome at position with new specified genome
             Map[position[0], position[1], position[2]].genome = genome;
+            Map[position[0], position[1], position[2]].fitness = genome.Fitness;
+            Map[position[0], position[1], position[2]].position = position;
+            Map[position[0], position[1], position[2]].genomeId = genome.Id;
         }
 
         public bool compareGenome(NetworkGenome genome, int[] position)
