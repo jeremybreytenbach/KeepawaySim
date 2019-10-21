@@ -35,3 +35,4 @@ NEAT Keepaway/Sources/.vs/RoboCup/v15/Server/sqlite3/**
 NEAT Keepaway/Sources/RoboCup/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 NEAT Keepaway/Sources/.vs/RoboCup/v15/_suo.doc
 *.mat
+*.asv

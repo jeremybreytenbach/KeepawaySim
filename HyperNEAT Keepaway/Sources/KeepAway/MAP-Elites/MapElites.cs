@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using csmatio.types;
 using csmatio.io;
+using MLApp;
 
 namespace Keepaway
 {
@@ -98,28 +99,37 @@ namespace Keepaway
         
         public void writeToFile()
         {
-            double[,,] fitness = new double[100, 100, 100];
+            double[,] fitness = new double[100, 100];
+
+            // initialise matlab interface
+            MLApp.MLApp matlab = new MLApp.MLApp();
 
             //foreach (MapElement mapElement in this.eliteMap.Map)
-            for (int n = 0; n < 100; n++)
+            for (int z = 0; z < 100; z++)
             {
-                for (int nn = 0; nn < 100; nn++)
+                for (int r = 0; r < 100; r++)
                 {
-                    for (int nnn = 0; nnn < 100; nnn++)
+                    for (int c = 0; c < 100; c++)
                     {
-                        fitness[n, nn, nnn] = this.eliteMap.Map[n, nn, nnn].fitness;
+                        fitness[r, c] = this.eliteMap.Map[r, c, z].fitness;
                     }
-                }                    
+                }
+                // place each layer of fitness into matlab base workspace with a new name
+                matlab.PutFullMatrix("fitness_" + z.ToString(), "base", fitness, fitness);
             }
 
-            
-            MLDouble matlabMapDouble = new MLDouble("Double", new double[] { double.MaxValue, double.MinValue }, 1);
+            //matlab.Execute(@"for k = 0:99; save(sprintf('E:\\Google Drive\\Academics\\UCT - MIT\\Research\\Code\\KeepawaySim\\Data\\fitness%i.mat',k),sprintf('fitness_%i',k)); end");
 
-            List<MLArray> mlList = new List<MLArray>();
-            mlList.Add(matlabMapDouble);
+            matlab.Execute(@"for k = 0:99;fitness(1:100,1:100,k+1) =  eval(sprintf('fitness_%i',k));end");
+            matlab.Execute(@"save('E:\\Google Drive\\Academics\\UCT - MIT\\Research\\Code\\KeepawaySim\\Data\\fitness.mat','fitness')");
 
-            string filename = "E:\\Google Drive\\Academics\\UCT - MIT\\Research\\Code\\KeepawaySim\\Data\\map";
-            MatFileWriter mfw = new MatFileWriter(filename, mlList, true);
+            //MLDouble matlabMapDouble = new MLDouble("Double", new double[] { double.MaxValue, double.MinValue }, 1);
+
+            //List<MLArray> mlList = new List<MLArray>();
+            //mlList.Add(matlabMapDouble);
+
+            //string filename = "E:\\Google Drive\\Academics\\UCT - MIT\\Research\\Code\\KeepawaySim\\Data\\map";
+            //MatFileWriter mfw = new MatFileWriter(filename, mlList, true);
         }
     }
 }
