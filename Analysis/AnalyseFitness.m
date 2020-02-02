@@ -1,7 +1,36 @@
+%% load data
 load(sprintf('..//Data//fitness.mat'));
 
 fitness = real(fitness);
 fitness(ismissing(fitness,0)) = nan;
+
+%% basic stats
+figure
+histogram(fitness)
+
+%% 3d visualisation
+[x,y,z] = meshgrid(1:100);
+
+figure
+scatter3(x(:),y(:),z(:),fitness(1:end))
+
+xlabel('team dispersion')
+ylabel('no passes')
+zlabel('dist from centre')
+
+normFitness = normalize(fitness(1:end),'range');
+normFitness(normFitness==0) = nan;
+
+figure
+scatter3(x(:),y(:),z(:),normFitness*100,normFitness*100,'filled')
+xlabel('team dispersion')
+ylabel('no passes')
+zlabel('dist from centre')
+
+colormap(jet);
+colorbar;
+%% More
+% create heatmap from 3d matrix
 
 % fitness2 = fitness*100;
 % fitness3 = zscore(fitness);
@@ -24,25 +53,5 @@ fitness(ismissing(fitness,0)) = nan;
 % 
 % figure
 % h = histogram(fitness2(:),30)
-% 
-% figure
-% % [xx,yy] = meshgrid(1:100,1:100);
-% scatter3(1:100,1:100,1:100)
 
-
-%%
-% n = 0;
-% figure
-% for k = 1:100
-%     for kk = 1:100
-%         for kkk = 1:100
-%             n = n+1;
-%             hold on
-%             scatter3(k,kk,kkk,fitness(n)*100)
-%         end
-%         drawnow
-%     end
-% end
-
-https://www.mathworks.com/help/matlab/visualize/visualizing-four-dimensional-data.html?s_tid=srchtitle
 

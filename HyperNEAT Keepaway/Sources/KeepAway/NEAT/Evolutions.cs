@@ -567,9 +567,14 @@ namespace Keepaway
                     int spec = enumerator.Current;
                     List<NetworkGenome> list = new List<NetworkGenome>(Enumerable.Where<NetworkGenome>((IEnumerable<NetworkGenome>)this.Current.Genomes, (Func<NetworkGenome, bool>)(g => g.Species == spec)));
                     list.Sort((Comparison<NetworkGenome>)((a, b) => b.Fitness.CompareTo(a.Fitness)));
-                    int num = (int)Math.Round(this.Reprod.Elitism * (double)list.Count);
+                    int num = (int)Math.Round(this.Reprod.Elitism * (double)list.Count); // Only keep num from current generation. TODO: modify code to keep num but also all of the genomes in mapElites.Map
                     for (int index = 0; index < num; ++index)
                         this.Next.Genomes.Add(list[index]);
+                    // Add genomes from mapElites.Map to this.Next.Genomes
+                    for (int index = 0; index < Program.mapElites.eliteMap.numElements(); index++)
+                    {
+                        this.Next.Genomes.Add(Program.mapElites.eliteMap.flatMap[index]);
+                    }
                 }
             }
         }

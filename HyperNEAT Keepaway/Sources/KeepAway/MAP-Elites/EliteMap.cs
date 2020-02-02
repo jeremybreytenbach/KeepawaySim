@@ -20,7 +20,7 @@ namespace Keepaway
 
         //public MapElement[,,] Map = new MapElement[dimensionsMax[0], dimensionsMax[1], dimensionsMax[2]]; // teamDispersion, no_passes, distfromcentre
         public MapElement[,,] Map = new MapElement[100, 100, 100]; // teamDispersion, no_passes, distfromcentre
-
+        public List<NetworkGenome> flatMap = new List<NetworkGenome>();
 
         // methods
 
@@ -72,6 +72,7 @@ namespace Keepaway
             Map[position[0], position[1], position[2]].fitness = genome.Fitness;
             Map[position[0], position[1], position[2]].position = position;
             Map[position[0], position[1], position[2]].genomeId = genome.Id;
+            flatMap.Add(genome);
         }
 
         public bool compareGenome(NetworkGenome genome, int[] position)
@@ -84,6 +85,12 @@ namespace Keepaway
             {
                 return false;
             }
+        }
+
+        public int numElements()
+        {
+            //return this.Map.Count(s => s != null);
+            return this.flatMap.Count();
         }
     }
 }
