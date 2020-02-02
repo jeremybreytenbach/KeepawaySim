@@ -2,9 +2,9 @@
 <Initialization xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Population load="false" file="Population.xml" />
   <Seed load="true" file="Seed.xml" />
-  <MaximumGenerations>20</MaximumGenerations><!--100-->
-  <PopulationSize>30</PopulationSize><!--150-->
+  <MaximumGenerations>100</MaximumGenerations>
+  <PopulationSize>150</PopulationSize>
   <InitalConnectionPercentage>1</InitalConnectionPercentage>
-  <StopOnFitnessCriteria>false</StopOnFitnessCriteria><!--false-->
-  <MaxLayers>5</MaxLayers><!--5-->
+  <StopOnFitnessCriteria>false</StopOnFitnessCriteria>
+  <MaxLayers>5</MaxLayers>
 </Initialization>

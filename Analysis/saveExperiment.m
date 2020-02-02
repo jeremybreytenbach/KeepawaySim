@@ -16,11 +16,19 @@ for k = 1:length(fileNames)
 end
 
 %% Save champ data from sim
-fileNames = "ChampStats.txt";
+fileNames = ["ChampStats.txt","PopStats.txt"];
 rootPath = "E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\HyperNEAT Keepaway\Sources\KeepAway\bin\Debug\Champs\";
 for k = 1:length(fileNames)
     copyfile(strcat(rootPath,fileNames(k)),strcat(newPath,dateToday,"\",fileNames(k)),'f');
 end
+
+%% Save species data from sim
+fileNames = ["SpeciesStats.txt"];
+rootPath = "E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\HyperNEAT Keepaway\Sources\KeepAway\bin\Debug\Species\";
+for k = 1:length(fileNames)
+    copyfile(strcat(rootPath,fileNames(k)),strcat(newPath,dateToday,"\",fileNames(k)),'f');
+end
+
 %% Save analytics and results
 fileNames = ["AnalyseFitness.m","analyseResults.m","fitnessVis.fig"];
 

@@ -11,7 +11,7 @@
   <NumKeepers>3</NumKeepers>
   <NumTakers>2</NumTakers>
   <Scalarizer>0.6</Scalarizer>
-  <Episodes>2</Episodes><!--30-->
+  <Episodes>30</Episodes>
   <nearestNeighbors>15</nearestNeighbors>
   <archiveLimit>10</archiveLimit>
   <archiveSize>1000</archiveSize>

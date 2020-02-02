@@ -1,0 +1,3 @@
+ActiveSpecies#:	1	Species0:	Members:	30	MaxFitness:	0	AvgFitness:	0
+ActiveSpecies#:	1	Species0:	Members:	30	MaxFitness:	0,48009386940323	AvgFitness:	0,427110216457802
+ActiveSpecies#:	1	Species0:	Members:	30	MaxFitness:	0,478195965402957	AvgFitness:	0,425922024074161
