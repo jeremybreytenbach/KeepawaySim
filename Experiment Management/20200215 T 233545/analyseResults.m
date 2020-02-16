@@ -12,31 +12,22 @@ for k = 1:length(xDoc.Population.Genomes.NetworkGenome)
     distFromCentre(k) = str2double(xDoc.Population.Genomes.NetworkGenome{k}.BehaviorType.bVector.double{4}.Text);
 end
 
-%%
 figure
 plot(fitness2)
 title('fitness')
 
-hold all
-
-% figure
+figure
 plot(cycles)
 title('cycles')
 
-% figure
+figure
 plot(teamDispersion)
 title('teamDispersion')
 
-% figure
+figure
 plot(numPasses)
 title('numPasses')
 
-% figure
+figure
 plot(distFromCentre)
 title('distFromCentre')
-
-%%
-figure
-plot(normalize(vertcat(fitness2,cycles,teamDispersion,numPasses,distFromCentre)'))
-title('metrics')
-legend('fitness','cycles','teamDispersion','numPasses','distFromCentre')

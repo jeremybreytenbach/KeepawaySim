@@ -604,6 +604,10 @@ namespace Keepaway
                 for (int index = 0; index < this.species.Count; ++index)
                     Species.SaveToXml(this.Saves.Species.path + "G" + this.Generation.ToString("0000") + "Species" + index.ToString("0000") + ".xml", this.species[index]);
             }
+            if (this.Generation % 5 == 0 || this.Generation == 1)
+            {
+                Program.mapElites.writeToFile();
+            }
             if (!this.Saves.SpeciesStatistics.save || this.Generation % this.Saves.SpeciesStatistics.inteval != 0)
                 return;
             this.WriteSpeciesStats();

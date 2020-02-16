@@ -1,0 +1,9 @@
+E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\HyperNEAT Keepaway\Sources\RoboCup\bin\Release\RoboCup#.dll
+E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\HyperNEAT Keepaway\Sources\RoboCup\bin\Release\RoboCup#.pdb
+E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\HyperNEAT Keepaway\Sources\RoboCup\obj\Release\RoboCup.csprojAssemblyReference.cache
+E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\HyperNEAT Keepaway\Sources\RoboCup\obj\Release\RoboCup.FieldVisualizer.resources
+E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\HyperNEAT Keepaway\Sources\RoboCup\obj\Release\RoboCup.ObjectData.resources
+E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\HyperNEAT Keepaway\Sources\RoboCup\obj\Release\RoboCup.csproj.GenerateResource.cache
+E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\HyperNEAT Keepaway\Sources\RoboCup\obj\Release\RoboCup.csproj.CoreCompileInputs.cache
+E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\HyperNEAT Keepaway\Sources\RoboCup\obj\Release\RoboCup#.dll
+E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\HyperNEAT Keepaway\Sources\RoboCup\obj\Release\RoboCup#.pdb

@@ -34,9 +34,9 @@ namespace Keepaway
                 double distfromcentre = genomes[i].BehaviorType.bVector[3];
 
                 // round each dimension
-                teamDispersion = Math.Round(teamDispersion * 100);
-                no_passes = Math.Round(no_passes * 100);
-                distfromcentre = Math.Round(distfromcentre * 100);
+                teamDispersion = Math.Round(teamDispersion * 1000);
+                no_passes = Math.Round(no_passes * 1000);
+                distfromcentre = Math.Round(distfromcentre * 1000);
 
                 // update EliteMap max to new max if necessary
                 //if (teamDispersion > EliteMap.dimensionsMax[0])
@@ -99,17 +99,17 @@ namespace Keepaway
         
         public void writeToFile()
         {
-            double[,] fitness = new double[100, 100];
+            double[,] fitness = new double[1000, 1000];
 
             // initialise matlab interface
             MLApp.MLApp matlab = new MLApp.MLApp();
 
             //foreach (MapElement mapElement in this.eliteMap.Map)
-            for (int z = 0; z < 100; z++)
+            for (int z = 0; z < 1000; z++)
             {
-                for (int r = 0; r < 100; r++)
+                for (int r = 0; r < 1000; r++)
                 {
-                    for (int c = 0; c < 100; c++)
+                    for (int c = 0; c < 1000; c++)
                     {
                         fitness[r, c] = this.eliteMap.Map[r, c, z].fitness;
                     }

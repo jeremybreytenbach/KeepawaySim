@@ -19,7 +19,7 @@ namespace Keepaway
         public double[] elementResolution = new double[numDimensions];
 
         //public MapElement[,,] Map = new MapElement[dimensionsMax[0], dimensionsMax[1], dimensionsMax[2]]; // teamDispersion, no_passes, distfromcentre
-        public MapElement[,,] Map = new MapElement[100, 100, 100]; // teamDispersion, no_passes, distfromcentre
+        public MapElement[,,] Map = new MapElement[1000, 1000, 1000]; // teamDispersion, no_passes, distfromcentre
         public List<NetworkGenome> flatMap = new List<NetworkGenome>();
 
         // methods
@@ -35,16 +35,16 @@ namespace Keepaway
             dimensionsMin[1] = 0;
             dimensionsMin[2] = 0;
 
-            dimensionsMax[0] = 100;
-            dimensionsMax[1] = 100;
-            dimensionsMax[2] = 100;
+            dimensionsMax[0] = 1000;
+            dimensionsMax[1] = 1000;
+            dimensionsMax[2] = 1000;
 
             elementResolution[0] = 1;
             elementResolution[1] = 1;
             elementResolution[2] = 1;
 
             // Initialise map
-            for (int dimensionIndex0 = 0; dimensionIndex0 < dimensionsMax[0]/elementResolution[0]; ++dimensionIndex0)
+            for (int dimensionIndex0 = 0; dimensionIndex0 < dimensionsMax[0]/elementResolution[0]; ++dimensionIndex0) // eg. 100/0.1 => 0,1,2,...,1000
             {
                 for (int dimensionIndex1 = 0; dimensionIndex1 < dimensionsMax[1]/elementResolution[1]; ++dimensionIndex1)
                 {

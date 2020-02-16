@@ -2,7 +2,7 @@
 <Initialization xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Population load="false" file="Population.xml" />
   <Seed load="true" file="Seed.xml" />
-  <MaximumGenerations>100</MaximumGenerations>
+  <MaximumGenerations>10</MaximumGenerations><!--100-->
   <PopulationSize>150</PopulationSize>
   <InitalConnectionPercentage>1</InitalConnectionPercentage>
   <StopOnFitnessCriteria>false</StopOnFitnessCriteria>
