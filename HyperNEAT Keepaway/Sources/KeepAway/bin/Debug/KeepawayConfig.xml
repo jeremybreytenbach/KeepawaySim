@@ -10,13 +10,14 @@
   <SubstrateEndY>1</SubstrateEndY>
   <NumKeepers>3</NumKeepers>
   <NumTakers>2</NumTakers>
-  <Scalarizer>0.6</Scalarizer>
-  <Episodes>30</Episodes>
+  <scalarizer>0.6</scalarizer>
+  <Episodes>5</Episodes><!--30-->
   <nearestNeighbors>15</nearestNeighbors>
   <archiveLimit>10</archiveLimit>
   <archiveSize>1000</archiveSize>
   <archiveThreshold>0.03</archiveThreshold>
-  <SearchMethod>1</SearchMethod>
+  <SearchMethod>3</SearchMethod>
+  <MapElites>true</MapElites>
   <Description>
     There are 5 variants of methods to adapt the evolutionary search :
     1. Objective-Based Search - uses average hold time in secs over 30 episodes

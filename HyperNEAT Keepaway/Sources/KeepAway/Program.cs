@@ -36,6 +36,7 @@ namespace Keepaway
         public int archiveSize;        
         public int SearchMethod;
         public string Description;
+        public bool MapElites;
 
         private static System.Xml.Serialization.XmlSerializer serial = new System.Xml.Serialization.XmlSerializer(typeof(KeepawayConfig));
 
@@ -81,6 +82,7 @@ namespace Keepaway
         public static double fitnormaliser = 12;
 
         public static MapElites mapElites = new MapElites();
+        public static int evaluations = 0;
 
         #endregion
 
@@ -131,7 +133,10 @@ namespace Keepaway
             evo.AllGenerations();
 
             // Write final map to matlab file for further analysis
-            mapElites.writeToFile();
+            if (config.MapElites)
+            {
+                mapElites.writeToFile();
+            }
 
             #endregion
         }
@@ -234,7 +239,7 @@ namespace Keepaway
         {
             if (!test)
             {
-                int evaluations = 0;
+                evaluations = 0;
                 Dictionary<int, int> evalCount = new Dictionary<int, int>();
                 List<int> keys = new List<int>(mapping.Keys);
                 for (int i = 0; i < genomes.Count; i++)
@@ -295,7 +300,7 @@ namespace Keepaway
                     for (int j = 0; j < config.Episodes; j++) // This is where we iterate over episodes. Server.RunCycle will run one episode, which ends when the ref says so.
                     {
                         fitness = Evaluate(createdNetworks[mapping[genomes[i].Id]]); // Run an episode and store results. fitness - 0: cycles, 1: team_dispersion, 2: no passes, 3: distance_from_centre
-                        genomes[i].RealFitness += fitness[0];
+                        genomes[i].RealFitness += fitness[0]; // realFitness is actually just cycles (number of simulated cycles before ref stops match)
                         for (int v = 0; v < fitness.Length; v++) // for each vector, add the fitness from each episode.
                         {
                             genomes[i].BehaviorType.bVector[v] += fitness[v];
@@ -327,9 +332,9 @@ namespace Keepaway
                             maxVec[v] = genomes[i].BehaviorType.bVector[v];
                         }
                     }
-                }  
-        
-                //double fitnormaliser = 11;
+                }
+
+                double fitnormaliser = 11;
                 for (int j = 0; j < genomes.Count; j++)
                 {
                     genomes[j].RealFitness /= fitnormaliser;
@@ -339,7 +344,7 @@ namespace Keepaway
                         genomes[j].BehaviorType.bVector[v] /= maxVec[v];
                     }
                 }
-                
+
                 foreach (NetworkGenome genome in genomes)
                 {                    
                     genome.Novelty = genome.NoveltyMeasure.computeNovelty(genome, genomes);
@@ -422,7 +427,7 @@ namespace Keepaway
                     }
 
                 }
-                //double fitnormaliser = 11;                
+                double fitnormaliser = 11;
                 for (int i = 0; i < genomes.Count; i++)
                 {
                     maxVec[0] = genomes[i].RealFitness;
@@ -432,17 +437,17 @@ namespace Keepaway
                         {
                             maxVec[v] = genomes[i].BehaviorType.bVector[v];
                         }
-                    }                    
-                }  
-                    for (int j = 0; j < genomes.Count; j++)
+                    }
+                }
+                for (int j = 0; j < genomes.Count; j++)
+                {
+                    genomes[j].RealFitness /= fitnormaliser;
+                    genomes[j].BehaviorType.bVector[0] /= fitnormaliser;
+                    for (int v = 1; v < maxVec.Length; v++)
                     {
-                        genomes[j].RealFitness /= fitnormaliser;
-                        genomes[j].BehaviorType.bVector[0] /= fitnormaliser ;
-                        for (int v = 1; v < maxVec.Length; v++)
-                        {
-                            genomes[j].BehaviorType.bVector[v] /= maxVec[v];
-                        }
-                     }
+                        genomes[j].BehaviorType.bVector[v] /= maxVec[v];
+                    }
+                }
 
                 foreach (NetworkGenome genome in genomes)
                 {

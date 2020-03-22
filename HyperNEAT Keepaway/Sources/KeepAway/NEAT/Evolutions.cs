@@ -373,6 +373,11 @@ namespace Keepaway
                 this.ChangeThreshold();
             this.UpdateStats(); // update max fitness for each species
             this.Save(); // save champs, pops, fitness, species in xml files on disk 
+            // Write map to matlab file for further analysis
+            if (Program.config.MapElites)
+            {
+                Program.mapElites.writeToFile();
+            }
             this.NextGeneration();
             this.UpdateSpeciesExtinction();
             if (this.OnGeneration == null)
@@ -571,9 +576,12 @@ namespace Keepaway
                     for (int index = 0; index < num; ++index)
                         this.Next.Genomes.Add(list[index]);
                     // Add genomes from mapElites.Map to this.Next.Genomes
-                    for (int index = 0; index < Program.mapElites.eliteMap.numElements(); index++)
+                    if (Program.config.MapElites)
                     {
-                        this.Next.Genomes.Add(Program.mapElites.eliteMap.flatMap[index]);
+                        for (int index = 0; index < Program.mapElites.eliteMap.numElements(); index++)
+                        {
+                            this.Next.Genomes.Add(Program.mapElites.eliteMap.flatMap[index]);
+                        }
                     }
                 }
             }

@@ -37,3 +37,7 @@ NEAT Keepaway/Sources/.vs/RoboCup/v15/_suo.doc
 *.mat
 *.asv
 *.diagsession
+Analysis/Times.xlsx
+Experiment Management/
+*.psess
+*.vspx

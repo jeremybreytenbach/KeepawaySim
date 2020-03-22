@@ -121,7 +121,9 @@ namespace Keepaway
             //matlab.Execute(@"for k = 0:99; save(sprintf('E:\\Google Drive\\Academics\\UCT - MIT\\Research\\Code\\KeepawaySim\\Data\\fitness%i.mat',k),sprintf('fitness_%i',k)); end");
 
             matlab.Execute(@"for k = 0:99;fitness(1:100,1:100,k+1) =  eval(sprintf('fitness_%i',k));end");
-            matlab.Execute(@"save('E:\\Google Drive\\Academics\\UCT - MIT\\Research\\Code\\KeepawaySim\\Data\\fitness.mat','fitness')");
+            //matlab.Execute(@"save('E:\\Google Drive\\Academics\\UCT - MIT\\Research\\Code\\KeepawaySim\\Data\\fitness.mat','fitness')");
+            matlab.Execute(@"save('E:\\Google Drive\\Academics\\UCT - MIT\\Research\\Code\\KeepawaySim\\Data\\fitness" + Program.evo.Generation.ToString() + ".mat','fitness')");
+
 
             //matlab.Execute(@"exit");
 

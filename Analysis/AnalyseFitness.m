@@ -1,5 +1,5 @@
 %% load data
-load(sprintf('..//Data//fitness.mat'));
+load(sprintf('..//Data//fitness8180.mat'));
 
 fitness = real(fitness);
 fitness(ismissing(fitness,0)) = nan;
@@ -7,13 +7,14 @@ fitness(ismissing(fitness,0)) = nan;
 %% basic stats
 figure
 histogram(fitness)
+title('Fitness histogram')
 
 %% 3d visualisation
 [x,y,z] = meshgrid(1:100);
 
 figure
 scatter3(x(:),y(:),z(:),fitness(1:end))
-
+title('Fitness landscape / Map of elites')
 xlabel('team dispersion')
 ylabel('no passes')
 zlabel('dist from centre')
@@ -26,6 +27,7 @@ scatter3(x(:),y(:),z(:),normFitness*100,normFitness*100,'filled')
 xlabel('team dispersion')
 ylabel('no passes')
 zlabel('dist from centre')
+title('Normalised fitness landscape / Map of elites')
 
 colormap(jet);
 colorbar;
