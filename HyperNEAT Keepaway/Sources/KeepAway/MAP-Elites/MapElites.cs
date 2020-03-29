@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using csmatio.types;
 using csmatio.io;
 using MLApp;
+using System.IO;
 
 namespace Keepaway
 {
@@ -99,6 +100,29 @@ namespace Keepaway
         
         public void writeToFile()
         {
+            // Initialise stringbuilder
+            var csv = new StringBuilder();
+
+            //foreach (MapElement mapElement in this.eliteMap.Map)
+            for (int z = 0; z < EliteMap.dimensionMax; z++)
+            {
+                for (int r = 0; r < EliteMap.dimensionMax; r++)
+                {
+                    for (int c = 0; c < EliteMap.dimensionMax; c++)
+                    {
+                        var newLine = string.Format("{0},{1},{2},{3}", r.ToString(), c.ToString(), z.ToString(), this.eliteMap.Map[r, c, z].fitness.ToString());
+                        csv.AppendLine(newLine);
+                    }
+                }
+            }
+
+            // Write out data
+            string filePath = "E:\\Google Drive\\Academics\\UCT - MIT\\Research\\Code\\KeepawaySim\\Data\\fitness_gen_" + Program.evo.Generation.ToString() + ".csv";
+            File.WriteAllText(filePath, csv.ToString());
+        }
+
+        public void writeToMatlabFile()
+        {
             double[,] fitness = new double[EliteMap.dimensionMax, EliteMap.dimensionMax];
 
             // initialise matlab interface
@@ -112,6 +136,7 @@ namespace Keepaway
                     for (int c = 0; c < EliteMap.dimensionMax; c++)
                     {
                         fitness[r, c] = this.eliteMap.Map[r, c, z].fitness;
+
                     }
                 }
                 // place each layer of fitness into matlab base workspace with a new name
