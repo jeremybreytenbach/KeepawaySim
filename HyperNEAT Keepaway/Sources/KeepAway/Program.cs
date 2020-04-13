@@ -133,10 +133,10 @@ namespace Keepaway
             evo.AllGenerations();
 
             // Write final map to matlab file for further analysis
-            if (config.MapElites)
-            {
+            //if (config.MapElites)
+            //{
                 mapElites.writeToFile();
-            }
+            //}
 
             #endregion
         }
