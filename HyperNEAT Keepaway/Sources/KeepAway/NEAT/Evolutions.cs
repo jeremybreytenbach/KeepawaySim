@@ -565,27 +565,63 @@ namespace Keepaway
 
         private void Elitism()
         {
+            // Actually, for MAP-Elites, I need to write a different version of this function. For MAP-Elites. Add all genomes in map to this.Next.Genomes
+            // And if genome is weaker than current genome in map, don't add it to this.Next.Genomes
+            // What this is currently doing: for each species, get top performing 90% of genomes, add these to this.Next.Genomes
+            // What I should be doing: for each species, if genomes in this species are in the map, add them to this.Next.Genomes
             using (IEnumerator<int> enumerator = this.Current.SpeciesIds.GetEnumerator())
             {
                 while (enumerator.MoveNext())
                 {
                     int spec = enumerator.Current;
                     List<NetworkGenome> list = new List<NetworkGenome>(Enumerable.Where<NetworkGenome>((IEnumerable<NetworkGenome>)this.Current.Genomes, (Func<NetworkGenome, bool>)(g => g.Species == spec)));
-                    list.Sort((Comparison<NetworkGenome>)((a, b) => b.Fitness.CompareTo(a.Fitness)));
-                    int num = (int)Math.Round(this.Reprod.Elitism * (double)list.Count); // Only keep num from current generation. TODO: modify code to keep num but also all of the genomes in mapElites.Map
-                    for (int index = 0; index < num; ++index)
-                        this.Next.Genomes.Add(list[index]);
-                    // Add genomes from mapElites.Map to this.Next.Genomes
                     if (Program.config.MapElites)
                     {
-                        for (int index = 0; index < Program.mapElites.eliteMap.numElements(); index++)
-                        {
-                            this.Next.Genomes.Add(Program.mapElites.eliteMap.flatMap[index]);
-                        }
+                        this.SelectWithMapElites(list);
+                    }
+                    else
+                    {
+                        this.Select(list);
                     }
                 }
             }
         }
+
+        private void Select(List<NetworkGenome> list)
+        {
+            list.Sort((Comparison<NetworkGenome>)((a, b) => b.Fitness.CompareTo(a.Fitness)));
+            int num = (int)Math.Round(this.Reprod.Elitism * (double)list.Count); // Only keep num from current generation. TODO: modify code to keep num but also all of the genomes in mapElites.Map
+            for (int index = 0; index < num; ++index)
+                this.Next.Genomes.Add(list[index]);
+        }
+
+        private void SelectWithMapElites(List<NetworkGenome> list)
+        {
+            for (int index = 0; index < list.Count; ++index) // for each genome in the species (in list)
+            {
+                if (Program.mapElites.eliteMap.flatMap.FindIndex(x => x.Id == list[index].Id) >= 0) // if this genome is in the elite Map
+                {
+                    this.Next.Genomes.Add(list[index]); // add this genome to this.Next.Genomes
+                }
+            }
+        }
+        
+        //private void oldElitismCode()
+        //{             
+        //    // Add genomes from mapElites.Map to this.Next.Genomes
+        //    if (Program.config.MapElites)
+        //    {
+        //        for (int index = 0; index < Program.mapElites.eliteMap.numElements(); index++)
+        //        {
+        //            // if Program.mapElites.eliteMap.flatMap[index] does not exist in this.Next.Genomes, then add it:
+        //            // any(ismember(this.Next.Genomes.id,Program.eliteMap.flatMap[index]))
+        //            if (this.Next.Genomes.FindIndex(x => x.Id == Program.mapElites.eliteMap.flatMap[index].Id) == -1)
+        //            {
+        //                this.Next.Genomes.Add(Program.mapElites.eliteMap.flatMap[index]);
+        //            }
+        //        }
+        //    }
+        //}
 
         private void IncrementGeneration()
         {
