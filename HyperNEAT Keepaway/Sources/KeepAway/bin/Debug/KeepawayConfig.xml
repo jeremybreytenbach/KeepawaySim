@@ -11,12 +11,12 @@
   <NumKeepers>3</NumKeepers>
   <NumTakers>2</NumTakers>
   <scalarizer>0.6</scalarizer>
-  <Episodes>20</Episodes><!--30-->
+  <Episodes>5</Episodes><!--30-->
   <nearestNeighbors>15</nearestNeighbors>
   <archiveLimit>10</archiveLimit>
   <archiveSize>1000</archiveSize>
   <archiveThreshold>0.03</archiveThreshold>
-  <SearchMethod>3</SearchMethod><!--1-->
+  <SearchMethod>1</SearchMethod><!--1-->
   <MapElites>true</MapElites>
   <Description>
     There are 5 variants of methods to adapt the evolutionary search :
