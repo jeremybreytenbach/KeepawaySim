@@ -397,7 +397,7 @@ namespace Keepaway
         private void NextGeneration()
         {
             this.IncrementGeneration(); 
-            this.Elitism(); // todo: investigate as priority
+            this.Elitism(); // todo: investigate as priority // done
             this.Reproduce();
             this.Previous = this.Current;
             this.Current = this.Next;
@@ -687,7 +687,6 @@ namespace Keepaway
                     this.PerformTest();
                 this.CompleteSaves();
             }
-            var thisThing = 0;
         }
 
         private void CompleteSaves()
