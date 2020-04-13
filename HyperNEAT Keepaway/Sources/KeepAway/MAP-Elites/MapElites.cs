@@ -110,7 +110,7 @@ namespace Keepaway
                 {
                     for (int c = 0; c < EliteMap.dimensionMax; c++)
                     {
-                        var newLine = string.Format("{0},{1},{2},{3}", r.ToString(), c.ToString(), z.ToString(), this.eliteMap.Map[r, c, z].fitness.ToString());
+                        var newLine = string.Format("{0},{1},{2},{3}", r.ToString(), c.ToString(), z.ToString(), this.eliteMap.Map[r, c, z].fitness.ToString(System.Globalization.CultureInfo.InvariantCulture));
                         csv.AppendLine(newLine);
                     }
                 }
