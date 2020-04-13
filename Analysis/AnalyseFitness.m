@@ -1,5 +1,18 @@
 %% load data
-load(sprintf('..//Data//fitness8180.mat'));
+% folderPath = "E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\Data\20200330-1350";
+% folderPath = "E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\Data\20200401-2203";
+% folderPath = "E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\Data\20200402-2344";
+% folderPath = "E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\Data\20200411-1018";
+% folderPath = "E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\Data\20200411-1036";
+% folderPath = "E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\Data\20200411-1442";
+% folderPath = "E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\Data\20200412-2142";
+folderPath = "E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\Data\20200413-1402";
+
+maxGens = 55;
+data = readFitnessData(folderPath,maxGens);
+
+%% Choose data to analyse
+fitness = data{1};
 
 fitness = real(fitness);
 fitness(ismissing(fitness,0)) = nan;
@@ -12,12 +25,12 @@ title('Fitness histogram')
 %% 3d visualisation
 [x,y,z] = meshgrid(1:100);
 
-figure
-scatter3(x(:),y(:),z(:),fitness(1:end))
-title('Fitness landscape / Map of elites')
-xlabel('team dispersion')
-ylabel('no passes')
-zlabel('dist from centre')
+% figure
+% scatter3(x(:),y(:),z(:),fitness(1:end))
+% title('Fitness landscape / Map of elites')
+% xlabel('team dispersion')
+% ylabel('no passes')
+% zlabel('dist from centre')
 
 normFitness = normalize(fitness(1:end),'range');
 normFitness(normFitness==0) = nan;
@@ -56,4 +69,33 @@ colorbar;
 % figure
 % h = histogram(fitness2(:),30)
 
+%% Plot best fitness over generations
+for k = 1:maxGens
+    best(k) = max(max(max(data{k})));
+end
 
+figure
+plot(best)
+title('Max fitness in map')
+xlabel('Generation')
+ylabel('Fitness')
+
+for k = 1:maxGens
+    thisData = data{k};
+    thisData(thisData == 0) = NaN;
+    averageFitness(k) = nanmean(nanmean(nanmean(thisData)));
+    averageFitnessBoxes(1:100,k) = nanmean(nanmean(thisData));
+end
+    
+figure
+plot(averageFitness)
+title('Mean fitness in map')
+xlabel('Generation')
+ylabel('Fitness')
+
+
+figure
+boxplot(averageFitnessBoxes)
+title('Mean fitness in map')
+xlabel('Generation')
+ylabel('Fitness')

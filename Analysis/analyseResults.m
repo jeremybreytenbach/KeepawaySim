@@ -175,6 +175,18 @@ figure
 plot(nanmean(distFromCentre,1))
 title('Average distFromCentre')
 
+% age
+figure
+plot(age(indBestFitness))
+title('age for most fit genome')
+
+figure
+plot(nanmean(age,1))
+title('Average age')
+
+figure
+boxplot(age)
+title('Age')
 %%
 figure
 plot(normalize(horzcat(fitness(indBestFitness),cycles(indBestCycles),...
