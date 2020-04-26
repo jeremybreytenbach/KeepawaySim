@@ -604,24 +604,7 @@ namespace Keepaway
                     this.Next.Genomes.Add(list[index]); // add this genome to this.Next.Genomes
                 }
             }
-        }
-        
-        //private void oldElitismCode()
-        //{             
-        //    // Add genomes from mapElites.Map to this.Next.Genomes
-        //    if (Program.config.MapElites)
-        //    {
-        //        for (int index = 0; index < Program.mapElites.eliteMap.numElements(); index++)
-        //        {
-        //            // if Program.mapElites.eliteMap.flatMap[index] does not exist in this.Next.Genomes, then add it:
-        //            // any(ismember(this.Next.Genomes.id,Program.eliteMap.flatMap[index]))
-        //            if (this.Next.Genomes.FindIndex(x => x.Id == Program.mapElites.eliteMap.flatMap[index].Id) == -1)
-        //            {
-        //                this.Next.Genomes.Add(Program.mapElites.eliteMap.flatMap[index]);
-        //            }
-        //        }
-        //    }
-        //}
+        }        
 
         private void IncrementGeneration()
         {

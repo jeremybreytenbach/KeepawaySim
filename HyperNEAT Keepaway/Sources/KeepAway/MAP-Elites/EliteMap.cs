@@ -70,6 +70,7 @@ namespace Keepaway
         {
             // replace genome at position with new specified genome
             Map[position[0], position[1], position[2]].genome = genome;
+            Map[position[0], position[1], position[2]].realFitness = genome.RealFitness;
             Map[position[0], position[1], position[2]].fitness = genome.Fitness;
             Map[position[0], position[1], position[2]].position = position;
             Map[position[0], position[1], position[2]].genomeId = genome.Id;
@@ -78,7 +79,7 @@ namespace Keepaway
 
         public bool compareGenome(NetworkGenome genome, int[] position)
         {
-            if (genome.Fitness > Map[position[0], position[1], position[2]].fitness) 
+            if (genome.RealFitness > Map[position[0], position[1], position[2]].realFitness) 
             {
                 return true; // return true if passed in genome is greater than existing genome at that location
             }

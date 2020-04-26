@@ -2,8 +2,8 @@
 <Initialization xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Population load="false" file="Population.xml" />
   <Seed load="true" file="Seed.xml" />
-  <MaximumGenerations>55</MaximumGenerations><!--100-->
-  <PopulationSize>150</PopulationSize><!--150-->
+  <MaximumGenerations>100</MaximumGenerations><!--100-->
+  <PopulationSize>300</PopulationSize><!--150-->
   <InitalConnectionPercentage>1</InitalConnectionPercentage>
   <StopOnFitnessCriteria>false</StopOnFitnessCriteria>
   <MaxLayers>5</MaxLayers>

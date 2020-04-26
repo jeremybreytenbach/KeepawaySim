@@ -300,7 +300,7 @@ namespace Keepaway
                     for (int j = 0; j < config.Episodes; j++) // This is where we iterate over episodes. Server.RunCycle will run one episode, which ends when the ref says so.
                     {
                         fitness = Evaluate(createdNetworks[mapping[genomes[i].Id]]); // Run an episode and store results. fitness - 0: cycles, 1: team_dispersion, 2: no passes, 3: distance_from_centre
-                        genomes[i].RealFitness += fitness[0]; // realFitness is actually just cycles (number of simulated cycles before ref stops match)
+                        genomes[i].RealFitness += fitness[0]; // realFitness is actually just average of cycles (number of simulated cycles before ref stops match)
                         for (int v = 0; v < fitness.Length; v++) // for each vector, add the fitness from each episode.
                         {
                             genomes[i].BehaviorType.bVector[v] += fitness[v];

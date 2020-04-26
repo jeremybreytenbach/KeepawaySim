@@ -8,7 +8,7 @@ data = readFitnessData(folderPath,maxGens);
 data = cell(maxGens,1);
 
 for k = 1:maxGens
-   tempData = csvread(sprintf('%s//fitness_gen_%i.csv',folderPath,k));
+   tempData = csvread(sprintf('%s//real_fitness_gen_%i.csv',folderPath,k));
    data{k} = reformatData(tempData);
 end
 

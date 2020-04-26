@@ -15,7 +15,22 @@ nearestNeighbors =
 
 % TODO: Add complexity and efficiency
 preallocationColLen = 500;
+% dataDir = 'E:/Google Drive/Academics/UCT - MIT/Research/Code/KeepawaySim/HyperNEAT Keepaway/Sources/KeepAway/bin/Debug/';
+
+dataDir = 'E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\Experiment Management\';
+
+% folderPath = [dataDir '20200330 T 135000'];
+% folderPath = [dataDir '20200401 T 220300'];
+% folderPath = [dataDir '20200402 T 234400'];
+% folderPath = [dataDir '20200411 T 101800'];
+% folderPath = [dataDir '20200411 T 103600'];
+% folderPath = [dataDir '20200411 T 144200'];
+% folderPath = [dataDir '20200412 T 214200'];
+% folderPath = [dataDir '20200413 T 140200'];
+folderPath = [dataDir '20200413 T 194200'];
 numGenerations = 55;
+% folderPath = [dataDir '20200413 T 234800'];
+% numGenerations = 100;
 
 indBestFitness = false(preallocationColLen,numGenerations);
 indBestRealFitness = false(preallocationColLen,numGenerations);
@@ -44,8 +59,7 @@ genotype_Diversity = nan(preallocationColLen,numGenerations);
 nearestNeighbors = nan(preallocationColLen,numGenerations);
 
 for n = 1:numGenerations %each file is generations of evolution
-    filename = sprintf(['E:/Google Drive/Academics/UCT - MIT/Research/Code/KeepawaySim/'...
-        'HyperNEAT Keepaway/Sources/KeepAway/bin/Debug/Populations/G00%02iPop.xml'],n);
+    filename = sprintf('%s/Populations/G%04iPop.xml',folderPath,n);
     xDoc = xml2struct(filename);
     for k = 1:length(xDoc.Population.Genomes.NetworkGenome) % k is genomes in population from generation n
         fitness(k,n) = str2double(xDoc.Population.Genomes.NetworkGenome{k}.Attributes.Fitness);
@@ -106,13 +120,15 @@ indBestGenotype_Diversity = indBestGenotype_Diversity(1:k,:);
 indBestNearestNeighbors = indBestNearestNeighbors(1:k,:);
 
 %%
-figure
+figure(1)
+hold all
 plot(fitness(indBestFitness),'DisplayName','fitness')
 xlabel('Generation')
 ylabel('Best fitness in pop at gen')
 title('Best fitness')
 
-figure
+figure(2)
+hold all
 plot(nanmean(fitness,1),'DisplayName','fitness')
 xlabel('Generation')
 ylabel('Average fitness in pop at gen')
@@ -120,13 +136,15 @@ title('Average fitness')
 % hold all
 
 % realFitness
-figure
+figure(3)
+hold all
 plot(realFitness(indBestRealFitness),'DisplayName','realFitness')
 xlabel('Generation')
 ylabel('Best realFitness in pop at gen')
 title('Best realFitness')
 
-figure
+figure(4)
+hold all
 plot(nanmean(realFitness,1),'DisplayName','realFitness')
 xlabel('Generation')
 ylabel('Average realFitness in pop at gen')
@@ -137,59 +155,72 @@ title('Average realFitness')
 % title('cycles')
 
 % teamDispersion
-figure
+figure(5)
+hold all
 plot(teamDispersion(indBestTeamDispersion))
 title('Best teamDispersion')
 
-figure
+figure(6)
+hold all
 plot(teamDispersion(indBestFitness))
 title('teamDispersion for most fit genome')
 
-figure
+figure(7)
+hold all
 plot(nanmean(teamDispersion,1))
 title('Average teamDispersion')
 
 % NumPasses
-figure
+figure(8)
+hold all
 plot(numPasses(indBestNumPasses))
 title('Best numPasses')
 
-figure
+figure(9)
+hold all
 plot(numPasses(indBestFitness))
 title('numPasses for most fit genome')
 
-figure
+figure(10)
+hold all
 plot(nanmean(numPasses,1))
 title('Average numPasses')
 
 % distFromCentre
-figure
+figure(11)
+hold all
 plot(distFromCentre(indBestDistFromCentre))
 title('Best distFromCentre')
 
-figure
+figure(12)
+hold all
 plot(distFromCentre(indBestFitness))
 title('distFromCentre for most fit genome')
 
-figure
+figure(13)
+hold all
 plot(nanmean(distFromCentre,1))
 title('Average distFromCentre')
 
 % age
-figure
+figure(14)
+hold all
 plot(age(indBestFitness))
 title('age for most fit genome')
 
-figure
+figure(15)
+hold all
 plot(nanmean(age,1))
 title('Average age')
 
-figure
+figure(16)
+hold all
 boxplot(age)
 title('Age')
 %%
-figure
+figure(17)
+hold all
 plot(normalize(horzcat(fitness(indBestFitness),cycles(indBestCycles),...
     teamDispersion(indBestTeamDispersion),numPasses(indBestNumPasses),distFromCentre(indBestDistFromCentre))))
 title('metrics for best genome over generations')
-legend('fitness','cycles','teamDispersion','numPasses','distFromCentre')
+legend('fitness','cycles/realFitness','teamDispersion','numPasses','distFromCentre')

@@ -1,26 +1,32 @@
 %% load data
-% folderPath = "E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\Data\20200330-1350";
-% folderPath = "E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\Data\20200401-2203";
-% folderPath = "E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\Data\20200402-2344";
-% folderPath = "E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\Data\20200411-1018";
-% folderPath = "E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\Data\20200411-1036";
-% folderPath = "E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\Data\20200411-1442";
-% folderPath = "E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\Data\20200412-2142";
-folderPath = "E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\Data\20200413-1402";
+dataDir = 'E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\Experiment Management\';
 
+% folderPath = [dataDir '20200330 T 135000'];
+% folderPath = [dataDir '20200401 T 220300'];
+% folderPath = [dataDir '20200402 T 234400'];
+% folderPath = [dataDir '20200411 T 101800'];
+% folderPath = [dataDir '20200411 T 103600'];
+% folderPath = [dataDir '20200411 T 144200'];
+% folderPath = [dataDir '20200412 T 214200'];
+% folderPath = [dataDir '20200413 T 140200'];
+folderPath = [dataDir '20200413 T 194200'];
 maxGens = 55;
+% folderPath = [dataDir '20200413 T 234800'];
+% maxGens = 100;
+
 data = readFitnessData(folderPath,maxGens);
 
 %% Choose data to analyse
-fitness = data{1};
+realFitness = data{1};
 
-fitness = real(fitness);
-fitness(ismissing(fitness,0)) = nan;
+realFitness = real(realFitness);
+realFitness(ismissing(realFitness,0)) = nan;
 
 %% basic stats
-figure
-histogram(fitness)
-title('Fitness histogram')
+figure(18)
+hold all
+histogram(realFitness)
+title('Real Fitness histogram')
 
 %% 3d visualisation
 [x,y,z] = meshgrid(1:100);
@@ -32,10 +38,11 @@ title('Fitness histogram')
 % ylabel('no passes')
 % zlabel('dist from centre')
 
-normFitness = normalize(fitness(1:end),'range');
+normFitness = normalize(realFitness(1:end),'range');
 normFitness(normFitness==0) = nan;
 
-figure
+figure(19)
+hold all
 scatter3(x(:),y(:),z(:),normFitness*100,normFitness*100,'filled')
 xlabel('team dispersion')
 ylabel('no passes')
@@ -70,32 +77,38 @@ colorbar;
 % h = histogram(fitness2(:),30)
 
 %% Plot best fitness over generations
+best = nan(maxGens,1);
 for k = 1:maxGens
     best(k) = max(max(max(data{k})));
 end
 
-figure
+figure(20)
+hold all
 plot(best)
-title('Max fitness in map')
+title('Max real fitness in map')
 xlabel('Generation')
 ylabel('Fitness')
+
+averageRealFitness = nan(maxGens,1);
+averageRealFitnessBoxes = nan(maxGens,maxGens);
 
 for k = 1:maxGens
     thisData = data{k};
     thisData(thisData == 0) = NaN;
-    averageFitness(k) = nanmean(nanmean(nanmean(thisData)));
-    averageFitnessBoxes(1:100,k) = nanmean(nanmean(thisData));
+    averageRealFitness(k) = nanmean(nanmean(nanmean(thisData)));
+    averageRealFitnessBoxes(1:100,k) = nanmean(nanmean(thisData));
 end
     
-figure
-plot(averageFitness)
-title('Mean fitness in map')
+figure(21)
+hold all
+plot(averageRealFitness)
+title('Mean real fitness in map')
 xlabel('Generation')
-ylabel('Fitness')
+ylabel('Real Fitness')
 
-
-figure
-boxplot(averageFitnessBoxes)
-title('Mean fitness in map')
+figure(22)
+hold all
+boxplot(averageRealFitnessBoxes)
+title('Mean real fitness in map')
 xlabel('Generation')
-ylabel('Fitness')
+ylabel('Real Fitness')
