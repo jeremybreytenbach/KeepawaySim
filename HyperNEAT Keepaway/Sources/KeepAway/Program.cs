@@ -37,6 +37,7 @@ namespace Keepaway
         public int SearchMethod;
         public string Description;
         public bool MapElites;
+        public int FitNormaliser;
 
         private static System.Xml.Serialization.XmlSerializer serial = new System.Xml.Serialization.XmlSerializer(typeof(KeepawayConfig));
 
@@ -79,7 +80,7 @@ namespace Keepaway
         public static Evolutions evo = new Evolutions();
         //public static double max_teamDispersion = 0.0, max_distCenter = 0.0, max_noPasses = 0.0;
         public static double[] maxVec = new double[4];
-        public static double fitnormaliser = 12;
+        //public static double fitnormaliser = 12;
 
         public static MapElites mapElites = new MapElites();
         public static int evaluations = 0;
@@ -316,34 +317,34 @@ namespace Keepaway
                     evaluations += config.Episodes;
                 }
 
-
-                List<double> lists = new List<double>();
+                // NORMALISE
+                //List<double> lists = new List<double>();
 
                 genomes.Sort((a, b) => b.Fitness.CompareTo(a.Fitness)); // question: Why sort on genome.Fitness (which seems to always be 0) and not genome.RealFitness which captures the avg fitness over all episodes (the actual genome fitness...)?
-                double Max0 = 0; double Max1 = 0; double Max2 = 0; double fit = 0;
+                //double Max0 = 0; double Max1 = 0; double Max2 = 0; double fit = 0;
 
-                for (int i = 0; i < genomes.Count; i++) // This loop loops through all genomes.BehaviorType.bVectors and records finds the largest (max) and stores thsi in maxVec
-                {
-                    maxVec[0] = genomes[i].RealFitness;
-                    for (int v = 1; v < maxVec.Length; v++)
-                    {
-                        if (genomes[i].BehaviorType.bVector[v] > maxVec[v])
-                        {
-                            maxVec[v] = genomes[i].BehaviorType.bVector[v];
-                        }
-                    }
-                }
+                //for (int i = 0; i < genomes.Count; i++) // This loop loops through all genomes.BehaviorType.bVectors and records finds the largest (max) and stores thsi in maxVec
+                //{
+                //    maxVec[0] = genomes[i].RealFitness;
+                //    for (int v = 1; v < maxVec.Length; v++)
+                //    {
+                //        if (genomes[i].BehaviorType.bVector[v] > maxVec[v])
+                //        {
+                //            maxVec[v] = genomes[i].BehaviorType.bVector[v];
+                //        }
+                //    }
+                //}
 
-                double fitnormaliser = 11;
-                for (int j = 0; j < genomes.Count; j++)
-                {
-                    genomes[j].RealFitness /= fitnormaliser;
-                    genomes[j].BehaviorType.bVector[0] /= fitnormaliser; // Question: Why is fitnormaliser always 12?
-                    for (int v = 1; v < maxVec.Length; v++)
-                    {
-                        genomes[j].BehaviorType.bVector[v] /= maxVec[v];
-                    }
-                }
+                //double fitnormaliser = 11;
+                //for (int j = 0; j < genomes.Count; j++)
+                //{
+                //    genomes[j].RealFitness /= config.FitNormaliser;
+                //    genomes[j].BehaviorType.bVector[0] /= config.FitNormaliser; // Question: Why is fitnormaliser always 12 or 11? // I think just because experiments yielded a max < 12
+                //    for (int v = 1; v < maxVec.Length; v++)
+                //    {
+                //        genomes[j].BehaviorType.bVector[v] /= maxVec[v]; // this doesn't make sense to always normalise to the largest bVector in all genomes in this generation
+                //    }
+                //}
 
                 foreach (NetworkGenome genome in genomes)
                 {                    
@@ -427,27 +428,29 @@ namespace Keepaway
                     }
 
                 }
-                double fitnormaliser = 11;
-                for (int i = 0; i < genomes.Count; i++)
-                {
-                    maxVec[0] = genomes[i].RealFitness;
-                    for (int v = 1; v < maxVec.Length; v++)
-                    {
-                        if (genomes[i].BehaviorType.bVector[v] > maxVec[v])
-                        {
-                            maxVec[v] = genomes[i].BehaviorType.bVector[v];
-                        }
-                    }
-                }
-                for (int j = 0; j < genomes.Count; j++)
-                {
-                    genomes[j].RealFitness /= fitnormaliser;
-                    genomes[j].BehaviorType.bVector[0] /= fitnormaliser;
-                    for (int v = 1; v < maxVec.Length; v++)
-                    {
-                        genomes[j].BehaviorType.bVector[v] /= maxVec[v];
-                    }
-                }
+
+                // NORMALIZE
+                //double fitnormaliser = 11;
+                //for (int i = 0; i < genomes.Count; i++)
+                //{
+                //    maxVec[0] = genomes[i].RealFitness;
+                //    for (int v = 1; v < maxVec.Length; v++)
+                //    {
+                //        if (genomes[i].BehaviorType.bVector[v] > maxVec[v])
+                //        {
+                //            maxVec[v] = genomes[i].BehaviorType.bVector[v];
+                //        }
+                //    }
+                //}
+                //for (int j = 0; j < genomes.Count; j++)
+                //{
+                //    genomes[j].RealFitness /= config.FitNormaliser;
+                //    genomes[j].BehaviorType.bVector[0] /= config.FitNormaliser;
+                //    for (int v = 1; v < maxVec.Length; v++)
+                //    {
+                //        genomes[j].BehaviorType.bVector[v] /= maxVec[v];
+                //    }
+                //}
 
                 foreach (NetworkGenome genome in genomes)
                 {
