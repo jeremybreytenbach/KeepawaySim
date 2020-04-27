@@ -1,6 +1,8 @@
 %% load data
 dataDir = 'E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\Experiment Management\';
 
+bNormaliseFitness = false;
+
 % folderPath = [dataDir '20200330 T 135000'];
 % folderPath = [dataDir '20200401 T 220300'];
 % folderPath = [dataDir '20200402 T 234400'];
@@ -9,15 +11,18 @@ dataDir = 'E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\Experim
 % folderPath = [dataDir '20200411 T 144200'];
 % folderPath = [dataDir '20200412 T 214200'];
 % folderPath = [dataDir '20200413 T 140200'];
-folderPath = [dataDir '20200413 T 194200'];
-maxGens = 55;
+% folderPath = [dataDir '20200413 T 194200'];
+% maxGens = 55;
 % folderPath = [dataDir '20200413 T 234800'];
 % maxGens = 100;
+%
+folderPath = [dataDir '20200427 T 015300'];
+maxGens = 100;
 
 data = readFitnessData(folderPath,maxGens);
 
 %% Choose data to analyse
-realFitness = data{1};
+realFitness = data{maxGens};
 
 realFitness = real(realFitness);
 realFitness(ismissing(realFitness,0)) = nan;
@@ -38,7 +43,11 @@ title('Real Fitness histogram')
 % ylabel('no passes')
 % zlabel('dist from centre')
 
-normFitness = normalize(realFitness(1:end),'range');
+if bNormaliseFitness
+    normFitness = normalize(realFitness(1:end),'range');
+else
+    normFitness = realFitness(1:end);
+end
 normFitness(normFitness==0) = nan;
 
 figure(19)

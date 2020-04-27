@@ -4,6 +4,7 @@ function legendFigures(legend1,legend2,figNums)
 %}
 
 for k = figNums
-    figure(k)
+    fig = figure(k);
     legend(legend1,legend2);
+%     fig.WindowStyle = 'docked';
 end

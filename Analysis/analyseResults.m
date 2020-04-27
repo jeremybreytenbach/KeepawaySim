@@ -27,10 +27,16 @@ dataDir = 'E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\Experim
 % folderPath = [dataDir '20200411 T 144200'];
 % folderPath = [dataDir '20200412 T 214200'];
 % folderPath = [dataDir '20200413 T 140200'];
-folderPath = [dataDir '20200413 T 194200'];
-numGenerations = 55;
+% folderPath = [dataDir '20200413 T 194200'];
+% numGenerations = 55;
 % folderPath = [dataDir '20200413 T 234800'];
 % numGenerations = 100;
+folderPath = [dataDir '20200427 T 015300'];
+numGenerations = 100;
+
+% plot various metrics for fittest genome (if false -> plot various metrics
+% for that metrics max at each generation
+bTraceBestFitness = true;
 
 indBestFitness = false(preallocationColLen,numGenerations);
 indBestRealFitness = false(preallocationColLen,numGenerations);
@@ -78,21 +84,37 @@ for n = 1:numGenerations %each file is generations of evolution
         nearestNeighbors(k,n) = str2double(xDoc.Population.Genomes.NetworkGenome{k}.nearestNeighbors.Text);
     end    
     % Find best genome in population from each generation
-    indBestFitness(:,n) = getBestInd(fitness(:,n));
-    indBestRealFitness(:,n) = getBestInd(realFitness(:,n));
-    indBestGenotypic_Diversity(:,n) = getBestInd(genotypic_Diversity(:,n));
-    indBestNovelty(:,n) = getBestInd(novelty(:,n));
-    indBestComplexity(:,n) = getBestInd(complexity(:,n));
-    indBestAge(:,n) = getBestInd(age(:,n));
-    indBestCycles(:,n) = getBestInd(cycles(:,n));
-    indBestTeamDispersion(:,n) = getBestInd(teamDispersion(:,n));
-    indBestNumPasses(:,n) = getBestInd(numPasses(:,n));
-    indBestDistFromCentre(:,n) = getBestInd(distFromCentre(:,n));
-    indBestGenotype_Diversity(:,n) = getBestInd(genotype_Diversity(:,n));
-    indBestNearestNeighbors(:,n) = getBestInd(nearestNeighbors(:,n));
+    if bTraceBestFitness
+        indBestFitness(:,n) = getBestInd(fitness(:,n));
+        indBestRealFitness(:,n) = getBestInd(realFitness(:,n));
+        indBestGenotypic_Diversity(:,n) = getBestInd(genotypic_Diversity(:,n));
+        indBestNovelty(:,n) = getBestInd(novelty(:,n));
+        indBestComplexity(:,n) = getBestInd(complexity(:,n));
+        indBestAge(:,n) = getBestInd(age(:,n));
+        indBestCycles(:,n) = getBestInd(cycles(:,n));
+        indBestTeamDispersion(:,n) = getBestInd(teamDispersion(:,n));
+        indBestNumPasses(:,n) = getBestInd(numPasses(:,n));
+        indBestDistFromCentre(:,n) = getBestInd(distFromCentre(:,n));
+        indBestGenotype_Diversity(:,n) = getBestInd(genotype_Diversity(:,n));
+        indBestNearestNeighbors(:,n) = getBestInd(nearestNeighbors(:,n));
+    else
+        indBestFitness(:,n) = getBestInd(fitness(:,n));
+        indBestRealFitness(:,n) = getBestInd(fitness(:,n));
+        indBestGenotypic_Diversity(:,n) = getBestInd(fitness(:,n));
+        indBestNovelty(:,n) = getBestInd(fitness(:,n));
+        indBestComplexity(:,n) = getBestInd(fitness(:,n));
+        indBestAge(:,n) = getBestInd(fitness(:,n));
+        indBestCycles(:,n) = getBestInd(fitness(:,n));
+        indBestTeamDispersion(:,n) = getBestInd(fitness(:,n));
+        indBestNumPasses(:,n) = getBestInd(fitness(:,n));
+        indBestDistFromCentre(:,n) = getBestInd(fitness(:,n));
+        indBestGenotype_Diversity(:,n) = getBestInd(fitness(:,n));
+        indBestNearestNeighbors(:,n) = getBestInd(fitness(:,n));
+    end
 end
 
-% trim down (after having initialised variables)
+% trim down (after having initialised variables) into dimensions of pop x
+% gen (eg 300 x 100 for population of 300 and 100 generations)
 fitness = fitness(1:k,:);
 realFitness = realFitness(1:k,:);
 genotypic_Diversity = genotypic_Diversity(1:k,:);
