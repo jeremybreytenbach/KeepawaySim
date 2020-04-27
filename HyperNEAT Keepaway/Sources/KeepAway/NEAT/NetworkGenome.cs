@@ -46,6 +46,8 @@ namespace Keepaway
         public int Parent2;
         [XmlAttribute]
         public int Species;
+        [XmlAttribute]
+        public int[] EliteMapPosition = new int[3];
         public ComputeNovelty NoveltyMeasure;
         internal IEnumerable<NodeGene> MutatableNodes;
         internal IEnumerable<LinkGene> MutatableLinks;
@@ -91,7 +93,10 @@ namespace Keepaway
             this.Novelty = novelty;
             this.Nodes = new List<NodeGene>();
             this.Links = new List<LinkGene>();
-           // this.Complexity = this.Links.Count;
+            this.EliteMapPosition[0] = -1;
+            this.EliteMapPosition[1] = -1;
+            this.EliteMapPosition[2] = -1;
+            // this.Complexity = this.Links.Count;
             this.MutatableNodes = Enumerable.Where<NodeGene>((IEnumerable<NodeGene>)this.Nodes, (Func<NodeGene, bool>)(nodes =>
             {
                 if (!nodes.Mutated && !nodes.Fixed)
