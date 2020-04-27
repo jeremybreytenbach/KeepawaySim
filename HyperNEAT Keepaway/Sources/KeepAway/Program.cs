@@ -37,7 +37,7 @@ namespace Keepaway
         public int SearchMethod;
         public string Description;
         public bool MapElites;
-        public int FitNormaliser;
+        //public int FitNormaliser;
 
         private static System.Xml.Serialization.XmlSerializer serial = new System.Xml.Serialization.XmlSerializer(typeof(KeepawayConfig));
 
