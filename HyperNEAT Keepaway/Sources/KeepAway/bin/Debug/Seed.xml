@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<NetworkGenome xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Id="3878" Fitness="0.9093280162911842" Novelty="0.022433908545895689" RealFitness="0.9093280162911842" Genotypic_Diversity="0.26314357465783023" Complexity="27" Age="1" Parent1="3752" Parent2="-1" Species="31">
+<NetworkGenome xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Id="0" Fitness="0" Novelty="0" RealFitness="0" Genotypic_Diversity="0" Complexity="0" Age="1" Parent1="-1" Parent2="-1" Species="-1">
   <Nodes>
     <NodeGene Id="0" Type="Bias" Function="Identity" Layer="0" Fixed="false" />
     <NodeGene Id="1" Type="Input" Function="Identity" Layer="0" Fixed="false" />
@@ -33,13 +33,13 @@
   </Links>
   <BehaviorType>
     <bVector>
-      <double>0.866561167738539</double>
-      <double>0.59748427672955973</double>
-      <double>0.82707964658810418</double>
-      <double>0.9093280162911842</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
+      <double>0</double>
     </bVector>
   </BehaviorType>
   <GenomeDiversity>
-    <genotype_Diversity>28.945793212361327</genotype_Diversity>
+    <genotype_Diversity>0</genotype_Diversity>
   </GenomeDiversity>
 </NetworkGenome>
