@@ -55,11 +55,16 @@ normFitness(normFitness==0) = nan;
 
 figure(19)
 hold all
-scatter3(x(:),y(:),z(:),normFitness,normFitness,'filled')
+scatter3(x(:),y(:),z(:),normFitness*10,normFitness*10,'filled')
 xlabel('team dispersion')
 ylabel('no passes')
 zlabel('dist from centre')
 title('Normalised fitness landscape / Map of elites')
+
+thisAxis = gca;
+thisAxis.YTick = 5:5:15;
+thisAxis.ZTick = 5:5:15;
+axis([0 100 0 20 0 20])
 
 colormap(jet);
 colorbar;
