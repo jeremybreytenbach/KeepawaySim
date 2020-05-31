@@ -12,17 +12,20 @@ bNormaliseFitness = false;
 % folderPath = [dataDir '20200412 T 214200'];
 % folderPath = [dataDir '20200413 T 140200'];
 % folderPath = [dataDir '20200413 T 194200'];
-% maxGens = 55;
+% numGenerations = 55;
 % folderPath = [dataDir '20200413 T 234800'];
-% maxGens = 100;
+% numGenerations = 100;
 %
-folderPath = [dataDir '20200427 T 015300'];
-maxGens = 100;
+% folderPath = [dataDir '20200427 T 015300'];
+% numGenerations = 100;
+%
+folderPath = [dataDir '20200427 T 192900'];
+numGenerations = 100;
 
-data = readFitnessData(folderPath,maxGens);
+data = readFitnessData(folderPath,numGenerations);
 
 %% Choose data to analyse
-realFitness = data{maxGens};
+realFitness = data{numGenerations};
 
 realFitness = real(realFitness);
 realFitness(ismissing(realFitness,0)) = nan;
@@ -44,7 +47,7 @@ title('Real Fitness histogram')
 % zlabel('dist from centre')
 
 if bNormaliseFitness
-    normFitness = normalize(realFitness(1:end),'range');
+    normFitness = normalize(realFitness(1:end),'range')*100;
 else
     normFitness = realFitness(1:end);
 end
@@ -52,7 +55,7 @@ normFitness(normFitness==0) = nan;
 
 figure(19)
 hold all
-scatter3(x(:),y(:),z(:),normFitness*100,normFitness*100,'filled')
+scatter3(x(:),y(:),z(:),normFitness,normFitness,'filled')
 xlabel('team dispersion')
 ylabel('no passes')
 zlabel('dist from centre')
@@ -86,8 +89,8 @@ colorbar;
 % h = histogram(fitness2(:),30)
 
 %% Plot best fitness over generations
-best = nan(maxGens,1);
-for k = 1:maxGens
+best = nan(numGenerations,1);
+for k = 1:numGenerations
     best(k) = max(max(max(data{k})));
 end
 
@@ -98,10 +101,10 @@ title('Max real fitness in map')
 xlabel('Generation')
 ylabel('Fitness')
 
-averageRealFitness = nan(maxGens,1);
-averageRealFitnessBoxes = nan(maxGens,maxGens);
+averageRealFitness = nan(numGenerations,1);
+averageRealFitnessBoxes = nan(numGenerations,numGenerations);
 
-for k = 1:maxGens
+for k = 1:numGenerations
     thisData = data{k};
     thisData(thisData == 0) = NaN;
     averageRealFitness(k) = nanmean(nanmean(nanmean(thisData)));
