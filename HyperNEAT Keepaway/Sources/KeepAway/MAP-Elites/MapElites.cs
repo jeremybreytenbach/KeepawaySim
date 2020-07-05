@@ -35,9 +35,11 @@ namespace Keepaway
                 double distfromcentre = genomes[i].BehaviorType.bVector[3];
 
                 int[] position = new int[3]; // x,y,z position, eg 0,0,0 or 0,3,1 etc.
-                position[0] = (int)Math.Round(teamDispersion);
-                position[1] = (int)Math.Round(no_passes);
-                position[2] = (int)Math.Round(distfromcentre);
+                position[0] = (int)(Math.Round(teamDispersion, 2) * 100);
+                position[1] = (int)(Math.Round(no_passes, 2) * 100);
+                position[2] = (int)(Math.Round(distfromcentre, 2) * 100);
+
+                
 
                 // check if genome is better
                 bool isbetterGenome = eliteMap.compareGenome(genomes[i], position);

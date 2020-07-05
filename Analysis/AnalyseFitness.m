@@ -19,7 +19,16 @@ bNormaliseFitness = false;
 % folderPath = [dataDir '20200427 T 015300'];
 % numGenerations = 100;
 %
-folderPath = [dataDir '20200427 T 192900'];
+% folderPath = [dataDir '20200427 T 015300'];
+% numGenerations = 100;
+%
+% folderPath = [dataDir '20200601 T 170300'];
+% numGenerations = 100;
+%
+% folderPath = [dataDir '20200601 T 184700'];
+% numGenerations = 100;
+%
+folderPath = [dataDir '20200603 T 085800'];
 numGenerations = 100;
 
 data = readFitnessData(folderPath,numGenerations);
@@ -65,6 +74,7 @@ thisAxis = gca;
 thisAxis.YTick = 5:5:15;
 thisAxis.ZTick = 5:5:15;
 axis([0 100 0 20 0 20])
+grid on
 
 colormap(jet);
 colorbar;

@@ -35,7 +35,16 @@ dataDir = 'E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\Experim
 % folderPath = [dataDir '20200427 T 015300'];
 % numGenerations = 100;
 %
-folderPath = [dataDir '20200427 T 192900'];
+% folderPath = [dataDir '20200427 T 192900'];
+% numGenerations = 100;
+%
+% folderPath = [dataDir '20200531 T 153100'];
+% numGenerations = 100;
+%
+% folderPath = [dataDir '20200601 T 184700'];
+% numGenerations = 100;
+%
+folderPath = [dataDir '20200603 T 085800'];
 numGenerations = 100;
 
 % plot various metrics for fittest genome (if false -> plot various metrics

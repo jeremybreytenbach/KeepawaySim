@@ -16,7 +16,7 @@
   <archiveLimit>10</archiveLimit>
   <archiveSize>1000</archiveSize>
   <archiveThreshold>0.03</archiveThreshold>
-  <SearchMethod>3</SearchMethod><!--1-->
+  <SearchMethod>1</SearchMethod><!--1-->
   <MapElites>true</MapElites>
   <!--<FitNormaliser>100</FitNormaliser>-->
   <Description>
