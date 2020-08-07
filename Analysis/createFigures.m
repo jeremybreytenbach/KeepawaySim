@@ -1,12 +1,16 @@
-[indexes,metric,realFitness,normFitness,best,eliteMap,...
-    experimentNames,averageRealFitness,averageRealFitnessBoxes] = getExperimentData();
+experimentNames = {'20200706 T 224400','20200706 T 123900','20200712 T 120800','20200806 T 214500'};
+friendlyExperimentNames = {'38: SM=1 ME=true','39: SM=3 ME=true','40: SM=3 ME=false','45: SM=3 ME=true'};
 
-% dateNow = datetime('now');
-% save('experimentData.mat','indexes','metric','realFitness','normFitness','best','eliteMap','averageRealFitness','averageRealFitnessBoxes','experimentNames','dateNow')
+% experimentNames = {'20200712 T 120800'};
+% friendlyExperimentNames = {'40: SM=3 ME=false'};
+
+[indexes,metric,data,averageRealFitness,experimentNames,friendlyExperimentNames] = getExperimentData(experimentNames,friendlyExperimentNames);
+
+dateNow = datetime('now');
+save(sprintf('experimentData_%s.mat',datestr(dateNow,'yyyy-mm-dd T HHMMSS')),'indexes','metric','data','averageRealFitness','experimentNames','friendlyExperimentNames','dateNow')
 % load('experimentData.mat')
 
 %%
-friendlyExperimentNames = {'30: SM=3 ME=true','31: SM=3 ME=false','32: SM=1 ME=false','33: SM=1 ME=true','34: SM=2 ME=true','35: SM=2 ME=false'};
 
 figure(1)
 hold all
@@ -156,45 +160,56 @@ for expNum = 1:length(experimentNames)
     legend('fitness','cycles/realFitness','teamDispersion','numPasses','distFromCentre')
 end
 
-figure(18)
-hold all
-for expNum = 1:length(experimentNames)
-    histogram(realFitness{expNum})
-    title('Real Fitness histogram')
-end
-legend(friendlyExperimentNames)
+%%
 
-figure(19)
+% figure(18)
+% hold all
+figure
+n = 0;
+for expNum = 1:length(experimentNames)
+    n = n+1;
+%     figure(17+n)
+    subplot(2,2,n)
+    histogram(data{expNum}{end}(:,4))
+    title(sprintf('Real Fitness histogram\n%s',friendlyExperimentNames{expNum}))
+end
+% legend(friendlyExperimentNames)
+
+figure
 % hold all
 n = 0;
-for expNum = [1,2,4,5,6]
-    n = n+1;
-    subplot(2,3,n)
-    scatter3(eliteMap{expNum}.X(:),eliteMap{expNum}.Y(:),eliteMap{expNum}.z(:),normFitness{expNum}(1:1e6)'*10,normFitness{expNum}(1:1e6)'*10,'filled')
-    xlabel('team dispersion')
-    ylabel('no passes')
-    zlabel('dist from centre')
-    title(sprintf(['Normalised fitness landscape / Map of elites\n' friendlyExperimentNames{expNum}]))
-    thisAxis = gca;
-    thisAxis.YTick = 5:5:15;
-    thisAxis.ZTick = 5:5:15;
-    axis([0 100 0 20 0 20])
-    grid on
-    colormap(jet);
-    colorbar;
-end
-
-figure(20)
-hold all
 for expNum = 1:length(experimentNames)
-    plot(best{expNum})
-    title('Max real fitness in map')
-    xlabel('Generation')
-    ylabel('Fitness')
+    try
+        n = n+1;
+        subplot(2,2,n)
+        scatter3(data{expNum}{end}(:,1)./100,data{expNum}{end}(:,2)./100,data{expNum}{end}(:,3)./100,...
+            data{expNum}{end}(:,4)*1,data{expNum}{end}(:,4)*10,'filled')
+        xlabel('team dispersion')
+        ylabel('no passes')
+        zlabel('dist from centre')
+        title(sprintf(['Normalised fitness landscape / Map of elites\n' friendlyExperimentNames{expNum}]))
+%       thisAxis = gca;
+%       thisAxis.YTick = 5:5:15;
+%       thisAxis.ZTick = 5:5:15;
+%       axis([0 100 0 20 0 20])
+        grid on
+        colormap(jet);
+        colorbar;
+    catch
+    end
 end
-legend(friendlyExperimentNames)
 
-figure(21)
+% figure(20)
+% hold all
+% for expNum = 1:length(experimentNames)
+%     plot(best{expNum})
+%     title('Max real fitness in map')
+%     xlabel('Generation')
+%     ylabel('Fitness')
+% end
+% legend(friendlyExperimentNames)
+
+figure
 hold all
 for expNum = 1:length(experimentNames)
     plot(averageRealFitness{expNum})
@@ -207,17 +222,36 @@ legend(friendlyExperimentNames)
 n = 0;
 for expNum = 1:length(experimentNames)
     n = n+1;
-    figure(21+n)
-    boxplot(averageRealFitnessBoxes{expNum})
-    title(sprintf(['Mean real fitness in map\n' friendlyExperimentNames{expNum}]))
+    figure%(20+n)    
+    boxplotData = nan(length(data{end}{end}),100);
+    for k = 1:length(data{expNum})
+        boxplotData(1:length(data{expNum}{k}(:,4)),k) = data{expNum}{k}(:,4);
+    end  
+    boxplot(boxplotData)
+    title(sprintf(['Real fitness in map\n' friendlyExperimentNames{expNum}]))
     xlabel('Generation')
     ylabel('Real Fitness')
 end
 
-figure(27)
-bar([nnz(~isnan(normFitness{1})),nnz(~isnan(normFitness{2})),...
-    nnz(~isnan(normFitness{3})),nnz(~isnan(normFitness{4})),nnz(~isnan(normFitness{5})),...
-    nnz(~isnan(normFitness{6}))]);
+figure
+bar([length(data{1}{end}),length(data{2}{end}),length(data{3}{end})])%,...
+%     length(data{4}{end}),length(data{5}{end}),...
+%     length(data{6}{end}),length(data{7}{end}),length(data{8}{end})]);
 title('Number of unique elites')
 ax = gca;
 ax.XTickLabel = friendlyExperimentNames;
+ax.XTickLabelRotation = 45;
+
+figure
+for expNum = 1:length(experimentNames)
+    for k = 1:100
+        maxMeanRealFitnessAtGen(k,1) = max(data{expNum}{k}(:,4));
+    end
+    plot(maxMeanRealFitnessAtGen)
+    hold on
+end
+title('Max mean real fitness at gen')
+xlabel('Generation')
+ylabel('Real Fitness')
+legend(friendlyExperimentNames)
+axis([0 100 0 20])

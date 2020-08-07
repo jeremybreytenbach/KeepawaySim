@@ -1,16 +1,19 @@
-function [indexes,metric,realFitness,normFitness,best,eliteMap,...
-    experimentNames,averageRealFitness,averageRealFitnessBoxes] = getExperimentData(experimentNames)
+function [indexes,metric,data,averageRealFitness,experimentNames,friendlyExperimentNames] = getExperimentData(experimentNames,friendlyExperimentNames)
 
 if nargin == 0
-    experimentNames = {'20200427 T 192900','20200531 T 153100','20200601 T 184700','20200603 T 085800','20200628 T 131000','20200630 T 093800'};
+    experimentNames = {'20200427 T 192900','20200531 T 153100','20200601 T 184700','20200603 T 085800','20200628 T 131000','20200630 T 093800','20200706 T 224400','20200706 T 123900','20200712 T 120800'};
+    friendlyExperimentNames = {'30: SM=3 ME=true','31: SM=3 ME=false','32: SM=1 ME=false','33: SM=1 ME=true','34: SM=2 ME=true','35: SM=2 ME=false','38: SM=1 ME=true','39: SM=3 ME=true','40: SM=3 ME=false'};
 end
 
-bNormaliseFitness = false;
+% bNormaliseFitness = false;
 numGenerations = 100;
-preallocationColLen = 500;
+preallocationColLen = 300;
 dataDir = 'E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\Experiment Management\';
 
+% clear indexes{k} metric{k} averageRealFitness averageRealFitnessBoxes data
+
 for k = 1:length(experimentNames)
+    tic
     folderPath = [dataDir experimentNames{k}];
     
     %% Get XML data
@@ -122,34 +125,43 @@ for k = 1:length(experimentNames)
     indexes{k}.indBestNearestNeighbors = indexes{k}.indBestNearestNeighbors(1:z,:);
     
     %% Get fitness map data
-    data = readFitnessData(folderPath,numGenerations);
+    data{k} = readFitnessData(folderPath,numGenerations);
     
     % Choose data to analyse
-    realFitness{k} = data{numGenerations};
-    realFitness{k} = real(realFitness{k});
-    realFitness{k}(ismissing(realFitness{k},0)) = nan;
+%     realFitness = data{numGenerations};
+%     realFitness = real(realFitness);
+%     realFitness(ismissing(realFitness,0)) = nan;
     
-    [eliteMap{k}.X,eliteMap{k}.Y,eliteMap{k}.z] = meshgrid(1:numGenerations);
+%     [eliteMap.X,eliteMap.Y,eliteMap.z] = meshgrid(1:numGenerations);
     
-    if bNormaliseFitness
-        normFitness{k} = normalize(realFitness{k}(1:end),'range')*numGenerations;
-    else
-        normFitness{k} = realFitness{k}(1:end);
-    end
-    normFitness{k}(normFitness{k} == 0) = nan;
+%     if bNormaliseFitness
+%         normFitness = normalize(realFitness(1:end),'range')*numGenerations;
+%     else
+%         normFitness = realFitness(1:end);
+%     end
+%     normFitness(normFitness == 0) = nan;
     
-    best{k} = nan(numGenerations,1);
-    for z = 1:numGenerations
-        best{k}(z) = max(max(max(data{z})));
-    end
+%     best = nan(numGenerations,1);
+%     for z = 1:numGenerations
+%         best(z) = max(max(max(data{z})));
+%     end
     
     averageRealFitness{k} = nan(numGenerations,1);
-    averageRealFitnessBoxes{k} = nan(numGenerations,numGenerations);
+%     averageRealFitnessBoxes = nan(numGenerations,numGenerations);
     
     for n = 1:numGenerations
-        thisData = data{n};
-        thisData(thisData == 0) = NaN;
-        averageRealFitness{k}(n) = nanmean(nanmean(nanmean(thisData)));
-        averageRealFitnessBoxes{k}(1:100,n) = nanmean(nanmean(thisData));
+        data{k}{n}((data{k}{n}(:,3) == 0),3) = NaN;
+        averageRealFitness{k}(n) = nanmean(data{k}{n}(:,3));
+%         averageRealFitnessBoxes(1:100,n) = data{n}(:,3);
     end
+    toc
+    
+    %% Save data
+%     disp('Saving data...')
+%     tic
+%     dateNow = datetime('now');
+%     saveFileName = sprintf('experimentData_%s.mat',experimentNames{k});
+%     save(saveFileName,'indexes{k}','metric{k}','averageRealFitness','averageRealFitnessBoxes','experimentNames','dateNow')
+%     fprintf('Saved data: ''%s''\n',saveFileName)
+%     toc
 end

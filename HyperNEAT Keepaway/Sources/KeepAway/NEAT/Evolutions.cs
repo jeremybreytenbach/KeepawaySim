@@ -368,7 +368,7 @@ namespace Keepaway
 
         public void OneGeneration()
         {
-            this.CriteriaMet = this.Evaluator(this.Current.Genomes, false); // evaluate whether we have met a stopping criteria (todo: what criteria can be set?)
+            this.CriteriaMet = this.Evaluator(this.Current.Genomes, false); // evaluate whether we have met a stopping criteria (todo: what criteria can be set?) //This is where we run Program.HyperNEATKeepaway
             if (Enumerable.Count<int>(this.Current.SpeciesIds) != this.Speciate.SpeciesCount) // ?
                 this.ChangeThreshold();
             this.UpdateStats(); // update max fitness for each species
@@ -398,7 +398,7 @@ namespace Keepaway
         {
             this.IncrementGeneration(); 
             this.Elitism(); // todo: investigate as priority // done
-            this.Reproduce();
+            this.Reproduce(); // crossover
             this.Previous = this.Current;
             this.Current = this.Next;
             this.Next = new Population(this.Generation + 1);
@@ -587,6 +587,7 @@ namespace Keepaway
             }
         }
 
+        // Adds the top performing genomes to the next generation
         private void Select(List<NetworkGenome> list)
         {
             list.Sort((Comparison<NetworkGenome>)((a, b) => b.Fitness.CompareTo(a.Fitness)));
@@ -595,17 +596,18 @@ namespace Keepaway
                 this.Next.Genomes.Add(list[index]);
         }
 
-        private void SelectWithMapElites(List<NetworkGenome> list)
+        // Adds random elites in the map to the next generation
+        private void SelectWithMapElites(List<NetworkGenome> list) // add random n% from map
         {
-            for (int index = 0; index < list.Count; ++index) // for each genome in the species (in list)
+            // get list of elites that are in the map, choose random n% and add to Next.Genomes
+            Program.Shuffle(Program.mapElites.eliteMap.flatMap);
+            int num = (int)Math.Round(this.Reprod.Elitism * (double)list.Count);
+            for (int index = 0; index < num; ++index)
             {
-                if (Program.mapElites.eliteMap.flatMap.FindIndex(x => x.Id == list[index].Id) >= 0) // if this genome is in the elite Map
-                {
-                    this.Next.Genomes.Add(list[index]); // add this genome to this.Next.Genomes
-                }
+                this.Next.Genomes.Add(Program.mapElites.eliteMap.flatMap[index]); // add this genome to this.Next.Genomes
             }
-        }        
-
+        }
+        
         private void IncrementGeneration()
         {
             ++this.Generation;
