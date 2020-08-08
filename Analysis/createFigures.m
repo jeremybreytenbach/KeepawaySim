@@ -1,8 +1,11 @@
-experimentNames = {'20200706 T 224400','20200706 T 123900','20200712 T 120800','20200806 T 214500'};
-friendlyExperimentNames = {'38: SM=1 ME=true','39: SM=3 ME=true','40: SM=3 ME=false','45: SM=3 ME=true'};
+% experimentNames = {'20200706 T 224400','20200706 T 123900','20200712 T 120800','20200806 T 214500','20200807 T 103500','20200807 T 154300'};
+% friendlyExperimentNames = {'38: SM=1 ME=true','39: SM=3 ME=true','40: SM=3 ME=false','45: SM=3 ME=true','44: SM=1 ME=true','46: SM=3 ME=false'};
 
-% experimentNames = {'20200712 T 120800'};
-% friendlyExperimentNames = {'40: SM=3 ME=false'};
+experimentNames = {'20200807 T 103500','20200806 T 214500','20200807 T 154300','20200807 T 195100'};
+friendlyExperimentNames = {'44: SM=1 ME=true','45: SM=3 ME=true','46: SM=3 ME=false','47: SM=1 ME=false'};
+
+% experimentNames = {'20200807 T 103500'};
+% friendlyExperimentNames = {'44: SM=1 ME=true'};
 
 [indexes,metric,data,averageRealFitness,experimentNames,friendlyExperimentNames] = getExperimentData(experimentNames,friendlyExperimentNames);
 
@@ -169,7 +172,7 @@ n = 0;
 for expNum = 1:length(experimentNames)
     n = n+1;
 %     figure(17+n)
-    subplot(2,2,n)
+    subplot(2,3,n)
     histogram(data{expNum}{end}(:,4))
     title(sprintf('Real Fitness histogram\n%s',friendlyExperimentNames{expNum}))
 end
@@ -181,9 +184,9 @@ n = 0;
 for expNum = 1:length(experimentNames)
     try
         n = n+1;
-        subplot(2,2,n)
+        subplot(2,3,n)
         scatter3(data{expNum}{end}(:,1)./100,data{expNum}{end}(:,2)./100,data{expNum}{end}(:,3)./100,...
-            data{expNum}{end}(:,4)*1,data{expNum}{end}(:,4)*10,'filled')
+            data{expNum}{end}(:,4)*0.1,data{expNum}{end}(:,4)*0.1,'filled')
         xlabel('team dispersion')
         ylabel('no passes')
         zlabel('dist from centre')
@@ -195,6 +198,7 @@ for expNum = 1:length(experimentNames)
         grid on
         colormap(jet);
         colorbar;
+        axis([0 20 0 300 0 20])
     catch
     end
 end
@@ -239,6 +243,7 @@ bar([length(data{1}{end}),length(data{2}{end}),length(data{3}{end})])%,...
 %     length(data{6}{end}),length(data{7}{end}),length(data{8}{end})]);
 title('Number of unique elites')
 ax = gca;
+ax.XTick = 1:4;
 ax.XTickLabel = friendlyExperimentNames;
 ax.XTickLabelRotation = 45;
 
@@ -254,4 +259,19 @@ title('Max mean real fitness at gen')
 xlabel('Generation')
 ylabel('Real Fitness')
 legend(friendlyExperimentNames)
-axis([0 100 0 20])
+axis([0 100 0 200])
+
+% data
+figure
+hold all
+for kn = 1:length(experimentNames)
+    for k = 1:length(data{kn})
+        [M,I] = max(data{kn}{k}(:,4));
+        maxFitnessInMap(k,kn) = M;
+    end
+    plot(maxFitnessInMap(:,kn))
+    title('Max fitness in map at each generation')
+    xlabel('Generation')
+    ylabel('Real Fitness')
+end
+legend(friendlyExperimentNames)
