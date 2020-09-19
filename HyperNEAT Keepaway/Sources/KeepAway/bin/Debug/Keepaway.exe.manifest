@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Keepaway.exe" size="132096">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Keepaway.exe" size="132608">
       <assemblyIdentity name="Keepaway" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>n0C4Nm7x/n9I2ULZ0jWAlq8KIYkXNLsB8azE7nf39hU=</dsig:DigestValue>
+        <dsig:DigestValue>FrSogQnKWGSOhRjm7YMYE6JYk2bNyXH0LJyEW4/M3s0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

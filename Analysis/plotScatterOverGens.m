@@ -1,4 +1,4 @@
-for gen = 1:20:100
+for gen = 1:10:100
     figure
     % hold all
     n = 0;

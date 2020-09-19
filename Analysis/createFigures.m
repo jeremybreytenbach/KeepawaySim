@@ -1,11 +1,11 @@
 % experimentNames = {'20200706 T 224400','20200706 T 123900','20200712 T 120800','20200806 T 214500','20200807 T 103500','20200807 T 154300'};
 % friendlyExperimentNames = {'38: SM=1 ME=true','39: SM=3 ME=true','40: SM=3 ME=false','45: SM=3 ME=true','44: SM=1 ME=true','46: SM=3 ME=false'};
 
-experimentNames = {'20200807 T 103500','20200806 T 214500','20200807 T 154300','20200807 T 195100'};
-friendlyExperimentNames = {'44: SM=1 ME=true','45: SM=3 ME=true','46: SM=3 ME=false','47: SM=1 ME=false'};
+experimentNames = {'20200807 T 103500','20200806 T 214500','20200807 T 154300','20200807 T 195100','20200809 T 004700'};
+friendlyExperimentNames = {'44: SM=1 ME=true','45: SM=3 ME=true','46: SM=3 ME=false','47: SM=1 ME=false','48: SM=3 ME=true'};
 
-% experimentNames = {'20200807 T 103500'};
-% friendlyExperimentNames = {'44: SM=1 ME=true'};
+% experimentNames = {'20200809 T 004700'};
+% friendlyExperimentNames = {'48: SM=3 ME=true'};
 
 [indexes,metric,data,averageRealFitness,experimentNames,friendlyExperimentNames] = getExperimentData(experimentNames,friendlyExperimentNames);
 
@@ -163,8 +163,6 @@ for expNum = 1:length(experimentNames)
     legend('fitness','cycles/realFitness','teamDispersion','numPasses','distFromCentre')
 end
 
-%%
-
 % figure(18)
 % hold all
 figure
@@ -259,7 +257,7 @@ title('Max mean real fitness at gen')
 xlabel('Generation')
 ylabel('Real Fitness')
 legend(friendlyExperimentNames)
-axis([0 100 0 200])
+% axis([0 100 0 200])
 
 % data
 figure

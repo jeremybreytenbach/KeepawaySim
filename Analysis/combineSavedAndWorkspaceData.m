@@ -1,4 +1,4 @@
-S = load('experimentData_2020-08-07 T 095922');
+S = load('experimentData_2020-08-08 T 002522');
 
 
 S.averageRealFitness(end+1) = averageRealFitness;

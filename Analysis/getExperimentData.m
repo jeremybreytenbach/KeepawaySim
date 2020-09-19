@@ -7,7 +7,7 @@ end
 
 % bNormaliseFitness = false;
 numGenerations = 100;
-preallocationColLen = 300;
+preallocationColLen = 1000;
 dataDir = 'E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\Experiment Management\';
 
 % clear indexes{k} metric{k} averageRealFitness averageRealFitnessBoxes data

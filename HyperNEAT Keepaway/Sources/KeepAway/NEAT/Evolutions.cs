@@ -398,6 +398,7 @@ namespace Keepaway
         {
             this.IncrementGeneration(); 
             this.Elitism(); // todo: investigate as priority // done
+            this.Init.PopulationSize += 5;
             this.Reproduce(); // crossover
             this.Previous = this.Current;
             this.Current = this.Next;
@@ -596,15 +597,15 @@ namespace Keepaway
                 this.Next.Genomes.Add(list[index]);
         }
 
-        // Adds random elites in the map to the next generation
-        private void SelectWithMapElites(List<NetworkGenome> list) // add random n% from map
+        // Adds all elites in the map to the next generation, and increase population size by N = 50
+        private void SelectWithMapElites(List<NetworkGenome> list)
         {
-            // get list of elites that are in the map, choose random n% and add to Next.Genomes
-            Program.Shuffle(Program.mapElites.eliteMap.flatMap);
-            int num = (int)Math.Round(this.Reprod.Elitism * (double)list.Count);
-            for (int index = 0; index < num; ++index)
+            for (int index = 0; index < list.Count; ++index) // for each genome in the species (in list)
             {
-                this.Next.Genomes.Add(Program.mapElites.eliteMap.flatMap[index]); // add this genome to this.Next.Genomes
+                if (Program.mapElites.eliteMap.flatMap.FindIndex(x => x.Id == list[index].Id) >= 0) // if this genome is in the elite Map
+                {
+                    this.Next.Genomes.Add(list[index]); // add this genome to this.Next.Genomes
+                }
             }
         }
         

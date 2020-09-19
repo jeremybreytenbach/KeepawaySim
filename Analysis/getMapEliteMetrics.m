@@ -39,7 +39,7 @@ end
 % Summary: At each gen, average of (fitness / best fitness ever found in that cell)
 
 for gens = 1:100
-    allCoords = unique(vertcat(data{1}{gens}(:,1:3),data{2}{gens}(:,1:3),data{3}{gens}(:,1:3),data{4}{gens}(:,1:3)),'rows');
+    allCoords = unique(vertcat(data{1}{gens}(:,1:3),data{2}{gens}(:,1:3),data{3}{gens}(:,1:3),data{4}{gens}(:,1:3),data{5}{gens}(:,1:3)),'rows');
     maxFitnessAtCoord = nan(length(allCoords),1);
     
     parfor k = 1:length(allCoords) % for each cell, what is the highest ever found across experiments
