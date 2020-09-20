@@ -398,7 +398,10 @@ namespace Keepaway
         {
             this.IncrementGeneration(); 
             this.Elitism(); // todo: investigate as priority // done
-            this.Init.PopulationSize += 5;
+            if (Program.config.MapElites)
+            {
+                this.Init.PopulationSize += 5;
+            }
             this.Reproduce(); // crossover
             this.Previous = this.Current;
             this.Current = this.Next;

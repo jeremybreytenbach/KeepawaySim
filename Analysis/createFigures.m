@@ -1,21 +1,26 @@
 % experimentNames = {'20200706 T 224400','20200706 T 123900','20200712 T 120800','20200806 T 214500','20200807 T 103500','20200807 T 154300'};
 % friendlyExperimentNames = {'38: SM=1 ME=true','39: SM=3 ME=true','40: SM=3 ME=false','45: SM=3 ME=true','44: SM=1 ME=true','46: SM=3 ME=false'};
 
-experimentNames = {'20200807 T 103500','20200806 T 214500','20200807 T 154300','20200807 T 195100','20200809 T 004700'};
-friendlyExperimentNames = {'44: SM=1 ME=true','45: SM=3 ME=true','46: SM=3 ME=false','47: SM=1 ME=false','48: SM=3 ME=true'};
-
 % experimentNames = {'20200809 T 004700'};
 % friendlyExperimentNames = {'48: SM=3 ME=true'};
+
+%% Run analysis and save data
+experimentNames = {'20200807 T 103500','20200806 T 214500','20200807 T 154300','20200807 T 195100','20200809 T 004700'};
+friendlyExperimentNames = {'44: SM=1 ME=true','45: SM=3 ME=true','46: SM=3 ME=false','47: SM=1 ME=false','48: SM=3 ME=true'};
 
 [indexes,metric,data,averageRealFitness,experimentNames,friendlyExperimentNames] = getExperimentData(experimentNames,friendlyExperimentNames);
 
 dateNow = datetime('now');
 save(sprintf('experimentData_%s.mat',datestr(dateNow,'yyyy-mm-dd T HHMMSS')),'indexes','metric','data','averageRealFitness','experimentNames','friendlyExperimentNames','dateNow')
-% load('experimentData.mat')
+
+%% Load Data
+
+loadDataFileName = 'experimentData_2020-08-09 T 110723';
+load(loadDataFileName)
 
 %%
 
-figure(1)
+figure('Name','Best fitness')
 hold all
 for expNum = 1:length(experimentNames)
     plot(metric{expNum}.fitness(indexes{expNum}.indBestFitness),'DisplayName','fitness')
@@ -25,7 +30,7 @@ for expNum = 1:length(experimentNames)
 end
 legend(friendlyExperimentNames)
 
-figure(2)
+figure('Name','Average fitness')
 hold all
 for expNum = 1:length(experimentNames)
     plot(nanmean(metric{expNum}.fitness,1),'DisplayName','fitness')
@@ -35,7 +40,7 @@ for expNum = 1:length(experimentNames)
 end
 legend(friendlyExperimentNames)
 
-figure(3)
+figure('Name','Best realFitness')
 hold all
 for expNum = 1:length(experimentNames)
     plot(metric{expNum}.realFitness(indexes{expNum}.indBestRealFitness),'DisplayName','realFitness')
@@ -45,7 +50,7 @@ for expNum = 1:length(experimentNames)
 end
 legend(friendlyExperimentNames)
 
-figure(4)
+figure('Name','Average realFitness')
 hold all
 for expNum = 1:length(experimentNames)
     plot(nanmean(metric{expNum}.realFitness,1),'DisplayName','realFitness')
@@ -55,7 +60,7 @@ for expNum = 1:length(experimentNames)
 end
 legend(friendlyExperimentNames)
 
-figure(5)
+figure('Name','Best teamDispersion')
 hold all
 for expNum = 1:length(experimentNames)
     plot(metric{expNum}.teamDispersion(indexes{expNum}.indBestTeamDispersion))
@@ -63,7 +68,7 @@ for expNum = 1:length(experimentNames)
 end
 legend(friendlyExperimentNames)
 
-figure(6)
+figure('Name','teamDispersion for most fit genome')
 hold all
 for expNum = 1:length(experimentNames)
     plot(metric{expNum}.teamDispersion(indexes{expNum}.indBestFitness))
@@ -71,7 +76,7 @@ for expNum = 1:length(experimentNames)
 end
 legend(friendlyExperimentNames)
 
-figure(7)
+figure('Name','Average teamDispersion')
 hold all
 for expNum = 1:length(experimentNames)
     plot(nanmean(metric{expNum}.teamDispersion,1))
@@ -80,7 +85,7 @@ end
 legend(friendlyExperimentNames)
 
 % NumPasses
-figure(8)
+figure('Name','Best numPasses')
 hold all
 for expNum = 1:length(experimentNames)
     plot(metric{expNum}.numPasses(indexes{expNum}.indBestNumPasses))
@@ -88,7 +93,7 @@ for expNum = 1:length(experimentNames)
 end
 legend(friendlyExperimentNames)
 
-figure(9)
+figure('Name','numPasses for most fit genome')
 hold all
 for expNum = 1:length(experimentNames)
     plot(metric{expNum}.numPasses(indexes{expNum}.indBestFitness))
@@ -96,7 +101,7 @@ for expNum = 1:length(experimentNames)
 end
 legend(friendlyExperimentNames)
 
-figure(10)
+figure('Name','Average numPasses')
 hold all
 for expNum = 1:length(experimentNames)
     plot(nanmean(metric{expNum}.numPasses,1))
@@ -105,7 +110,7 @@ end
 legend(friendlyExperimentNames)
 
 % distFromCentre
-figure(11)
+figure('Name','Best distFromCentre')
 hold all
 for expNum = 1:length(experimentNames)
     plot(metric{expNum}.distFromCentre(indexes{expNum}.indBestDistFromCentre))
@@ -113,7 +118,7 @@ for expNum = 1:length(experimentNames)
 end
 legend(friendlyExperimentNames)
 
-figure(12)
+figure('Name','distFromCentre for most fit genome')
 hold all
 for expNum = 1:length(experimentNames)
     plot(metric{expNum}.distFromCentre(indexes{expNum}.indBestFitness))
@@ -121,7 +126,7 @@ for expNum = 1:length(experimentNames)
 end
 legend(friendlyExperimentNames)
 
-figure(13)
+figure('Name','Average distFromCentre')
 hold all
 for expNum = 1:length(experimentNames)
     plot(nanmean(metric{expNum}.distFromCentre,1))
@@ -130,7 +135,7 @@ end
 legend(friendlyExperimentNames)
 
 % age
-figure(14)
+figure('Name','age for most fit genome')
 hold all
 for expNum = 1:length(experimentNames)
     plot(metric{expNum}.age(indexes{expNum}.indBestFitness))
@@ -138,7 +143,7 @@ for expNum = 1:length(experimentNames)
 end
 legend(friendlyExperimentNames)
 
-figure(15)
+figure('Name','Average age')
 hold all
 for expNum = 1:length(experimentNames)
     plot(nanmean(metric{expNum}.age,1))
@@ -146,7 +151,7 @@ for expNum = 1:length(experimentNames)
 end
 legend(friendlyExperimentNames)
 
-figure(16)
+figure('Name','Age')
 hold all
 for expNum = 1:length(experimentNames)
     boxplot(metric{expNum}.age)
@@ -154,7 +159,7 @@ for expNum = 1:length(experimentNames)
 end
 legend(friendlyExperimentNames)
 
-figure(17)
+figure('Name','metrics for best genome over generations')
 hold all
 for expNum = 1:length(experimentNames)
     plot(normalize(horzcat(metric{expNum}.fitness(indexes{expNum}.indBestFitness),metric{expNum}.cycles(indexes{expNum}.indBestCycles),...
@@ -165,7 +170,7 @@ end
 
 % figure(18)
 % hold all
-figure
+figure('Name','Real Fitness histograms')
 n = 0;
 for expNum = 1:length(experimentNames)
     n = n+1;
@@ -176,7 +181,7 @@ for expNum = 1:length(experimentNames)
 end
 % legend(friendlyExperimentNames)
 
-figure
+figure('Name','Normalised fitness landscape - Map of elites')
 % hold all
 n = 0;
 for expNum = 1:length(experimentNames)
@@ -195,6 +200,8 @@ for expNum = 1:length(experimentNames)
 %       axis([0 100 0 20 0 20])
         grid on
         colormap(jet);
+        caxis manual
+        caxis([0 100]);
         colorbar;
         axis([0 20 0 300 0 20])
     catch
@@ -211,7 +218,7 @@ end
 % end
 % legend(friendlyExperimentNames)
 
-figure
+figure('Name','Mean real fitness in map')
 hold all
 for expNum = 1:length(experimentNames)
     plot(averageRealFitness{expNum})
@@ -224,7 +231,7 @@ legend(friendlyExperimentNames)
 n = 0;
 for expNum = 1:length(experimentNames)
     n = n+1;
-    figure%(20+n)    
+    figure('Name','Real fitness in map')   
     boxplotData = nan(length(data{end}{end}),100);
     for k = 1:length(data{expNum})
         boxplotData(1:length(data{expNum}{k}(:,4)),k) = data{expNum}{k}(:,4);
@@ -235,17 +242,17 @@ for expNum = 1:length(experimentNames)
     ylabel('Real Fitness')
 end
 
-figure
-bar([length(data{1}{end}),length(data{2}{end}),length(data{3}{end})])%,...
-%     length(data{4}{end}),length(data{5}{end}),...
+figure('Name','Number of unique elites')
+bar([length(data{1}{end}),length(data{2}{end}),length(data{3}{end}),...
+     length(data{4}{end}),length(data{5}{end})])%,...
 %     length(data{6}{end}),length(data{7}{end}),length(data{8}{end})]);
 title('Number of unique elites')
 ax = gca;
-ax.XTick = 1:4;
+ax.XTick = 1:length(friendlyExperimentNames);
 ax.XTickLabel = friendlyExperimentNames;
 ax.XTickLabelRotation = 45;
 
-figure
+figure('Name','Max mean real fitness at gen')
 for expNum = 1:length(experimentNames)
     for k = 1:100
         maxMeanRealFitnessAtGen(k,1) = max(data{expNum}{k}(:,4));
@@ -260,7 +267,7 @@ legend(friendlyExperimentNames)
 % axis([0 100 0 200])
 
 % data
-figure
+figure('Name','Max fitness in map at each generation')
 hold all
 for kn = 1:length(experimentNames)
     for k = 1:length(data{kn})
@@ -273,3 +280,24 @@ for kn = 1:length(experimentNames)
     ylabel('Real Fitness')
 end
 legend(friendlyExperimentNames)
+
+%% Save all figures
+figObjs =  findobj('type','figure');
+numFigs = length(figObjs);
+
+mkdir(loadDataFileName);
+
+for k = 1:numFigs
+    thisFig = figure(k);
+    savefig(figObjs(k),sprintf('%s/Figure %i - %s',loadDataFileName,k,thisFig.Name))
+end
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
