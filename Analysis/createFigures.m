@@ -1,12 +1,6 @@
-% experimentNames = {'20200706 T 224400','20200706 T 123900','20200712 T 120800','20200806 T 214500','20200807 T 103500','20200807 T 154300'};
-% friendlyExperimentNames = {'38: SM=1 ME=true','39: SM=3 ME=true','40: SM=3 ME=false','45: SM=3 ME=true','44: SM=1 ME=true','46: SM=3 ME=false'};
-
-% experimentNames = {'20200809 T 004700'};
-% friendlyExperimentNames = {'48: SM=3 ME=true'};
-
 %% Run analysis and save data
-experimentNames = {'20200807 T 103500','20200806 T 214500','20200807 T 154300','20200807 T 195100','20200809 T 004700'};
-friendlyExperimentNames = {'44: SM=1 ME=true','45: SM=3 ME=true','46: SM=3 ME=false','47: SM=1 ME=false','48: SM=3 ME=true'};
+experimentNames = {'20200809 T 004700','20200920 T 014200','20200920 T 083600','20200920 T 180100'};
+friendlyExperimentNames = {'48: SM=3 ME=true','49: SM=3 ME=false','50: SM=1 ME=true','51: SM=1 ME=false'};
 
 [indexes,metric,data,averageRealFitness,experimentNames,friendlyExperimentNames] = getExperimentData(experimentNames,friendlyExperimentNames);
 
@@ -14,12 +8,10 @@ dateNow = datetime('now');
 save(sprintf('experimentData_%s.mat',datestr(dateNow,'yyyy-mm-dd T HHMMSS')),'indexes','metric','data','averageRealFitness','experimentNames','friendlyExperimentNames','dateNow')
 
 %% Load Data
-
-loadDataFileName = 'experimentData_2020-08-09 T 110723';
+loadDataFileName = 'experimentData_2020-10-04 T 142550';
 load(loadDataFileName)
 
 %%
-
 figure('Name','Best fitness')
 hold all
 for expNum = 1:length(experimentNames)
@@ -187,7 +179,7 @@ n = 0;
 for expNum = 1:length(experimentNames)
     try
         n = n+1;
-        subplot(2,3,n)
+        subplot(2,2,n)
         scatter3(data{expNum}{end}(:,1)./100,data{expNum}{end}(:,2)./100,data{expNum}{end}(:,3)./100,...
             data{expNum}{end}(:,4)*0.1,data{expNum}{end}(:,4)*0.1,'filled')
         xlabel('team dispersion')
@@ -244,7 +236,7 @@ end
 
 figure('Name','Number of unique elites')
 bar([length(data{1}{end}),length(data{2}{end}),length(data{3}{end}),...
-     length(data{4}{end}),length(data{5}{end})])%,...
+     length(data{4}{end})]);%,length(data{5}{end})])%,...
 %     length(data{6}{end}),length(data{7}{end}),length(data{8}{end})]);
 title('Number of unique elites')
 ax = gca;
@@ -281,6 +273,38 @@ for kn = 1:length(experimentNames)
 end
 legend(friendlyExperimentNames)
 
+[globalFitness,coverage,globalReliability,summaryData] = getMapEliteMetrics(data,experimentNames);
+
+figure('Name','Global Fitness')
+bar(globalFitness*100)
+title('Global Fitness')
+xlabel('Experiment')
+ylabel('%')
+ax = gca;
+ax.XTick = 1:length(friendlyExperimentNames);
+ax.XTickLabel = friendlyExperimentNames;
+ax.XTickLabelRotation = 45;
+
+figure('Name','Coverage')
+bar(coverage*100)
+title('Coverage')
+xlabel('Experiment')
+ylabel('%')
+ax = gca;
+ax.XTick = 1:length(friendlyExperimentNames);
+ax.XTickLabel = friendlyExperimentNames;
+ax.XTickLabelRotation = 45;
+
+figure('Name','Global Reliability')
+bar(globalReliability*100)
+title('Global Reliability')
+xlabel('Experiment')
+ylabel('%')
+ax = gca;
+ax.XTick = 1:length(friendlyExperimentNames);
+ax.XTickLabel = friendlyExperimentNames;
+ax.XTickLabelRotation = 45;
+
 %% Save all figures
 figObjs =  findobj('type','figure');
 numFigs = length(figObjs);
@@ -289,11 +313,8 @@ mkdir(loadDataFileName);
 
 for k = 1:numFigs
     thisFig = figure(k);
-    savefig(figObjs(k),sprintf('%s/Figure %i - %s',loadDataFileName,k,thisFig.Name))
+    savefig(thisFig,sprintf('%s/Figure %i - %s',loadDataFileName,k,thisFig.Name))
 end
-      
-    
-    
     
     
     

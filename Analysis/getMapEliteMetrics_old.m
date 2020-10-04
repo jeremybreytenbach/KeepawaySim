@@ -1,37 +1,34 @@
-function [globalFitness,coverage,globalReliability,summaryData] = getMapEliteMetrics(data,experimentNames)
+function output = getMapEliteMetrics_old(data,experimentNames)
 
-% Global fitness. 
-% For each run, the single highest-performing solution found 
+% Global fitness. For each run, the single highest-performing solution found 
 % by that algorithm anywhere in the search space divided by the highest performance 
 % possible in that domain. If it is not known what the maximum theoretical performance 
 % is, as is the case for all of our domains, we estimate it by dividing by the 
 % highest performance found by any algorithm in any run. This metric is independent 
 % of the behavior space.
-% Summary: At last gen, highest fitness in map / highestMax
+% Summary: At each gen, highest fitness in map / highestMax
 
 highestMax = 1000;
 for kn = 1:length(experimentNames)
-    for k = length(data{kn})
-        globalFitness(kn) = max(data{kn}{k}(:,4)) / highestMax;
+    for k = 1:length(data{kn})
+        globalFitness(k,kn) = max(data{kn}{k}(:,4)) / highestMax;
     end
 end
 
-% Coverage. 
-% Measures how many cells of the feature space a run of an algorithm 
+% Coverage. Measures how many cells of the feature space a run of an algorithm 
 % is able to fill of the total number that are possible to fill. This metric 
 % depends on the behavior space because some combinations of behavioral descriptors 
 % might be impossible.
-% Summary: At last gen, percent of filled cells = ~nans
+% Summary: At each gen, percent of filled cells = ~nans
 
 searchSpace = 20*20*300;
 for kn = 1:length(experimentNames)
-    for k = length(data{kn})
-        coverage(kn) = nnz(~isnan(data{kn}{k}(:,4))) / searchSpace;
+    for k = 1:length(data{kn})
+        coverage(k,kn) = nnz(~isnan(data{kn}{k}(:,4))) / searchSpace;
     end
 end
 
-% Global reliability. 
-% This metric computes the average fitness for all the cells 
+% Global reliability. This metric computes the average fitness for all the cells 
 % of the map. For each run, the average across all cells of the highest-performing 
 % solution the algorithm found for each cell (0 if it did not produce a solution 
 % in that cell) divided by the best known performance for that cell as found by 
@@ -39,51 +36,28 @@ end
 % any algorithm are not included in the calculation (to avoid dividing by zero, 
 % and because it may not be possible to fill such cells and algorithms thus should 
 % not be penalized for not doing so). This metric depends on the behavior space. 
-% Summary: At last gen, average of (fitness / best fitness ever found in that cell)
-
-dataExp1 = array2table(data{1}{100},'VariableNames',{'X','Y','Z','RealFitness'});
-dataExp2 = array2table(data{2}{100},'VariableNames',{'X','Y','Z','RealFitness'});
-dataExp3 = array2table(data{3}{100},'VariableNames',{'X','Y','Z','RealFitness'});
-dataExp4 = array2table(data{4}{100},'VariableNames',{'X','Y','Z','RealFitness'});
-
-summaryData = outerjoin(dataExp1,dataExp2,'Keys',{'X','Y','Z'},'MergeKeys',true);
-summaryData = outerjoin(summaryData,dataExp3,'Keys',{'X','Y','Z'},'MergeKeys',true);
-summaryData.Properties.VariableNames{6} = 'RealFitness_dataExp3';
-summaryData = outerjoin(summaryData,dataExp4,'Keys',{'X','Y','Z'},'MergeKeys',true);
-summaryData.Properties.VariableNames{7} = 'RealFitness_dataExp4';
-
-summaryData.RealFitness_dataExp1(isnan(summaryData.RealFitness_dataExp1)) = 0;
-summaryData.RealFitness_dataExp2(isnan(summaryData.RealFitness_dataExp2)) = 0;
-summaryData.RealFitness_dataExp3(isnan(summaryData.RealFitness_dataExp3)) = 0;
-summaryData.RealFitness_dataExp4(isnan(summaryData.RealFitness_dataExp4)) = 0;
-
-summaryData = unique(summaryData,'rows');
-
-tempData = table2array(summaryData(:,4:end));
-maxData = max(tempData')';
-
-% dataAll.RealFitness_dataExp1(dataAll.RealFitness_dataExp1 == 0) = nan;
-% dataAll.RealFitness_dataExp2(dataAll.RealFitness_dataExp2 == 0) = nan;
-% dataAll.RealFitness_dataExp3(dataAll.RealFitness_dataExp3 == 0) = nan;
-% dataAll.RealFitness_dataExp4(dataAll.RealFitness_dataExp4 == 0) = nan;
-
-summaryData = addvars(summaryData,maxData,'NewVariableNames',{'MaxFitness'});
+% Summary: At each gen, average of (fitness / best fitness ever found in that cell)
 
 for kn = 1:length(experimentNames)
-    for k = length(data{kn})
-        globalReliability(kn) = mean(summaryData{:,3+kn}./summaryData{:,end},'includenan');
+    for k = 1:length(data{kn})
+   
+        globalReliability = mean(
     end
 end
 
-% Precision (opt-in reliability). 
-% This metric computes the average fitness for 
+% Precision (opt-in reliability). This metric computes the average fitness for 
 % the filled cells only. For each run, if (and only if) this run creates a solution 
 % in a cell, the average across all such cells of the highest performing solution 
 % produced for that cell divided by the highest performing solution any algorithm 
 % found for that cell. This metric depends on the behavior space.
-% Summary: at last gen, average (fitness / max fitness in that cell)
+% Summary: at each gen, average (fitness/ max fitness in that cell)
 
-% N/A
+
+
+
+
+
+
 
 %% Old global reliability code
 % for gens = 1:100

@@ -1,4 +1,4 @@
-S = load('experimentData_2020-08-08 T 002522');
+S = load('experimentData_2020-09-20 T 170101');
 
 
 S.averageRealFitness(end+1) = averageRealFitness;
@@ -15,3 +15,11 @@ experimentNames = S.experimentNames;
 friendlyExperimentNames = S.friendlyExperimentNames;
 indexes = S.indexes;
 metric = S.metric;
+
+%% Delete first entry (to keep array to 6 in length)
+averageRealFitness(1) = [];
+data(1) = [];
+experimentNames(1) = [];
+friendlyExperimentNames(1) = [];
+indexes(1) = [];
+metric(1) = [];
