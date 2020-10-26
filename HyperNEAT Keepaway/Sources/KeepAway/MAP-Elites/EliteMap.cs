@@ -67,18 +67,19 @@ namespace Keepaway
 
         public void updateMapElement(NetworkGenome genome, int[] position) // rather - I need to only have a flat map. So find the flatmap item that has position, and update that one.
         {
+            NetworkGenome newGenome = new NetworkGenome(genome); // create a new genome with this new position and store it.
             int indFlatMap = findMapElement(position);
-            genome.EliteMapPosition = position;
+            newGenome.EliteMapPosition = position;
 
             if (indFlatMap == -1)
             {
                 // if this position is empty, add this genome to the list
-                flatMap.Add(genome);
+                flatMap.Add(newGenome);
             }
             else
             {
                 // if this position is already filled, replace that genome with this one
-                flatMap[indFlatMap] = genome;
+                flatMap[indFlatMap] = newGenome;
             }
         }
 
