@@ -45,17 +45,24 @@ dataExp1 = array2table(data{1}{100},'VariableNames',{'X','Y','Z','RealFitness'})
 dataExp2 = array2table(data{2}{100},'VariableNames',{'X','Y','Z','RealFitness'});
 dataExp3 = array2table(data{3}{100},'VariableNames',{'X','Y','Z','RealFitness'});
 dataExp4 = array2table(data{4}{100},'VariableNames',{'X','Y','Z','RealFitness'});
+dataExp5 = array2table(data{5}{100},'VariableNames',{'X','Y','Z','RealFitness'});
 
 summaryData = outerjoin(dataExp1,dataExp2,'Keys',{'X','Y','Z'},'MergeKeys',true);
+
 summaryData = outerjoin(summaryData,dataExp3,'Keys',{'X','Y','Z'},'MergeKeys',true);
 summaryData.Properties.VariableNames{6} = 'RealFitness_dataExp3';
+
 summaryData = outerjoin(summaryData,dataExp4,'Keys',{'X','Y','Z'},'MergeKeys',true);
 summaryData.Properties.VariableNames{7} = 'RealFitness_dataExp4';
+
+summaryData = outerjoin(summaryData,dataExp5,'Keys',{'X','Y','Z'},'MergeKeys',true);
+summaryData.Properties.VariableNames{8} = 'RealFitness_dataExp5';
 
 summaryData.RealFitness_dataExp1(isnan(summaryData.RealFitness_dataExp1)) = 0;
 summaryData.RealFitness_dataExp2(isnan(summaryData.RealFitness_dataExp2)) = 0;
 summaryData.RealFitness_dataExp3(isnan(summaryData.RealFitness_dataExp3)) = 0;
 summaryData.RealFitness_dataExp4(isnan(summaryData.RealFitness_dataExp4)) = 0;
+summaryData.RealFitness_dataExp5(isnan(summaryData.RealFitness_dataExp5)) = 0;
 
 summaryData = unique(summaryData,'rows');
 

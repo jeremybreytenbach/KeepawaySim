@@ -1,15 +1,17 @@
 %% Run analysis and save data
-experimentNames = {'20200809 T 004700','20200920 T 014200','20200920 T 083600','20200920 T 180100'};
-friendlyExperimentNames = {'48: SM=3 ME=true','49: SM=3 ME=false','50: SM=1 ME=true','51: SM=1 ME=false'};
+experimentNames = {'20201026 T 210200','20201026 T 093900','20201025 T 153400','20201026 T 164400','20201026 T 231600','20201028 T 162200'};
+friendlyExperimentNames = {'52: SM=3 ME=true','53: SM=3 ME=false','54: SM=1 ME=true','55: SM=1 ME=false','56: SM=3 ME=true','57: SM=3 ME=false'};
 
 [indexes,metric,data,averageRealFitness,experimentNames,friendlyExperimentNames] = getExperimentData(experimentNames,friendlyExperimentNames);
 
 dateNow = datetime('now');
-save(sprintf('experimentData_%s.mat',datestr(dateNow,'yyyy-mm-dd T HHMMSS')),'indexes','metric','data','averageRealFitness','experimentNames','friendlyExperimentNames','dateNow')
+fileName = sprintf('experimentData_%s.mat',datestr(dateNow,'yyyy-mm-dd T HHMMSS'));
+save(fileName,'indexes','metric','data','averageRealFitness','experimentNames','friendlyExperimentNames','dateNow')
 
 %% Load Data
-loadDataFileName = 'experimentData_2020-10-04 T 142550';
-load(loadDataFileName)
+loadDataFileName = fileName(1:end-4); 
+% loadDataFileName = sprintf('experimentData_%s.mat',datestr(dateNow,'yyyy-mm-dd T HHMMSS'));
+% load(loadDataFileName)
 
 %%
 figure('Name','Best fitness')
@@ -179,26 +181,24 @@ n = 0;
 for expNum = 1:length(experimentNames)
     try
         n = n+1;
-        subplot(2,2,n)
-        scatter3(data{expNum}{end}(:,1)./100,data{expNum}{end}(:,2)./100,data{expNum}{end}(:,3)./100,...
+        subplot(2,3,n)
+        scatter3(data{expNum}{end}(:,1)./10,data{expNum}{end}(:,2)./10,data{expNum}{end}(:,3)./10,...
             data{expNum}{end}(:,4)*0.1,data{expNum}{end}(:,4)*0.1,'filled')
         xlabel('team dispersion')
         ylabel('no passes')
         zlabel('dist from centre')
         title(sprintf(['Normalised fitness landscape / Map of elites\n' friendlyExperimentNames{expNum}]))
-%       thisAxis = gca;
-%       thisAxis.YTick = 5:5:15;
-%       thisAxis.ZTick = 5:5:15;
-%       axis([0 100 0 20 0 20])
+        thisAxis(n) = gca;
         grid on
         colormap(jet);
         caxis manual
         caxis([0 100]);
         colorbar;
-        axis([0 20 0 300 0 20])
+        axis([0 20 0 200 0 20])
     catch
     end
 end
+linkprop(thisAxis,{'CameraUpVector', 'CameraPosition', 'CameraTarget', 'XLim', 'YLim', 'ZLim'});
 
 % figure(20)
 % hold all

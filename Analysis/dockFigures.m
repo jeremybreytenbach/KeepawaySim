@@ -1,4 +1,4 @@
-for k = 1:22
+for k = 1:29
     fig = figure(k);
     fig.WindowStyle = 'docked';
 end

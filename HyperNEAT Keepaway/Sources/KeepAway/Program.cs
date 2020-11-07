@@ -298,6 +298,9 @@ namespace Keepaway
                     //Fitness Evaluation function.
                     double[] fitness = new double[4];
 
+                    // reset genomes[].RealFitness to be reevaluated (bug existed where new fitness was being added to old, and then this was divided by by number of episodes)
+                    genomes[i].RealFitness = 0;
+
                     for (int j = 0; j < config.Episodes; j++) // This is where we iterate over episodes. Server.RunCycle will run one episode, which ends when the ref says so.
                     {
                         fitness = Evaluate(createdNetworks[mapping[genomes[i].Id]]); // Run an episode and store results. fitness - 0: cycles, 1: team_dispersion, 2: no passes, 3: distance_from_centre
@@ -311,7 +314,7 @@ namespace Keepaway
                     genomes[i].RealFitness /= config.Episodes;
                     for (int v = 0; v < fitness.Length; v++)
                     {
-                        genomes[i].BehaviorType.bVector[v] /= config.Episodes; //see line 296, we now divide by number of episodes to get average over episodes
+                        genomes[i].BehaviorType.bVector[v] /= config.Episodes; //see line 307, we now divide by number of episodes to get average over episodes
                     }
                     evalCount[genomes[i].Id] = config.Episodes;
                     evaluations += config.Episodes;
