@@ -188,7 +188,7 @@ figure('Name','Real Fitness histograms')
 n = 0;
 for expNum = 1:length(experimentNames)
     n = n+1;
-    subplot(2,3,n)
+    subplot(2,2,n)
     histogram(data{expNum}{end}(:,4))
     title(sprintf('Real Fitness histogram\n%s',friendlyExperimentNames{expNum}))
     axis([0 15 0 1800])
@@ -198,7 +198,7 @@ figure('Name','Fitness histograms')
 n = 0;
 for expNum = 1:length(experimentNames)
     n = n+1;
-    subplot(2,3,n)
+    subplot(2,2,n)
     histogram(data{expNum}{end}(:,5))
     title(sprintf('Fitness histogram\n%s',friendlyExperimentNames{expNum}))
     axis([0 15 0 1500])
