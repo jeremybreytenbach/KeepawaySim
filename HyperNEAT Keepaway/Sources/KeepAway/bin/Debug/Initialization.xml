@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Initialization xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Population load="false" file="Population.xml" />
-  <Seed load="false" file="Seed.xml" /><!--true--><!--consider setting this to false-->
+  <Seed load="true" file="Seed.xml" /><!--true--><!--consider setting this to false-->
   <MaximumGenerations>100</MaximumGenerations><!--100-->
-  <PopulationSize>100</PopulationSize><!--300-->
+  <PopulationSize>150</PopulationSize><!--300-->
   <InitalConnectionPercentage>1</InitalConnectionPercentage>
   <StopOnFitnessCriteria>false</StopOnFitnessCriteria>
   <MaxLayers>5</MaxLayers>

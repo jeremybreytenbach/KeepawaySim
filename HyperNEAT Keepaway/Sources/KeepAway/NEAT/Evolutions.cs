@@ -398,11 +398,11 @@ namespace Keepaway
         {
             this.IncrementGeneration(); 
             this.Elitism(); // todo: investigate as priority // done
-            int popSizeIncrease = 5; // 5 for all experiments 60-67
-            if (Program.config.MapElites)
-            {
-                this.Init.PopulationSize += popSizeIncrease;
-            }
+            //int popSizeIncrease = 5; // 5 for all experiments 60-67
+            //if (Program.config.MapElites)
+            //{
+            //    this.Init.PopulationSize += popSizeIncrease;
+            //}
             this.Reproduce(); // crossover
             this.Previous = this.Current;
             this.Current = this.Next;
@@ -604,11 +604,23 @@ namespace Keepaway
         // Adds all elites in the map to the next generation, and increase population size by N = 50
         private void SelectWithMapElites(List<NetworkGenome> list)
         {
+            int numGenomesAdded = 0;
+            int numToSelect = (int)(Math.Round(0.6*this.Init.PopulationSize,1));
+            //int index = 0;
+
             for (int index = 0; index < list.Count; ++index) // for each genome in the species (in list)
+            //while (numGenomesAdded < numToSelect)
             {
+                index++;
                 if (Program.mapElites.eliteMap.flatMap.FindIndex(x => x.Id == list[index].Id) >= 0) // if this genome is in the elite Map
                 {
+                    numGenomesAdded++;
                     this.Next.Genomes.Add(list[index]); // add this genome to this.Next.Genomes
+                    if (numGenomesAdded >= numToSelect)
+                    {
+                        break;
+                    }
+                    
                 }
             }
         }

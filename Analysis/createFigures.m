@@ -1,10 +1,16 @@
 %% Run analysis and save data
 
-% experimentNames = {'20201108 T 000500','20201108 T 102600','20201108 T 155900','20201108 T 204700','20201122 T 182500','20201128 T 181800','20201130 T 203100','20201202 T 170100'};
-% friendlyExperimentNames = {'60: SM=3 ME=true','61: SM=3 ME=false','62: SM=1 ME=true','63: SM=1 ME=false','64: SM=3 ME=true Ep=10','65: SM=3 ME=false Ep=10','66: SM=1 ME=true Ep=10','67: SM=1 ME=false Ep=10'};
+experimentNames =  {'20210109 T 233400',...
+                    '20210110 T 184500',...
+                    '20210111 T 100500',...
+                    '20210112 T 011300'};
+friendlyExperimentNames =  {'72: SM=3 ME=true Ep=10',...
+                            '73: SM=3 ME=false Ep=10',...
+                            '74: SM=1 ME=true Ep=10',...
+                            '75: SM=1 ME=false Ep=10'};
 
-experimentNames = {'20210103 T 091100'};
-friendlyExperimentNames = {'69: SM=1 ME=true Ep=10 popInc=false'};
+% experimentNames = {'20210110 T 184500'};
+% friendlyExperimentNames = {'73: SM=3 ME=false Ep=10'};
 
 [indexes,metric,data,averageRealFitness,experimentNames,friendlyExperimentNames] = getExperimentData(experimentNames,friendlyExperimentNames);
 
