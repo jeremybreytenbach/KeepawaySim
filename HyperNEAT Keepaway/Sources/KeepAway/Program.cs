@@ -38,6 +38,7 @@ namespace Keepaway
         public string Description;
         public bool MapElites;
         //public int FitNormaliser;
+        public string DataPath;
 
         private static System.Xml.Serialization.XmlSerializer serial = new System.Xml.Serialization.XmlSerializer(typeof(KeepawayConfig));
 

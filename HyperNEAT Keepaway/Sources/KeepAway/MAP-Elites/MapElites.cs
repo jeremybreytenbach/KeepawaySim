@@ -74,10 +74,10 @@ namespace Keepaway
             }
 
             // Write out data
-            string filePath = "E:\\Google Drive\\Academics\\UCT - MIT\\Research\\Code\\KeepawaySim\\Data\\real_fitness_gen_" + Program.evo.Generation.ToString() + ".csv";
+            string filePath = Program.config.DataPath + "real_fitness_gen_" + Program.evo.Generation.ToString() + ".csv";
             File.WriteAllText(filePath, csvRealFitness.ToString());
 
-            filePath = "E:\\Google Drive\\Academics\\UCT - MIT\\Research\\Code\\KeepawaySim\\Data\\fitness_gen_" + Program.evo.Generation.ToString() + ".csv";
+            filePath = Program.config.DataPath + "fitness_gen_" + Program.evo.Generation.ToString() + ".csv";
             File.WriteAllText(filePath, csvFitness.ToString());
         }        
     }
