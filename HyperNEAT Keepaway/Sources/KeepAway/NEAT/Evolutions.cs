@@ -598,27 +598,27 @@ namespace Keepaway
             list.Sort((Comparison<NetworkGenome>)((a, b) => b.Fitness.CompareTo(a.Fitness)));
             int num = (int)Math.Round(this.Reprod.Elitism * (double)list.Count); // Only keep num from current generation. TODO: modify code to keep num but also all of the genomes in mapElites.Map
             for (int index = 0; index < num; ++index)
+            {
                 this.Next.Genomes.Add(list[index]);
+            }
         }
 
-        // Adds all elites in the map to the next generation, and increase population size by N = 50
+        // Adds a percentage of the best elites in the map to the next generation
         private void SelectWithMapElites(List<NetworkGenome> list)
         {
+            list.Sort((Comparison<NetworkGenome>)((a, b) => b.Fitness.CompareTo(a.Fitness)));
             int numGenomesAdded = 0;
             int numToSelect = (int)(Math.Round(0.6*this.Init.PopulationSize,1));
-            //int index = 0;
 
             for (int index = 0; index < list.Count; ++index) // for each genome in the species (in list)
-            //while (numGenomesAdded < numToSelect)
             {
-                index++;
                 if (Program.mapElites.eliteMap.flatMap.FindIndex(x => x.Id == list[index].Id) >= 0) // if this genome is in the elite Map
                 {
                     numGenomesAdded++;
                     this.Next.Genomes.Add(list[index]); // add this genome to this.Next.Genomes
                     if (numGenomesAdded >= numToSelect)
                     {
-                        break;
+                        break; // if we have enough from the map (numToSelect) then break out of loop and selection
                     }
                     
                 }
