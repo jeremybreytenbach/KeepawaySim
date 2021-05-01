@@ -1,5 +1,5 @@
 %% Setup directories
-dataPath = sprintf('E:\\Google Drive\\Academics\\UCT - MIT\\Research\\Code\\KeepawaySim\\Data\\');
+dataPath = sprintf('E:\\Google Drive\\Academics\\UCT - MIT\\Research\Code\\KeepawaySim\\Analysis\\CHPC\\20210409 T 230000\\executableCode2\\');
 
 experimentManagerPath = sprintf('E:\\Google Drive\\Academics\\UCT - MIT\\Research\\Code\\KeepawaySim\\Experiment Management\\');
 

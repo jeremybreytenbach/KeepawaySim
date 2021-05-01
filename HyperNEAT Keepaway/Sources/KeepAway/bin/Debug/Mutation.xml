@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Mutation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Recurrence>false</Recurrence>
-  <AddNode>0.05</AddNode>
+  <AddNode>0.75</AddNode><!--0.05-->
   <KeepLinkOnAddNode>0.2</KeepLinkOnAddNode>
   <ChangeNodeFunction>0.0</ChangeNodeFunction>
   <FunctionProbabilities>
@@ -14,8 +14,8 @@
     <FunctionMutation Function="Ramp" Probability="0.005" />
     <FunctionMutation Function="Sine" Probability="0.1" />
   </FunctionProbabilities>
-  <AddConnection>0.15</AddConnection>
-  <DeleteConnection>0.05</DeleteConnection>
+  <AddConnection>0.75</AddConnection><!--0.15-->
+  <DeleteConnection>0.1</DeleteConnection><!--0.05-->
   <MutateWeights>0.8</MutateWeights>
   <WeightProbabilities>
     <WeightMutation Normal="true" Delta="true" Proportional="true" Amount="1" Probability="0.25" />

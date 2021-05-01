@@ -1,21 +1,15 @@
 #!/bin/bash
-#PBS -N ResourceCheck
 #PBS -q seriallong
 #PBS -P CSCI1142
-#PBS -l select=1:ncpus=4:mpiprocs=4:nodetype=haswell_reg
-#PBS -q smp
+#PBS -l select=1:ncpus=4:mpiprocs=4:mem=8gb:nodetype=haswell_reg
 #PBS -l walltime=100:00:00
-#PBS -o /mnt/lustre/users/jbreytenbach/testPractice1/test1.out
-#PBS -e /mnt/lustre/users/jbreytenbach/testPractice1/test1.err
-#PBS -m abe jeremybreytenbach@gmail.com
- 
-cd mnt/lustre/users/jbreytenbach/hyperNEAT_MAPElites/ExecutableCode/
-echo $PBS_NODEFILE
-echo nproc is $nproc
-echo $PBS_O_WORKDIR
-ls compilers/
-ls tools/
-ls chpc/
-ls cs/
+#PBS -o /mnt/lustre/users/jbreytenbach/hyperNEAT_MAPElites/executableCode/Output/test1.out
+#PBS -e /mnt/lustre/users/jbreytenbach/hyperNEAT_MAPElites/executableCode/Output//test1.err
+#PBS -m abe 
+#PBS -WMail_Users=jeremybreytenbach@gmail.com
+
+echo 'changing directory' 
+cd /mnt/lustre/users/jbreytenbach/hyperNEAT_MAPElites/executableCode/Debug_82/
+echo 'run program'
 # Run program
 mono keepaway.exe

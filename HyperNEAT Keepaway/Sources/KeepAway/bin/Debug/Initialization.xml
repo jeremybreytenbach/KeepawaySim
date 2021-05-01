@@ -3,8 +3,8 @@
   <Population load="false" file="Population.xml" />
   <Seed load="true" file="Seed.xml" /><!--true--><!--consider setting this to false-->
   <MaximumGenerations>100</MaximumGenerations><!--100-->
-  <PopulationSize>150</PopulationSize><!--300-->
+  <PopulationSize>50</PopulationSize><!--150-->
   <InitalConnectionPercentage>1</InitalConnectionPercentage>
   <StopOnFitnessCriteria>false</StopOnFitnessCriteria>
-  <MaxLayers>5</MaxLayers>
+  <MaxLayers>10</MaxLayers><!--5-->
 </Initialization>

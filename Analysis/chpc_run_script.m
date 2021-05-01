@@ -37,19 +37,19 @@ ssh jbreytenbach@lengau.chpc.ac.za
 ssh jbreytenbach@scp.chpc.ac.za
 
 %% transfer files
-scp testPracticeSSHfile.m jbreytenbach@scp.chpc.ac.za:/mnt/lustre/users/jbreytenbach/testPractice1/
+scp E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\HyperNEAT Keepaway\Sources\KeepAway\bin\Debug\Keepaway.exe jbreytenbach@scp.chpc.ac.za:/mnt/lustre/users/jbreytenbach/hyperNEAT_MAPElites/executableCode/
 
 %% browse to correct directory
-cd mnt/lustre/users/jbreytenbach/testPractice1/
+cd /mnt/lustre/users/jbreytenbach/hyperNEAT_MAPElites/executableCode/JobScripts/
+
+%% load modules
+module load chpc/monos/ex
 
 %% Submit job to scheduler
 qsub chpc_job_script.job
+% 3428541.sched01
 
-%% Todo:
-executablePath = "E:\Google Drive\Academics\UCT - MIT\Research\Code\KeepawaySim\HyperNEAT Keepaway\Sources\KeepAway\bin\Debug"
-* Create path: mnt/lustre/users/jbreytenbach/hyperNEAT_MAPElites/ExecutableCode/
-* Upload executablePath to mnt/lustre/users/jbreytenbach/hyperNEAT_MAPElites/ExecutableCode/
-* Create path: mnt/lustre/users/jbreytenbach/hyperNEAT_MAPElites/Data/
-* Change code to save data to Data path above (make it an optional parameter)
-* Find out if I can run windows exe with mono on chpc
+%% Check status of job
+qstat -x -f 3428443.sched01
+qstat 3428443.sched01 -H
 
